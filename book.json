@@ -1,0 +1,86 @@
+{
+  "title": "星塔Node",
+  "author": "云崖先生",
+  "description": "一个自用的文档库",
+  "language": "zh-hans",
+  "styles": {
+    "website": "./public-repertory/css/gitbook-configure.css"
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-pro",
+    "splitter",
+    "expandable-chapters-small",
+    "code",
+    "github",
+    "-sharing",
+    "sharing-plus",
+    "auto-scroll-table",
+    "disqus",
+    "katex",
+    "tbfed-pagefooter",
+    "sectionx",
+    "simple-page-toc",
+    "anchor-navigation-ex",
+    "edit-link"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/KahnDepot"
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": true,
+      "pocket": false,
+      "qq": true,
+      "qzone": false,
+      "twitter": false,
+      "weibo": true,
+      "all": [
+        "douban",
+        "facebook",
+        "google",
+        "instapaper",
+        "linkedin",
+        "twitter",
+        "weibo",
+        "messenger",
+        "qq",
+        "qzone",
+        "viber",
+        "whatsapp"
+      ]
+    },
+    "disqus": {
+      "shortName": "starstower"
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy 云崖先生 2016",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "sectionx": {
+      "tag": "b"
+    },
+    "simple-page-toc": {
+      "maxDepth": 5,
+      "skipFirstH1": true
+    },
+    "anchor-navigation-ex": {
+      "isShowTocTitleIcon": true,
+      "tocLevel1Icon": "fa fa-hand-o-right",
+      "tocLevel2Icon": "fa fa-hand-o-right",
+      "tocLevel3Icon": "fa fa-hand-o-right"
+    },
+    "edit-link": {
+      "base": "https://github.com/KahnDepot/startowernode/edit/main",
+      "label": "编辑此页面"
+    }
+  }
+}
+
+
+
+
