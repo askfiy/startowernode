@@ -23,7 +23,8 @@
     "sectionx",
     "simple-page-toc",
     "anchor-navigation-ex",
-    "edit-link"
+    "edit-link",
+    "accordion"
   ],
   "pluginsConfig": {
     "github": {

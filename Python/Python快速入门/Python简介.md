@@ -6,7 +6,7 @@ Python的名字来源于龟叔（Guido van Rossum在Python界的爱称）十分�
 
 作为一门解释性的动态强类型语言，Python的开发效率奇高，因此在Python界流传着这样一句至理名言：
 
-- 人生苦短，我用Python！
+> 人生苦短，我用Python
 
 ![image-20210512172438655](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210512172438655.png)
 
@@ -34,7 +34,7 @@ Python并不是毫无缺点的孩子，作为一门动态语言，它的执行�
 
 动态语言是逐行翻译，我们可以将它理解为一种边跑边看的策略。
 
-无疑，这样做的后果是方便代码排查，缺点是拉低执行效率。
+这样做的后果是方便代码排查，缺点是拉低执行效率。
 
 常见的Python解释器（包括CPython）等都是采用这种策略，故Python的执行效率一直被人诟病。
 
@@ -59,7 +59,7 @@ PyPy采用[JIT技术](http://en.wikipedia.org/wiki/Just-in-time_compilation)，�
 
 如果你需要较高的执行效率，可以选用该解释器，但是本专题中不会使用它。
 
-因为PyPy终究不是正统，所以对很多第三方库的依赖兼容不如CPython。
+因为PyPy终究不是正统，所以对很多第三方库的依赖性和兼容性不如CPython。
 
 
 
