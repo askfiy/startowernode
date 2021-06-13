@@ -1,0 +1,2836 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>继承 · 星塔Node</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="云崖先生">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../public-repertory/css/gitbook-configure.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="多态.html" />
+    
+    
+    <link rel="prev" href="封装.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../杂谈专栏/summary.html">
+            
+                <a href="../../杂谈专栏/summary.html">
+            
+                    
+                    杂谈专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../杂谈专栏/编程语言区别.html">
+            
+                <a href="../../杂谈专栏/编程语言区别.html">
+            
+                    
+                    编程语言区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../杂谈专栏/详解字符编码.html">
+            
+                <a href="../../杂谈专栏/详解字符编码.html">
+            
+                    
+                    详解字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../杂谈专栏/放一些常见题目.html">
+            
+                <a href="../../杂谈专栏/放一些常见题目.html">
+            
+                    
+                    常见问题大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../summary.html">
+            
+                <a href="../summary.html">
+            
+                    
+                    Python专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Python快速入门/summary.html">
+            
+                <a href="../Python快速入门/summary.html">
+            
+                    
+                    Python快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../Python快速入门/Python简介.html">
+            
+                <a href="../Python快速入门/Python简介.html">
+            
+                    
+                    Python简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../Python快速入门/Python安装.html">
+            
+                <a href="../Python快速入门/Python安装.html">
+            
+                    
+                    Python安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../Python快速入门/pip简单使用.html">
+            
+                <a href="../Python快速入门/pip简单使用.html">
+            
+                    
+                    pip简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../Python快速入门/Python虚拟环境.html">
+            
+                <a href="../Python快速入门/Python虚拟环境.html">
+            
+                    
+                    Python虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../Python快速入门/Python常用工具.html">
+            
+                <a href="../Python快速入门/Python常用工具.html">
+            
+                    
+                    Python常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../Python快速入门/PEP8规范说明.html">
+            
+                <a href="../Python快速入门/PEP8规范说明.html">
+            
+                    
+                    PEP8规范说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Python基础知识/summary.html">
+            
+                <a href="../Python基础知识/summary.html">
+            
+                    
+                    Python基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Python基础知识/代码与注释.html">
+            
+                <a href="../Python基础知识/代码与注释.html">
+            
+                    
+                    代码与注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Python基础知识/变量与常量.html">
+            
+                <a href="../Python基础知识/变量与常量.html">
+            
+                    
+                    变量与常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Python基础知识/整形与浮点型.html">
+            
+                <a href="../Python基础知识/整形与浮点型.html">
+            
+                    
+                    整形与浮点型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Python基础知识/列表类型.html">
+            
+                <a href="../Python基础知识/列表类型.html">
+            
+                    
+                    列表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Python基础知识/元组类型.html">
+            
+                <a href="../Python基础知识/元组类型.html">
+            
+                    
+                    元组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Python基础知识/字符串类型.html">
+            
+                <a href="../Python基础知识/字符串类型.html">
+            
+                    
+                    字符串类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Python基础知识/字典类型.html">
+            
+                <a href="../Python基础知识/字典类型.html">
+            
+                    
+                    字典类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Python基础知识/集合类型.html">
+            
+                <a href="../Python基础知识/集合类型.html">
+            
+                    
+                    集合类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Python基础知识/布尔类型.html">
+            
+                <a href="../Python基础知识/布尔类型.html">
+            
+                    
+                    布尔类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Python基础知识/单例None.html">
+            
+                <a href="../Python基础知识/单例None.html">
+            
+                    
+                    单例None
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.11" data-path="../Python基础知识/内存管理.html">
+            
+                <a href="../Python基础知识/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.12" data-path="../Python基础知识/深浅拷贝.html">
+            
+                <a href="../Python基础知识/深浅拷贝.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.13" data-path="../Python基础知识/输入与输出.html">
+            
+                <a href="../Python基础知识/输入与输出.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.14" data-path="../Python基础知识/运算符相关.html">
+            
+                <a href="../Python基础知识/运算符相关.html">
+            
+                    
+                    运算符相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.15" data-path="../Python基础知识/分支结构.html">
+            
+                <a href="../Python基础知识/分支结构.html">
+            
+                    
+                    分支结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.16" data-path="../Python基础知识/流程控制.html">
+            
+                <a href="../Python基础知识/流程控制.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.17" data-path="../Python基础知识/推导式.html">
+            
+                <a href="../Python基础知识/推导式.html">
+            
+                    
+                    推导式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.18" data-path="../Python基础知识/字符编码.html">
+            
+                <a href="../Python基础知识/字符编码.html">
+            
+                    
+                    字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.19" data-path="../Python基础知识/文件操作.html">
+            
+                <a href="../Python基础知识/文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Python函数相关/summary.html">
+            
+                <a href="../Python函数相关/summary.html">
+            
+                    
+                    Python函数相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../Python函数相关/初识函数.html">
+            
+                <a href="../Python函数相关/初识函数.html">
+            
+                    
+                    初识函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../Python函数相关/使用函数.html">
+            
+                <a href="../Python函数相关/使用函数.html">
+            
+                    
+                    使用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../Python函数相关/参数详解.html">
+            
+                <a href="../Python函数相关/参数详解.html">
+            
+                    
+                    参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../Python函数相关/命名空间.html">
+            
+                <a href="../Python函数相关/命名空间.html">
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../Python函数相关/高阶函数.html">
+            
+                <a href="../Python函数相关/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../Python函数相关/递归函数.html">
+            
+                <a href="../Python函数相关/递归函数.html">
+            
+                    
+                    递归函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../Python函数相关/匿名函数.html">
+            
+                <a href="../Python函数相关/匿名函数.html">
+            
+                    
+                    匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../Python函数相关/内置函数.html">
+            
+                <a href="../Python函数相关/内置函数.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../Python函数相关/装饰器.html">
+            
+                <a href="../Python函数相关/装饰器.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="../Python函数相关/迭代器.html">
+            
+                <a href="../Python函数相关/迭代器.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.11" data-path="../Python函数相关/生成器.html">
+            
+                <a href="../Python函数相关/生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Python模块与包/summary.html">
+            
+                <a href="../Python模块与包/summary.html">
+            
+                    
+                    Python模块与包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../Python模块与包/目录规范.html">
+            
+                <a href="../Python模块与包/目录规范.html">
+            
+                    
+                    目录规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../Python模块与包/Python模块.html">
+            
+                <a href="../Python模块与包/Python模块.html">
+            
+                    
+                    Python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../Python模块与包/Python包.html">
+            
+                <a href="../Python模块与包/Python包.html">
+            
+                    
+                    Python包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../Python模块与包/time.html">
+            
+                <a href="../Python模块与包/time.html">
+            
+                    
+                    内置模块：time
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../Python模块与包/datetime.html">
+            
+                <a href="../Python模块与包/datetime.html">
+            
+                    
+                    内置模块：datetime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../Python模块与包/random.html">
+            
+                <a href="../Python模块与包/random.html">
+            
+                    
+                    内置模块：random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../Python模块与包/os.html">
+            
+                <a href="../Python模块与包/os.html">
+            
+                    
+                    内置模块：os
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../Python模块与包/sys.html">
+            
+                <a href="../Python模块与包/sys.html">
+            
+                    
+                    内置模块：sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="../Python模块与包/json&pickle&shelve.html">
+            
+                <a href="../Python模块与包/json&pickle&shelve.html">
+            
+                    
+                    内置模块：json&pickle&shelve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="../Python模块与包/hashlib.html">
+            
+                <a href="../Python模块与包/hashlib.html">
+            
+                    
+                    内置模块：hashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="../Python模块与包/configparser.html">
+            
+                <a href="../Python模块与包/configparser.html">
+            
+                    
+                    内置模块：configparser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="../Python模块与包/subprocess.html">
+            
+                <a href="../Python模块与包/subprocess.html">
+            
+                    
+                    内置模块：subprocess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="../Python模块与包/logging.html">
+            
+                <a href="../Python模块与包/logging.html">
+            
+                    
+                    内置模块：logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.14" data-path="../Python模块与包/re.html">
+            
+                <a href="../Python模块与包/re.html">
+            
+                    
+                    内置模块：re
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.15" data-path="../Python模块与包/importlib.html">
+            
+                <a href="../Python模块与包/importlib.html">
+            
+                    
+                    内置模块：importlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.16" data-path="../Python模块与包/collections.html">
+            
+                <a href="../Python模块与包/collections.html">
+            
+                    
+                    内置模块：collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.17" data-path="../Python模块与包/itertools.html">
+            
+                <a href="../Python模块与包/itertools.html">
+            
+                    
+                    内置模块：itertools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.18" data-path="../Python模块与包/functools.html">
+            
+                <a href="../Python模块与包/functools.html">
+            
+                    
+                    内置模块：functools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.19" data-path="../Python模块与包/模块包库框架的区别.html">
+            
+                <a href="../Python模块与包/模块包库框架的区别.html">
+            
+                    
+                    模块包库框架的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Python面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="编程范式.html">
+            
+                <a href="编程范式.html">
+            
+                    
+                    编程范式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="类与对象.html">
+            
+                <a href="类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="类的方法.html">
+            
+                <a href="类的方法.html">
+            
+                    
+                    类的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="属性代理.html">
+            
+                <a href="属性代理.html">
+            
+                    
+                    属性代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="封装.html">
+            
+                <a href="封装.html">
+            
+                    
+                    封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5.6" data-path="继承.html">
+            
+                <a href="继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="多态.html">
+            
+                <a href="多态.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="抽象基类.html">
+            
+                <a href="抽象基类.html">
+            
+                    
+                    抽象基类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="自省反射.html">
+            
+                <a href="自省反射.html">
+            
+                    
+                    自省反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="双下大全.html">
+            
+                <a href="双下大全.html">
+            
+                    
+                    双下大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.11" data-path="描述符类.html">
+            
+                <a href="描述符类.html">
+            
+                    
+                    描述符类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.12" data-path="元类编程.html">
+            
+                <a href="元类编程.html">
+            
+                    
+                    元类编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.13" data-path="异常处理.html">
+            
+                <a href="异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Python数算基础/summary.html">
+            
+                <a href="../Python数算基础/summary.html">
+            
+                    
+                    Python数算基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" >
+            
+                <span>
+            
+                    
+                    算法与数构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" >
+            
+                <span>
+            
+                    
+                    算法渐进分析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" >
+            
+                <span>
+            
+                    
+                    算法之递归篇
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" >
+            
+                <span>
+            
+                    
+                    算法之搜索篇
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" >
+            
+                <span>
+            
+                    
+                    算法之排序篇
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.6" >
+            
+                <span>
+            
+                    
+                    数构之线性结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.7" >
+            
+                <span>
+            
+                    
+                    数构之链表相关
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.8" >
+            
+                <span>
+            
+                    
+                    数构之树相关
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.9" >
+            
+                <span>
+            
+                    
+                    数构之图相关
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Python设计模式/summary.html">
+            
+                <a href="../Python设计模式/summary.html">
+            
+                    
+                    Python设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../Python设计模式/普通工厂模式.html">
+            
+                <a href="../Python设计模式/普通工厂模式.html">
+            
+                    
+                    普通工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../Python设计模式/普通工厂模式.html">
+            
+                <a href="../Python设计模式/普通工厂模式.html">
+            
+                    
+                    抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../Python设计模式/普通工厂模式.html">
+            
+                <a href="../Python设计模式/普通工厂模式.html">
+            
+                    
+                    建造者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" >
+            
+                <span>
+            
+                    
+                    单例模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" >
+            
+                <span>
+            
+                    
+                    原型模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" >
+            
+                <span>
+            
+                    
+                    适配器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" >
+            
+                <span>
+            
+                    
+                    桥接模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" >
+            
+                <span>
+            
+                    
+                    组合模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" >
+            
+                <span>
+            
+                    
+                    外观模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.10" >
+            
+                <span>
+            
+                    
+                    代理模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.11" >
+            
+                <span>
+            
+                    
+                    装饰器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.12" >
+            
+                <span>
+            
+                    
+                    享元模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.13" >
+            
+                <span>
+            
+                    
+                    责任链模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.14" >
+            
+                <span>
+            
+                    
+                    解释器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.15" >
+            
+                <span>
+            
+                    
+                    迭代器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.16" >
+            
+                <span>
+            
+                    
+                    观察者模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.17" >
+            
+                <span>
+            
+                    
+                    中介者模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.18" >
+            
+                <span>
+            
+                    
+                    访问者模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.19" >
+            
+                <span>
+            
+                    
+                    备忘录模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.20" >
+            
+                <span>
+            
+                    
+                    命令模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.21" >
+            
+                <span>
+            
+                    
+                    状态模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.22" >
+            
+                <span>
+            
+                    
+                    策略模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.23" >
+            
+                <span>
+            
+                    
+                    模板模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    Python网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    TCP粘包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    sockertserver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.4" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    源码分析：socketserver-TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.5" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    源码分析：socketserver-UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    Python并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    系统发展史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    GIL锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    threading模块使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.4" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    threading锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.5" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    threading.local源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.6" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    数据安全与线程队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.7" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    multiprocessing模块使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.8" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    线程池与进程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.9" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    UNIX五大IO模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.10" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    I/O多路复用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.11" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    协程 asynic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Python驱动程序/summary.html">
+            
+                <a href="../Python驱动程序/summary.html">
+            
+                    
+                    Python驱动程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" >
+            
+                <span>
+            
+                    
+                    Python操纵MySQL
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" >
+            
+                <span>
+            
+                    
+                    Python操纵Redis
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" >
+            
+                <span>
+            
+                    
+                    Python操纵MongoDB
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.4" >
+            
+                <span>
+            
+                    
+                    Python操纵Elasticsearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.5" >
+            
+                <span>
+            
+                    
+                    Python操纵RabbitMQ
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.6" >
+            
+                <span>
+            
+                    
+                    ORM框架：SQLALchemy的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >继承</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#oop&#x7EE7;&#x627F;"><b>1. </b>oop&#x7EE7;&#x627F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7EE7;&#x627F;&#x4ECB;&#x7ECD;"><b>1.1. </b>&#x7EE7;&#x627F;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x8986;&#x5199;"><b>1.2. </b>&#x65B9;&#x6CD5;&#x8986;&#x5199;</a></li></ul><li><span class="title-icon "></span><a href="#python3"><b>2. </b>Python3</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B0;&#x5F0F;&#x7C7B;"><b>2.1. </b>&#x65B0;&#x5F0F;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x5355;&#x7EE7;&#x627F;"><b>2.2. </b>&#x5355;&#x7EE7;&#x627F;</a></li><li><span class="title-icon "></span><a href="#&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;"><b>2.3. </b>&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;</a></li><li><span class="title-icon "></span><a href="#&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;"><b>2.4. </b>&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;</a></li></ul><li><span class="title-icon "></span><a href="#python2"><b>3. </b>Python2</a></li><ul><li><span class="title-icon "></span><a href="#&#x7ECF;&#x5178;&#x7C7B;"><b>3.1. </b>&#x7ECF;&#x5178;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x5355;&#x7EE7;&#x627F;_1"><b>3.2. </b>&#x5355;&#x7EE7;&#x627F;</a></li><li><span class="title-icon "></span><a href="#&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;_1"><b>3.3. </b>&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;</a></li><li><span class="title-icon "></span><a href="#&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;_1"><b>3.4. </b>&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53CC;&#x4E0B;&#x5C5E;&#x6027;"><b>4. </b>&#x53CC;&#x4E0B;&#x5C5E;&#x6027;</a></li><ul><li><span class="title-icon "></span><a href="#class"><b>4.1. </b>__class__</a></li><li><span class="title-icon "></span><a href="#base"><b>4.2. </b>__base__</a></li><li><span class="title-icon "></span><a href="#bases"><b>4.3. </b>__bases__</a></li><li><span class="title-icon "></span><a href="#mro"><b>4.4. </b>__mro__</a></li></ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x501F;&#x7528;"><b>5. </b>&#x65B9;&#x6CD5;&#x501F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#classattr"><b>5.1. </b>class.attr</a></li><li><span class="title-icon "></span><a href="#super"><b>5.2. </b>super()</a></li></ul><li><span class="title-icon "></span><a href="#mixins&#x673A;&#x5236;"><b>6. </b>Mixins&#x673A;&#x5236;</a></li></ul></div><a href="#oop&#x7EE7;&#x627F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="oop&#x7EE7;&#x627F;"><a name="oop&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#oop&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. oop&#x7EE7;&#x627F;</h1>
+<h2 id="&#x7EE7;&#x627F;&#x4ECB;&#x7ECD;"><a name="&#x7EE7;&#x627F;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7EE7;&#x627F;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7EE7;&#x627F;&#x4ECB;&#x7ECD;</h2>
+<p>&#x7EE7;&#x627F;&#x4F5C;&#x4E3A;oop&#x4E09;&#x5927;&#x7279;&#x6027;&#x4E4B;&#x4E00;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x6700;&#x96BE;&#x7684;&#x4E00;&#x7AE0;&#x77E5;&#x8BC6;&#x70B9;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x7684;&#x975E;&#x5E38;&#x591A;&#x3002;</p>
+<p>&#x7EE7;&#x627F;&#x662F;&#x6307;&#x521B;&#x5EFA;&#x7C7B;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x6781;&#x5927;&#x7A0B;&#x5EA6;&#x4E0A;&#x89C4;&#x907F;&#x4E86;&#x7C7B;&#x4E0E;&#x7C7B;&#x4E4B;&#x95F4;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x590D;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5728;Python&#x4E2D;&#xFF0C;&#x662F;&#x652F;&#x6301;&#x591A;&#x7EE7;&#x627F;&#x7684;&#xFF0C;&#x5373;&#x4E00;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#x7C7B;&#xFF0C;&#x8FD9;&#x662F;&#x5176;&#x4ED6;&#x5927;&#x591A;&#x6570;&#x8BED;&#x8A00;&#x4E2D;&#x6240;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x3002;</p>
+<ul>
+<li><p>&#x88AB;&#x7EE7;&#x627F;&#x7684;&#x7C7B;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x7236;&#x7C7B;&#xFF0C;&#x8D85;&#x7C7B;&#x6216;&#x8005;&#x57FA;&#x7C7B;</p>
+</li>
+<li><p>&#x7EE7;&#x627F;&#x7684;&#x7C7B;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x5B50;&#x7C7B;&#x6216;&#x8005;&#x6D3E;&#x751F;&#x7C7B;</p>
+</li>
+</ul>
+<p>&#x6D3E;&#x751F;&#x7C7B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7236;&#x7C7B;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x53CA;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x7236;&#x7C7B;&#x662F;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6D3E;&#x751F;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#x7684;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code>class &#x7C7B;&#x6807;&#x793A;&#x7B26;(&#x7236;&#x7C7B;1, &#x7236;&#x7C7B;2):
+    ...
+</code></pre><p>&#x4E3E;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4E0B;&#x9762;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x72FC;&#xFF08;Wolf&#xFF09;&#x7C7B;&#x548C;&#x72D7;&#xFF08;Dog&#xFF09;&#x7C7B;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x54AC;&#x4EBA;&#xFF08;bite&#xFF09;&#x3001;&#x8DD1;&#x6B65;&#xFF08;run&#xFF09;&#x7B49;&#xFF0C;&#x7531;&#x4E8E;&#x7EE7;&#x627F;&#x7684;&#x5B58;&#x5728;&#x6545;&#x4E0D;&#x7528;&#x5C06;&#x8BE5;&#x65B9;&#x6CD5;&#x4E66;&#x5199;&#x4E24;&#x6B21;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x72D7;&#x7C7B;&#x7EE7;&#x627F;&#x72FC;&#x7C7B;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code>class Wolf:
+    def __init__(self, name) -&gt; None:
+        self.name = name
+
+    def bite(self, personName):
+        return &quot;%s biting %s&quot; % (self.name, personName)
+
+    def run(self):
+        return &quot;%s runing...&quot; % self.name
+
+
+class Dog(Wolf):
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    wolfInstance = Wolf(&quot;King Kong&quot;)
+    print(wolfInstance.bite(&quot;Tom&quot;))
+    print(wolfInstance.run())
+    print(&quot;=&quot; * 10)
+    dogInstance = Dog(&quot;Small Black&quot;)
+    print(dogInstance.bite(&quot;Jack&quot;))
+    print(dogInstance.run())
+
+# King Kong biting Tom
+# King Kong runing...
+# ==========
+# Small Black biting Jack
+# Small Black runing...
+</code></pre><h2 id="&#x65B9;&#x6CD5;&#x8986;&#x5199;"><a name="&#x65B9;&#x6CD5;&#x8986;&#x5199;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x8986;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x65B9;&#x6CD5;&#x8986;&#x5199;</h2>
+<p>&#x5982;&#x679C;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x62E5;&#x6709;&#x548C;&#x7236;&#x7C7B;&#x540C;&#x540D;&#x7684;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x6D3E;&#x751F;&#x7C7B;&#x6216;&#x8005;&#x5176;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x5728;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#x65F6;&#x53EA;&#x4F1A;&#x62FF;&#x81EA;&#x5DF1;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5728;Dog&#x7C7B;&#x4E2D;&#x91CD;&#x5199;&#x4E86;bite&#xFF0C;&#x8BA9;&#x5B83;&#x4E0D;&#x518D;&#x54AC;&#x4EBA;&#xFF1A;</p>
+<pre><code>class Wolf:
+    def __init__(self, name) -&gt; None:
+        self.name = name
+
+    def bite(self, personName):
+        return &quot;%s biting %s&quot; % (self.name, personName)
+
+    def run(self):
+        return &quot;%s runing...&quot; % self.name
+
+
+class Dog(Wolf):
+    def bite(self, personName):
+        return &quot;%s not biting, %s escaped &quot; % (self.name, personName)
+
+
+if __name__ == &quot;__main__&quot;:
+    wolfInstance = Wolf(&quot;King Kong&quot;)
+    print(wolfInstance.bite(&quot;Tom&quot;))
+    print(wolfInstance.run())
+    print(&quot;=&quot; * 10)
+    dogInstance = Dog(&quot;Small Black&quot;)
+    print(dogInstance.bite(&quot;Jack&quot;))
+    print(dogInstance.run())
+
+# King Kong biting Tom
+# King Kong runing...
+# ==========
+# Small Black not biting, Jack escaped
+# Small Black runing...
+</code></pre><h1 id="python3"><a name="python3" class="anchor-navigation-ex-anchor" href="#python3"><i class="fa fa-link" aria-hidden="true"></i></a>2. Python3</h1>
+<h2 id="&#x65B0;&#x5F0F;&#x7C7B;"><a name="&#x65B0;&#x5F0F;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5F0F;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x65B0;&#x5F0F;&#x7C7B;</h2>
+<p>Python3&#x4E2D;&#x9ED8;&#x8BA4;&#x7684;&#x6240;&#x6709;&#x7C7B;&#x90FD;&#x7EE7;&#x627F;&#x4E86;object&#x7C7B;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x88AB;&#x79F0;&#x4E3A;&#x65B0;&#x5F0F;&#x7C7B;&#xFF1A;</p>
+<pre><code>class A:  # eq class A(object)
+    pass
+
+if __name__ == &quot;__main__&quot;:
+    print(A.__bases__)
+
+
+# (&lt;class &apos;object&apos;&gt;,)
+</code></pre><h2 id="&#x5355;&#x7EE7;&#x627F;"><a name="&#x5355;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x5355;&#x7EE7;&#x627F;</h2>
+<p>&#x65B0;&#x5F0F;&#x7C7B;&#x5355;&#x7EE7;&#x627F;&#x67E5;&#x627E;&#x516C;&#x6709;&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x6BCF;&#x8F6E;&#x6309;&#x7167;&#x4E00;&#x6761;&#x7EBF;&#x7684;&#x5411;&#x4E0A;&#x67E5;&#x627E;&#x6B21;&#x5E8F;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210606211132244.png" alt="image-20210606211132244"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>class A:
+    def show(self):
+        print(&quot;--- A.show run ---&quot;)
+        self.info()
+
+    def info(self):
+        print(&quot;--- A.info run ---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find A.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class B(A):
+    def info(self):
+        print(&quot;--- B.info run ---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find B.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class C(B):
+    def info(self):
+        print(&quot;--- C.info run---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find C.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+if __name__ == &quot;__main__&quot;:
+    instanceC = C()
+    instanceC.show()
+
+# find C.show
+# find B.show
+# find A.show
+# --- A.show run ---
+# find C.info
+# find B.info
+# find A.info
+# --- C.info run---
+</code></pre><p>&#x800C;&#x65B0;&#x5F0F;&#x7C7B;&#x5982;&#x679C;&#x662F;&#x5355;&#x7EE7;&#x627F;&#x67E5;&#x627E;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#x5219;&#x7ED3;&#x679C;&#x53C8;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210606212022720.png" alt="image-20210606212022720"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>class A:
+    def show(self):
+        print(&quot;--- A.show run ---&quot;)
+        self.__info()
+
+    def __info(self):
+        print(&quot;--- A.__info run ---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find A.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class B(A):
+    def __info(self):
+        print(&quot;--- B.__info run ---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find B.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class C(B):
+    def __info(self):
+        print(&quot;--- C.__info run---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find C.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+if __name__ == &quot;__main__&quot;:
+    instanceC = C()
+    instanceC.show()
+
+# find C.show
+# find B.show
+# find A.show
+# --- A.show run ---
+# find C._A__info
+# find B._A__info
+# find A._A__info
+# --- A.__info run ---
+</code></pre><h2 id="&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;"><a name="&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;</h2>
+<p>Python3&#x4E2D;&#x7684;&#x65B0;&#x5F0F;&#x7C7B;&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x4F1A;&#x6309;&#x7167;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x7684;&#x67E5;&#x627E;&#x7B56;&#x7565;&#x67E5;&#x627E;&#x6574;&#x4E2A;&#x7EE7;&#x627F;&#x6811;&#x3002;</p>
+<ul>
+<li>&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#xFF1A;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x67E5;&#x627E;&#xFF0C;&#x6BCF;&#x6761;&#x5206;&#x652F;&#x67E5;&#x5230;&#x6700;&#x9876;&#x90E8;&#xFF0C;&#x6700;&#x540E;&#x67E5;&#x627E;object&#x7C7B;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210606214240523.png" alt="image-20210606214240523"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>class A:
+
+    def __getattribute__(self, name: str):
+        print(&quot;find A.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class B(A):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find B.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class C(B):
+
+    def show(self):
+        print(&quot;--- C.show run ---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find C.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class D:
+
+    def __getattribute__(self, name: str):
+        print(&quot;find D.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class E(D):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find E.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class F:
+
+    def __getattribute__(self, name: str):
+        print(&quot;find F.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class G(C, E, F):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find G.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+if __name__ == &quot;__main__&quot;:
+    instanceG = G()
+    instanceG.show()
+
+# find G.show
+# find C.show
+# find B.show
+# find A.show
+# find E.show
+# find D.show
+# find F.show
+# --- C.show run ---
+</code></pre><h2 id="&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;"><a name="&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;" class="anchor-navigation-ex-anchor" href="#&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. &#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;</h2>
+<p>&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x6B7B;&#x4EA1;&#x83F1;&#x5F62;&#x7EE7;&#x627F;&#xFF0C;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210611103729629.png" alt="image-20210611103729629"></p>
+<p>Python3&#x4E2D;&#x7684;&#x65B0;&#x5F0F;&#x7C7B;&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x4F1A;&#x6309;&#x7167;&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x7684;&#x67E5;&#x627E;&#x7B56;&#x7565;&#x67E5;&#x627E;&#x6574;&#x4E2A;&#x7EE7;&#x627F;&#x6811;&#x3002;</p>
+<ul>
+<li>&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#xFF1A;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x67E5;&#x627E;&#xFF0C;&#x6BCF;&#x6761;&#x5206;&#x652F;&#x67E5;&#x5230;&#x9876;&#x90E8;&#x7B2C;&#x4E8C;&#x4E2A;&#x7C7B;&#x8D85;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x67E5;&#x94BB;&#x77F3;&#x57FA;&#x7C7B;&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x6CA1;&#x6709;&#x624D;&#x67E5;&#x627E;&#x94BB;&#x77F3;&#x57FA;&#x7C7B;&#xFF0C;&#x6700;&#x540E;&#x67E5;&#x627E;object&#x7C7B;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210611104611542.png" alt="image-20210611104611542"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>class A:
+
+    def show(self):
+        print(&quot;--- A.show run ---&quot;)
+
+    def __getattribute__(self, name: str):
+        print(&quot;find A.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class B(A):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find B.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class C(A):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find C.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class D(A):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find D.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class E(B):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find E.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class F(C):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find F.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class G(D):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find G.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class H(E):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find H.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+class I(H, F, G):
+
+    def __getattribute__(self, name: str):
+        print(&quot;find I.%s&quot; % name)
+        return super().__getattribute__(name)
+
+
+if __name__ == &quot;__main__&quot;:
+    instanceI = I()
+    instanceI.show()
+
+# find I.show
+# find H.show
+# find E.show
+# find B.show
+# find F.show
+# find C.show
+# find G.show
+# find D.show
+# find A.show
+# --- A.show run ---
+</code></pre><h1 id="python2"><a name="python2" class="anchor-navigation-ex-anchor" href="#python2"><i class="fa fa-link" aria-hidden="true"></i></a>3. Python2</h1>
+<h2 id="&#x7ECF;&#x5178;&#x7C7B;"><a name="&#x7ECF;&#x5178;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x7ECF;&#x5178;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x7ECF;&#x5178;&#x7C7B;</h2>
+<p>Python2&#x4E2D;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7C7B;&#x6CA1;&#x6709;&#x7EE7;&#x627F;object&#x7C7B;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x88AB;&#x79F0;&#x4E3A;&#x7ECF;&#x5178;&#x7C7B;&#x3002;</p>
+<p>&#x53CD;&#x4E4B;&#xFF0C;&#x5982;&#x679C;&#x7EE7;&#x627F;&#x4E86;object&#x7C7B;&#xFF0C;&#x5219;&#x88AB;&#x79F0;&#x4E3A;&#x65B0;&#x5F0F;&#x7C7B;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code># Python2&#x4E2D;&#x7684;&#x7ECF;&#x5178;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;Python3&#x4E2D;&#x7684;&#x65B0;&#x5F0F;&#x7C7B;
+class A:
+    pass
+
+# Python2&#x4E2D;&#x7684;&#x65B0;&#x5F0F;&#x7C7B;
+class A(object):
+    pass
+</code></pre><p>&#x6362;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;Python2&#x7684;&#x7C7B;&#x6709;&#x65B0;&#x5F0F;&#x7C7B;&#x548C;&#x7ECF;&#x5178;&#x7C7B;2&#x79CD;&#xFF0C;Python3&#x4E2D;&#x4EC5;&#x6709;&#x65B0;&#x5F0F;&#x7C7B;&#xFF0C;&#x53D6;&#x6D88;&#x4E86;&#x7ECF;&#x5178;&#x7C7B;&#x7684;&#x8BBE;&#x5B9A;&#x3002;</p>
+<p>&#x4E0D;&#x8BBA;&#x662F;Python2&#x7684;&#x65B0;&#x5F0F;&#x7C7B;&#x8FD8;&#x662F;Python3&#x7684;&#x65B0;&#x5F0F;&#x7C7B;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x6545;&#x4E0B;&#x9762;&#x53EA;&#x4F1A;&#x4F8B;&#x4E3E;&#x7ECF;&#x5178;&#x7C7B;&#x7684;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x3002;</p>
+<h2 id="&#x5355;&#x7EE7;&#x627F;_1"><a name="&#x5355;&#x7EE7;&#x627F;_1" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x7EE7;&#x627F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x5355;&#x7EE7;&#x627F;</h2>
+<p>&#x7ECF;&#x5178;&#x7C7B;&#x5728;&#x5355;&#x7EE7;&#x627F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x548C;&#x65B0;&#x5F0F;&#x7C7B;&#x7684;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x4E00;&#x81F4;&#x3002;</p>
+<h2 id="&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;_1"><a name="&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;_1" class="anchor-navigation-ex-anchor" href="#&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;</h2>
+<p>&#x4E0D;&#x7BA1;&#x662F;&#x65B0;&#x5F0F;&#x7C7B;&#x8FD8;&#x662F;&#x7ECF;&#x5178;&#x7C7B;&#xFF0C;&#x5728;&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;&#x7684;&#x67E5;&#x627E;&#x4E0B;&#x90FD;&#x662F;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x7B56;&#x7565;&#xFF1A;</p>
+<ul>
+<li>&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#xFF1A;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x67E5;&#x627E;&#xFF0C;&#x6BCF;&#x6761;&#x5206;&#x652F;&#x67E5;&#x5230;&#x6700;&#x9876;&#x90E8;</li>
+</ul>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210611110722331.png" alt="image-20210611110722331"></p>
+<p>&#x7531;&#x4E8E;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;__getattribute__()&#x65B9;&#x6CD5;&#x6765;&#x67E5;&#x770B;&#x6574;&#x4E2A;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#xFF0C;&#x6545;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x518D;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x4E86;&#x3002;</p>
+<p>&#x611F;&#x5174;&#x8DA3;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<h2 id="&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;_1"><a name="&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;_1" class="anchor-navigation-ex-anchor" href="#&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;</h2>
+<p>&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;&#x4E2D;&#xFF0C;&#x7ECF;&#x5178;&#x7C7B;&#x91C7;&#x7528;&#x7684;&#x662F;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x7B56;&#x7565;&#xFF0C;&#x800C;&#x65B0;&#x5F0F;&#x7C7B;&#x5219;&#x91C7;&#x7528;&#x7684;&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x7B56;&#x7565;&#x3002;</p>
+<ul>
+<li>&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#xFF1A;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x67E5;&#x627E;&#xFF0C;&#x6BCF;&#x6761;&#x5206;&#x652F;&#x67E5;&#x5230;&#x6700;&#x9876;&#x90E8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x94BB;&#x77F3;&#x57FA;&#x7C7B;&#x5728;&#x7B2C;&#x4E00;&#x8F6E;&#x5C31;&#x4F1A;&#x88AB;&#x67E5;&#x5230;</li>
+</ul>
+<p>&#x56FE;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210611111221313.png" alt="image-20210611111221313"></p>
+<p>&#x7531;&#x4E8E;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;__getattribute__()&#x65B9;&#x6CD5;&#x6765;&#x67E5;&#x770B;&#x6574;&#x4E2A;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#xFF0C;&#x6545;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x518D;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x4E86;&#x3002;</p>
+<p>&#x611F;&#x5174;&#x8DA3;&#x7684;&#x670B;&#x53CB;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<h1 id="&#x53CC;&#x4E0B;&#x5C5E;&#x6027;"><a name="&#x53CC;&#x4E0B;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x53CC;&#x4E0B;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x53CC;&#x4E0B;&#x5C5E;&#x6027;</h1>
+<h2 id="class"><a name="class" class="anchor-navigation-ex-anchor" href="#class"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. __class__</h2>
+<p>instanceObject.__class__&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x6240;&#x5C5E;&#x7684;&#x7C7B;&#xFF1A;</p>
+<pre><code>class A:
+    pass
+
+if __name__ == &quot;__main__&quot;:
+    instanceObject = A()
+    print(instanceObject.__class__)
+
+# __main__.A
+</code></pre><h2 id="base"><a name="base" class="anchor-navigation-ex-anchor" href="#base"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. __base__</h2>
+<p>className.__base__&#x5C5E;&#x6027;&#x53EF;&#x67E5;&#x770B;&#x5230;&#x7C7B;&#x7684;&#x7236;&#x7C7B;&#xFF0C;&#x4EC5;Python3&#x6709;&#x6548;&#xFF0C;&#x8FD4;&#x56DE;&#x7C7B;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code>class A:
+    pass
+
+
+class B(A):
+    pass
+
+
+class C(B):
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    print(C.__base__)
+
+# &lt;class &apos;__main__.B&apos;&gt;
+</code></pre><h2 id="bases"><a name="bases" class="anchor-navigation-ex-anchor" href="#bases"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. __bases__</h2>
+<p>className.__bases__&#x5C5E;&#x6027;&#x53EF;&#x67E5;&#x770B;&#x5230;&#x7C7B;&#x7684;&#x7236;&#x7C7B;&#xFF0C;&#x4EC5;Python3&#x6709;&#x6548;&#xFF0C;&#x8FD4;&#x56DE;&#x5143;&#x7EC4;&#xFF0C;&#x7D22;&#x5F15;0&#x5904;&#x662F;&#x5176;&#x7236;&#x7C7B;&#xFF1A;</p>
+<pre><code>class A:
+    pass
+
+
+class B(A):
+    pass
+
+
+class C(B):
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    print(C.__bases__)
+
+# (&lt;class &apos;__main__.B&apos;&gt;,)
+</code></pre><h2 id="mro"><a name="mro" class="anchor-navigation-ex-anchor" href="#mro"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. __mro__</h2>
+<p>&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x5728;&#x7C7B;&#x5B9A;&#x4E49;&#x65F6;&#x5E95;&#x5C42;&#x4F1A;&#x6839;&#x636E;C3&#x7B97;&#x6CD5;&#x751F;&#x6210;&#xFF0C;&#x4F7F;&#x7528;className.__mro__&#x53EF;&#x8C03;&#x7528;&#x51FA;&#x8BE5;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5217;&#x8868;&#x4E2D;&#x5D4C;&#x5957;&#x5404;&#x79CD;&#x7236;&#x7C7B;&#x3001;&#x8D85;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4EC5;&#x5728;Python3&#x4E2D;&#x751F;&#x6548;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x65B0;&#x5F0F;&#x7C7B;&#x666E;&#x901A;&#x591A;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#xFF0C;&#x548C;&#x4E0A;&#x9762;&#x6D4B;&#x8BD5;&#x7684;&#x7ED3;&#x679C;&#x4E00;&#x81F4;&#xFF1A;</p>
+<pre><code>class A:
+    pass
+
+
+class B(A):
+    pass
+
+
+class C(B):
+    pass
+
+
+class D:
+    pass
+
+
+class E(D):
+    pass
+
+
+class F:
+    pass
+
+
+class G(C, E, F):
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    print(G.__mro__)
+
+# (&lt;class &apos;__main__.G&apos;&gt;, &lt;class &apos;__main__.C&apos;&gt;, &lt;class &apos;__main__.B&apos;&gt;, &lt;class &apos;__main__.A&apos;&gt;, &lt;class &apos;__main__.E&apos;&gt;, &lt;class &apos;__main__.D&apos;&gt;, &lt;class &apos;__main__.F&apos;&gt;, &lt;class &apos;object&apos;&gt;)
+</code></pre><p>&#x4E0B;&#x9762;&#x662F;&#x65B0;&#x5F0F;&#x7C7B;&#x94BB;&#x77F3;&#x591A;&#x7EE7;&#x627F;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#xFF0C;&#x548C;&#x4E0A;&#x9762;&#x6D4B;&#x8BD5;&#x7684;&#x7ED3;&#x679C;&#x4E00;&#x81F4;&#xFF1A;</p>
+<pre><code>class A:
+    pass
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    pass
+
+
+class D(A):
+    pass
+
+
+class E(B):
+    pass
+
+
+class F(C):
+    pass
+
+
+class G(D):
+    pass
+
+
+class H(E):
+    pass
+
+
+class I(H, F, G):
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    print(I.__mro__)
+
+# (&lt;class &apos;__main__.I&apos;&gt;, &lt;class &apos;__main__.H&apos;&gt;, &lt;class &apos;__main__.E&apos;&gt;, &lt;class &apos;__main__.B&apos;&gt;, &lt;class &apos;__main__.F&apos;&gt;, &lt;class &apos;__main__.C&apos;&gt;, &lt;class &apos;__main__.G&apos;&gt;, &lt;class &apos;__main__.D&apos;&gt;, &lt;class &apos;__main__.A&apos;&gt;, &lt;class &apos;object&apos;&gt;)
+</code></pre><h1 id="&#x65B9;&#x6CD5;&#x501F;&#x7528;"><a name="&#x65B9;&#x6CD5;&#x501F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x501F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x65B9;&#x6CD5;&#x501F;&#x7528;</h1>
+<h2 id="classattr"><a name="classattr" class="anchor-navigation-ex-anchor" href="#classattr"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. class.attr</h2>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7C7B;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5173;&#x7CFB;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x501F;&#x7528;&#x8FD0;&#x884C;&#x5176;&#x4E0B;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6307;&#x540D;&#x9053;&#x59D3;&#x7684;&#x901A;&#x8FC7;&#x7C7B;&#x6765;&#x8C03;&#x7528;&#x5176;&#x4E0B;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5FC5;&#x987B;&#x624B;&#x52A8;&#x4F20;&#x5165;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>class A:
+    def func(self):
+        print(&quot;run A instance method&quot;)
+
+class B:
+    def func(self):
+        print(&quot;run B instance method&quot;)
+        A.func(self=self)
+
+if __name__ == &quot;__main__&quot;:
+    B().func()
+
+# run B instance method
+# run A instance method
+</code></pre><h2 id="super"><a name="super" class="anchor-navigation-ex-anchor" href="#super"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. super()</h2>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7C7B;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x6709;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;super()&#x65B9;&#x6CD5;&#x81EA;&#x52A8;&#x5411;&#x540E;&#x67E5;&#x627E;&#x5176;&#x7236;&#x7C7B;&#x4E2D;&#x9700;&#x8981;&#x501F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x5E76;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5B83;&#x672C;&#x8D28;&#x4E0A;&#x4F1A;&#x505A;&#x4E24;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ol>
+<li>&#x8C03;&#x7528;__mro__&#xFF0C;&#x62FF;&#x5230;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x5217;&#x8868;</li>
+<li>&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x7C7B;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x62FF;&#x5230;&#x5176;&#x7236;&#x7C7B;&#xFF0C;&#x518D;&#x81EA;&#x52A8;&#x4F7F;&#x7528;class.attr&#x7684;&#x65B9;&#x5F0F;&#x6307;&#x540D;&#x9053;&#x59D3;&#x7684;&#x8FD0;&#x884C;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;</li>
+</ol>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x4F7F;&#x7528;super()&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x65B9;&#x6CD5;&#x501F;&#x7528;&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x624B;&#x52A8;&#x4F20;&#x5165;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E0E;class.attr&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7684;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>super(__class__, &lt;first argument&gt;)
+</code></pre><p>&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#xFF1A;</p>
+<pre><code>class A:
+    def func(self):
+        print(&quot;run A instance method&quot;)
+
+class B(A):
+    def func(self):
+        print(&quot;run B instance method&quot;)
+        super(__class__, self).func()  # &#x2776; &#x2777;
+
+if __name__ == &quot;__main__&quot;:
+    B().func()
+
+# run B instance method
+# run A instance method
+</code></pre><p>&#x2776;&#xFF1A;&#x4F20;&#x5165;__class__&#xFF0C;&#x7528;&#x4E8E;&#x786E;&#x8BA4;&#x8BE5;&#x7C7B;&#x5728;__mro__&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EE5;&#x4FBF;&#x786E;&#x5B9A;&#x540E;&#x9762;&#x7684;&#x7236;&#x7C7B;&#x67E5;&#x627E;</p>
+<p>&#x2777;&#xFF1A;&#x4F20;&#x5165;self&#xFF0C;&#x5B83;&#x5C06;&#x81EA;&#x52A8;&#x628A;self&#x4F20;&#x9012;&#x7ED9;A.func()&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;</p>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>Python3&#x7684;super()&#x65B9;&#x6CD5;&#x4E2D;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4E0D;&#x4F20;&#x9012;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x8865;&#x5145;</li>
+<li>Python2&#x7684;&#x7ECF;&#x5178;&#x7C7B;&#x5982;&#x679C;&#x60F3;&#x4F7F;&#x7528;super()&#x65B9;&#x6CD5;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x5728;&#x6587;&#x4EF6;&#x9876;&#x90E8;&#x6DFB;&#x52A0;&#x4E00;&#x53E5;&#x4EE3;&#x7801; &#xFF1A; __metaclass__ = type&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;</li>
+<li>Python2&#x7684;super()&#x65B9;&#x6CD5;&#x4E2D;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x4F20;&#x9012;&#xFF0C;&#x4E0D;&#x53EF;&#x8FDB;&#x884C;&#x7701;&#x7565;</li>
+</ul>
+<h1 id="mixins&#x673A;&#x5236;"><a name="mixins&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#mixins&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>6. Mixins&#x673A;&#x5236;</h1>
+<p>Python&#x7531;&#x4E8E;&#x652F;&#x6301;&#x591A;&#x7EE7;&#x627F;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x6545;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x4E0D;&#x901A;&#x987A;&#x7684;&#x95EE;&#x9898;&#x51FA;&#x73B0;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210611122234789.png" alt="image-20210611122234789"></p>
+<p>&#x4E3A;&#x4E86;&#x80FD;&#x8BA9;&#x57FA;&#x7C7B;&#x7684;&#x4F5C;&#x7528;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#xFF0C;&#x7B26;&#x5408;&#x4E00;&#x5207;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#x57FA;&#x7C7B;&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x98DE;&#x884C;&#x65B9;&#x6CD5;</li>
+<li>&#x629B;&#x951A;&#x65B9;&#x6CD5;</li>
+<li>&#x5239;&#x8F66;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x5DF2;&#x7ECF;&#x4EA7;&#x751F;&#x4E86;&#x903B;&#x8F91;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x8F6E;&#x8239;&#x4E0D;&#x4F1A;&#x98DE;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5239;&#x8F66;&#xFF0C;&#x4F46;&#x4F5C;&#x4E3A;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#x57FA;&#x7C7B;&#x7684;&#x6D3E;&#x751F;&#x7C7B;&#xFF0C;&#x5B83;&#x4E5F;&#x80FD;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;</li>
+<li>&#x6C7D;&#x8F66;&#x4E0D;&#x4F1A;&#x98DE;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x629B;&#x951A;&#xFF0C;&#x4F46;&#x4F5C;&#x4E3A;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#x57FA;&#x7C7B;&#x7684;&#x6D3E;&#x751F;&#x7C7B;&#xFF0C;&#x5B83;&#x4E5F;&#x80FD;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;</li>
+<li>&#x98DE;&#x673A;&#x4E0D;&#x4F1A;&#x5239;&#x8F66;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x629B;&#x951A;&#xFF0C;&#x4F46;&#x4F5C;&#x4E3A;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#x57FA;&#x7C7B;&#x7684;&#x6D3E;&#x751F;&#x7C7B;&#xFF0C;&#x5B83;&#x4E5F;&#x80FD;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>class Transportation:
+    def __init__(self, name) -&gt; None:
+        self.name = name
+
+    def fly(self):
+        &quot;&quot;&quot;
+        &#x98DE;
+        &quot;&quot;&quot;
+        print(&quot;%s flying&quot; % self.name)
+
+    def brake(self):
+        &quot;&quot;&quot;
+        &#x5239;&#x8F66;
+        &quot;&quot;&quot;
+        print(&quot;%s braking&quot; % self.name)
+
+    def anchor(self):
+        &quot;&quot;&quot;
+        &#x629B;&#x951A;
+        &quot;&quot;&quot;
+        print(&quot;%s anchor&quot; % self.name)
+
+class Aircraft(Transportation):
+    pass
+
+class Car(Transportation):
+    pass
+
+class Ship(Transportation):
+    pass
+
+if __name__ == &quot;__main__&quot;:
+    aircraft = Aircraft(&quot;Boeing 747&quot;)
+    car = Car(&quot;BMW&quot;)
+    ship = Ship(&quot;Titanic&quot;)
+
+    # Serious Problem
+    aircraft.brake()
+    aircraft.anchor()
+
+    car.fly()
+    car.anchor()
+
+    ship.fly()
+    ship.brake()
+
+# Boeing 747 braking
+# Boeing 747 anchor
+# BMW flying
+# BMW anchor
+# Titanic flying
+# Titanic braking
+</code></pre><p>&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Mixins&#x673A;&#x5236;&#xFF0C;&#x5C06;&#x5239;&#x8F66;&#x3001;&#x629B;&#x951A;&#x3001;&#x98DE;&#x884C;&#x8FD9;3&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x5355;&#x72EC;&#x7684;&#x5C01;&#x88C5;&#x5230;&#x4E0B;&#x9762;3&#x4E2A;&#x7C7B;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>&#x6C7D;&#x8F66;&#x529F;&#x80FD;&#x7C7B;&#xFF1A;&#x5239;&#x8F66;</li>
+<li>&#x98DE;&#x673A;&#x529F;&#x80FD;&#x7C7B;&#xFF1A;&#x98DE;&#x884C;</li>
+<li>&#x8F6E;&#x8239;&#x529F;&#x80FD;&#x7C7B;&#xFF1A;&#x629B;&#x951A;</li>
+</ul>
+<p>&#x5B50;&#x7C7B;&#x53EA;&#x9700;&#x8981;&#x7EE7;&#x627F;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#x57FA;&#x7C7B;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#x7C7B;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210611143430059.png" alt="image-20210611143430059"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>class Transportation:
+    def __init__(self, name) -&gt; None:
+        self.name = name
+
+class AircraftMixin:
+    def fly(self):
+        &quot;&quot;&quot;
+        &#x98DE;
+        &quot;&quot;&quot;
+        print(&quot;%s flying&quot; % self.name)
+
+class CarMixin:
+    def brake(self):
+        &quot;&quot;&quot;
+        &#x5239;&#x8F66;
+        &quot;&quot;&quot;
+        print(&quot;%s braking&quot; % self.name)
+
+class ShipMixin:
+    def anchor(self):
+        &quot;&quot;&quot;
+        &#x629B;&#x951A;
+        &quot;&quot;&quot;
+        print(&quot;%s anchor&quot; % self.name)
+
+class Aircraft(Transportation, AircraftMixin):
+    pass
+
+class Car(Transportation, CarMixin):
+    pass
+
+class Ship(Transportation, ShipMixin):
+    pass
+
+if __name__ == &quot;__main__&quot;:
+    aircraft = Aircraft(&quot;Boeing 747&quot;)
+    car = Car(&quot;BMW&quot;)
+    ship = Ship(&quot;Titanic&quot;)
+
+    aircraft.fly()
+    car.brake()
+    ship.anchor()
+
+# Boeing 747 flying
+# BMW braking
+# Titanic anchor
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x4E91;&#x5D16;&#x5148;&#x751F; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-11 16:59:43
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="封装.html" class="navigation navigation-prev " aria-label="Previous page: 封装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="多态.html" class="navigation navigation-next " aria-label="Next page: 多态">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"继承","level":"1.3.5.6","depth":3,"next":{"title":"多态","level":"1.3.5.7","depth":3,"path":"Python/Python面向对象/多态.md","ref":"./Python/Python面向对象/多态.md","articles":[]},"previous":{"title":"封装","level":"1.3.5.5","depth":3,"path":"Python/Python面向对象/封装.md","ref":"./Python/Python面向对象/封装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","splitter","expandable-chapters-small","code","github","-sharing","sharing-plus","auto-scroll-table","disqus","katex","tbfed-pagefooter","sectionx","simple-page-toc","anchor-navigation-ex","edit-link","accordion","livereload"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 云崖先生 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"starstower"},"github":{"url":"https://github.com/KahnDepot"},"livereload":{},"simple-page-toc":{"maxDepth":5,"skipFirstH1":true},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":true,"qzone":false},"edit-link":{"label":"编辑此页面","base":"https://github.com/KahnDepot/startowernode/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"云崖先生","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"星塔Node","language":"zh-hans","gitbook":"*","description":"一个自用的文档库"},"file":{"path":"Python/Python面向对象/继承.md","mtime":"2021-06-11T08:59:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-13T07:08:57.834Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

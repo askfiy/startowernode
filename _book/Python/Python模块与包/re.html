@@ -1,0 +1,3244 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>内置模块：re · 星塔Node</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="云崖先生">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../public-repertory/css/gitbook-configure.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="importlib.html" />
+    
+    
+    <link rel="prev" href="logging.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../杂谈专栏/summary.html">
+            
+                <a href="../../杂谈专栏/summary.html">
+            
+                    
+                    杂谈专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../杂谈专栏/编程语言区别.html">
+            
+                <a href="../../杂谈专栏/编程语言区别.html">
+            
+                    
+                    编程语言区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../杂谈专栏/详解字符编码.html">
+            
+                <a href="../../杂谈专栏/详解字符编码.html">
+            
+                    
+                    详解字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../杂谈专栏/放一些常见题目.html">
+            
+                <a href="../../杂谈专栏/放一些常见题目.html">
+            
+                    
+                    常见问题大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../summary.html">
+            
+                <a href="../summary.html">
+            
+                    
+                    Python专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Python快速入门/summary.html">
+            
+                <a href="../Python快速入门/summary.html">
+            
+                    
+                    Python快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../Python快速入门/Python简介.html">
+            
+                <a href="../Python快速入门/Python简介.html">
+            
+                    
+                    Python简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../Python快速入门/Python安装.html">
+            
+                <a href="../Python快速入门/Python安装.html">
+            
+                    
+                    Python安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../Python快速入门/pip简单使用.html">
+            
+                <a href="../Python快速入门/pip简单使用.html">
+            
+                    
+                    pip简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../Python快速入门/Python虚拟环境.html">
+            
+                <a href="../Python快速入门/Python虚拟环境.html">
+            
+                    
+                    Python虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../Python快速入门/Python常用工具.html">
+            
+                <a href="../Python快速入门/Python常用工具.html">
+            
+                    
+                    Python常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../Python快速入门/PEP8规范说明.html">
+            
+                <a href="../Python快速入门/PEP8规范说明.html">
+            
+                    
+                    PEP8规范说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Python基础知识/summary.html">
+            
+                <a href="../Python基础知识/summary.html">
+            
+                    
+                    Python基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Python基础知识/代码与注释.html">
+            
+                <a href="../Python基础知识/代码与注释.html">
+            
+                    
+                    代码与注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Python基础知识/变量与常量.html">
+            
+                <a href="../Python基础知识/变量与常量.html">
+            
+                    
+                    变量与常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Python基础知识/整形与浮点型.html">
+            
+                <a href="../Python基础知识/整形与浮点型.html">
+            
+                    
+                    整形与浮点型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Python基础知识/列表类型.html">
+            
+                <a href="../Python基础知识/列表类型.html">
+            
+                    
+                    列表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Python基础知识/元组类型.html">
+            
+                <a href="../Python基础知识/元组类型.html">
+            
+                    
+                    元组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Python基础知识/字符串类型.html">
+            
+                <a href="../Python基础知识/字符串类型.html">
+            
+                    
+                    字符串类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Python基础知识/字典类型.html">
+            
+                <a href="../Python基础知识/字典类型.html">
+            
+                    
+                    字典类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Python基础知识/集合类型.html">
+            
+                <a href="../Python基础知识/集合类型.html">
+            
+                    
+                    集合类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Python基础知识/布尔类型.html">
+            
+                <a href="../Python基础知识/布尔类型.html">
+            
+                    
+                    布尔类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Python基础知识/单例None.html">
+            
+                <a href="../Python基础知识/单例None.html">
+            
+                    
+                    单例None
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.11" data-path="../Python基础知识/内存管理.html">
+            
+                <a href="../Python基础知识/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.12" data-path="../Python基础知识/深浅拷贝.html">
+            
+                <a href="../Python基础知识/深浅拷贝.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.13" data-path="../Python基础知识/输入与输出.html">
+            
+                <a href="../Python基础知识/输入与输出.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.14" data-path="../Python基础知识/运算符相关.html">
+            
+                <a href="../Python基础知识/运算符相关.html">
+            
+                    
+                    运算符相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.15" data-path="../Python基础知识/分支结构.html">
+            
+                <a href="../Python基础知识/分支结构.html">
+            
+                    
+                    分支结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.16" data-path="../Python基础知识/流程控制.html">
+            
+                <a href="../Python基础知识/流程控制.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.17" data-path="../Python基础知识/推导式.html">
+            
+                <a href="../Python基础知识/推导式.html">
+            
+                    
+                    推导式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.18" data-path="../Python基础知识/字符编码.html">
+            
+                <a href="../Python基础知识/字符编码.html">
+            
+                    
+                    字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.19" data-path="../Python基础知识/文件操作.html">
+            
+                <a href="../Python基础知识/文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Python函数相关/summary.html">
+            
+                <a href="../Python函数相关/summary.html">
+            
+                    
+                    Python函数相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../Python函数相关/初识函数.html">
+            
+                <a href="../Python函数相关/初识函数.html">
+            
+                    
+                    初识函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../Python函数相关/使用函数.html">
+            
+                <a href="../Python函数相关/使用函数.html">
+            
+                    
+                    使用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../Python函数相关/参数详解.html">
+            
+                <a href="../Python函数相关/参数详解.html">
+            
+                    
+                    参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../Python函数相关/命名空间.html">
+            
+                <a href="../Python函数相关/命名空间.html">
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../Python函数相关/高阶函数.html">
+            
+                <a href="../Python函数相关/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../Python函数相关/递归函数.html">
+            
+                <a href="../Python函数相关/递归函数.html">
+            
+                    
+                    递归函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../Python函数相关/匿名函数.html">
+            
+                <a href="../Python函数相关/匿名函数.html">
+            
+                    
+                    匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../Python函数相关/内置函数.html">
+            
+                <a href="../Python函数相关/内置函数.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../Python函数相关/装饰器.html">
+            
+                <a href="../Python函数相关/装饰器.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="../Python函数相关/迭代器.html">
+            
+                <a href="../Python函数相关/迭代器.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.11" data-path="../Python函数相关/生成器.html">
+            
+                <a href="../Python函数相关/生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Python模块与包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="目录规范.html">
+            
+                <a href="目录规范.html">
+            
+                    
+                    目录规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="Python模块.html">
+            
+                <a href="Python模块.html">
+            
+                    
+                    Python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="Python包.html">
+            
+                <a href="Python包.html">
+            
+                    
+                    Python包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="time.html">
+            
+                <a href="time.html">
+            
+                    
+                    内置模块：time
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="datetime.html">
+            
+                <a href="datetime.html">
+            
+                    
+                    内置模块：datetime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="random.html">
+            
+                <a href="random.html">
+            
+                    
+                    内置模块：random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    内置模块：os
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="sys.html">
+            
+                <a href="sys.html">
+            
+                    
+                    内置模块：sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="json&pickle&shelve.html">
+            
+                <a href="json&pickle&shelve.html">
+            
+                    
+                    内置模块：json&pickle&shelve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="hashlib.html">
+            
+                <a href="hashlib.html">
+            
+                    
+                    内置模块：hashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="configparser.html">
+            
+                <a href="configparser.html">
+            
+                    
+                    内置模块：configparser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="subprocess.html">
+            
+                <a href="subprocess.html">
+            
+                    
+                    内置模块：subprocess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    内置模块：logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.14" data-path="re.html">
+            
+                <a href="re.html">
+            
+                    
+                    内置模块：re
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.15" data-path="importlib.html">
+            
+                <a href="importlib.html">
+            
+                    
+                    内置模块：importlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.16" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    内置模块：collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.17" data-path="itertools.html">
+            
+                <a href="itertools.html">
+            
+                    
+                    内置模块：itertools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.18" data-path="functools.html">
+            
+                <a href="functools.html">
+            
+                    
+                    内置模块：functools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.19" data-path="模块包库框架的区别.html">
+            
+                <a href="模块包库框架的区别.html">
+            
+                    
+                    模块包库框架的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Python面向对象/summary.html">
+            
+                <a href="../Python面向对象/summary.html">
+            
+                    
+                    Python面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../Python面向对象/编程范式.html">
+            
+                <a href="../Python面向对象/编程范式.html">
+            
+                    
+                    编程范式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../Python面向对象/类与对象.html">
+            
+                <a href="../Python面向对象/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../Python面向对象/类的方法.html">
+            
+                <a href="../Python面向对象/类的方法.html">
+            
+                    
+                    类的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../Python面向对象/属性代理.html">
+            
+                <a href="../Python面向对象/属性代理.html">
+            
+                    
+                    属性代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../Python面向对象/封装.html">
+            
+                <a href="../Python面向对象/封装.html">
+            
+                    
+                    封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../Python面向对象/继承.html">
+            
+                <a href="../Python面向对象/继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../Python面向对象/多态.html">
+            
+                <a href="../Python面向对象/多态.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../Python面向对象/抽象基类.html">
+            
+                <a href="../Python面向对象/抽象基类.html">
+            
+                    
+                    抽象基类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../Python面向对象/自省反射.html">
+            
+                <a href="../Python面向对象/自省反射.html">
+            
+                    
+                    自省反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="../Python面向对象/双下大全.html">
+            
+                <a href="../Python面向对象/双下大全.html">
+            
+                    
+                    双下大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.11" data-path="../Python面向对象/描述符类.html">
+            
+                <a href="../Python面向对象/描述符类.html">
+            
+                    
+                    描述符类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.12" data-path="../Python面向对象/元类编程.html">
+            
+                <a href="../Python面向对象/元类编程.html">
+            
+                    
+                    元类编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.13" data-path="../Python面向对象/异常处理.html">
+            
+                <a href="../Python面向对象/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Python数算基础/summary.html">
+            
+                <a href="../Python数算基础/summary.html">
+            
+                    
+                    Python数算基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" >
+            
+                <span>
+            
+                    
+                    算法与数构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" >
+            
+                <span>
+            
+                    
+                    算法渐进分析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" >
+            
+                <span>
+            
+                    
+                    算法之递归篇
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" >
+            
+                <span>
+            
+                    
+                    算法之搜索篇
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" >
+            
+                <span>
+            
+                    
+                    算法之排序篇
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.6" >
+            
+                <span>
+            
+                    
+                    数构之线性结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.7" >
+            
+                <span>
+            
+                    
+                    数构之链表相关
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.8" >
+            
+                <span>
+            
+                    
+                    数构之树相关
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.9" >
+            
+                <span>
+            
+                    
+                    数构之图相关
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Python设计模式/summary.html">
+            
+                <a href="../Python设计模式/summary.html">
+            
+                    
+                    Python设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../Python设计模式/普通工厂模式.html">
+            
+                <a href="../Python设计模式/普通工厂模式.html">
+            
+                    
+                    普通工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../Python设计模式/普通工厂模式.html">
+            
+                <a href="../Python设计模式/普通工厂模式.html">
+            
+                    
+                    抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../Python设计模式/普通工厂模式.html">
+            
+                <a href="../Python设计模式/普通工厂模式.html">
+            
+                    
+                    建造者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" >
+            
+                <span>
+            
+                    
+                    单例模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" >
+            
+                <span>
+            
+                    
+                    原型模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" >
+            
+                <span>
+            
+                    
+                    适配器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" >
+            
+                <span>
+            
+                    
+                    桥接模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" >
+            
+                <span>
+            
+                    
+                    组合模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" >
+            
+                <span>
+            
+                    
+                    外观模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.10" >
+            
+                <span>
+            
+                    
+                    代理模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.11" >
+            
+                <span>
+            
+                    
+                    装饰器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.12" >
+            
+                <span>
+            
+                    
+                    享元模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.13" >
+            
+                <span>
+            
+                    
+                    责任链模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.14" >
+            
+                <span>
+            
+                    
+                    解释器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.15" >
+            
+                <span>
+            
+                    
+                    迭代器模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.16" >
+            
+                <span>
+            
+                    
+                    观察者模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.17" >
+            
+                <span>
+            
+                    
+                    中介者模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.18" >
+            
+                <span>
+            
+                    
+                    访问者模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.19" >
+            
+                <span>
+            
+                    
+                    备忘录模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.20" >
+            
+                <span>
+            
+                    
+                    命令模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.21" >
+            
+                <span>
+            
+                    
+                    状态模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.22" >
+            
+                <span>
+            
+                    
+                    策略模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.23" >
+            
+                <span>
+            
+                    
+                    模板模式
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    Python网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    TCP粘包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    sockertserver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.4" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    源码分析：socketserver-TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.5" data-path="../Python网络编程/summary.html">
+            
+                <a href="../Python网络编程/summary.html">
+            
+                    
+                    源码分析：socketserver-UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    Python并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    系统发展史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    GIL锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    threading模块使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.4" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    threading锁机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.5" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    threading.local源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.6" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    数据安全与线程队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.7" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    multiprocessing模块使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.8" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    线程池与进程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.9" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    UNIX五大IO模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.10" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    I/O多路复用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.11" data-path="../Python并发编程/summary.html">
+            
+                <a href="../Python并发编程/summary.html">
+            
+                    
+                    协程 asynic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Python驱动程序/summary.html">
+            
+                <a href="../Python驱动程序/summary.html">
+            
+                    
+                    Python驱动程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" >
+            
+                <span>
+            
+                    
+                    Python操纵MySQL
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" >
+            
+                <span>
+            
+                    
+                    Python操纵Redis
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" >
+            
+                <span>
+            
+                    
+                    Python操纵MongoDB
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.4" >
+            
+                <span>
+            
+                    
+                    Python操纵Elasticsearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.5" >
+            
+                <span>
+            
+                    
+                    Python操纵RabbitMQ
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.6" >
+            
+                <span>
+            
+                    
+                    ORM框架：SQLALchemy的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >内置模块：re</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#re&#x7B80;&#x4ECB;"><b>1. </b>re&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x4E00;&#x89C8;"><b>2. </b>&#x65B9;&#x6CD5;&#x4E00;&#x89C8;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B26;&#x53F7;&#x5927;&#x5168;"><b>2.1. </b>&#x7B26;&#x53F7;&#x5927;&#x5168;</a></li><li><span class="title-icon "></span><a href="#&#x5339;&#x914D;&#x65B9;&#x6CD5;"><b>2.2. </b>&#x5339;&#x914D;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x5339;&#x914D;&#x6A21;&#x5F0F;"><b>2.3. </b>&#x5339;&#x914D;&#x6A21;&#x5F0F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x6B63;&#x5219;"><b>3. </b>&#x521B;&#x5EFA;&#x6B63;&#x5219;</a></li><ul><li><span class="title-icon "></span><a href="#refindall"><b>3.1. </b>re.findall()</a></li></ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x7B26;&#x53F7;"><b>4. </b>&#x57FA;&#x7840;&#x7B26;&#x53F7;</a></li><ul><li><span class="title-icon "></span><a href="#&#x901A;&#x914D;&#x7B26;"><b>4.1. </b>. &#x901A;&#x914D;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x5F00;&#x59CB;&#x7B26;"><b>4.2. </b>^ &#x5F00;&#x59CB;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x7ED3;&#x675F;&#x7B26;"><b>4.3. </b>$ &#x7ED3;&#x675F;&#x7B26;</a></li></ul><li><span class="title-icon "></span><a href="#&#x91CD;&#x590D;&#x7B26;"><b>5. </b>&#x91CD;&#x590D;&#x7B26;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53EF;&#x6709;&#x91CD;&#x590D;"><b>5.1. </b>* &#x53EF;&#x6709;&#x91CD;&#x590D;</a></li><li><span class="title-icon "></span><a href="#&#x5FC5;&#x6709;&#x91CD;&#x590D;"><b>5.2. </b>+ &#x5FC5;&#x6709;&#x91CD;&#x590D;</a></li><li><span class="title-icon "></span><a href="#&#x5355;&#x4E00;&#x91CD;&#x590D;"><b>5.3. </b>? &#x5355;&#x4E00;&#x91CD;&#x590D;</a></li><li><span class="title-icon "></span><a href="#nm-&#x8303;&#x56F4;&#x91CD;&#x590D;"><b>5.4. </b>{n,m} &#x8303;&#x56F4;&#x91CD;&#x590D;</a></li><li><span class="title-icon "></span><a href="#n-&#x7CBE;&#x786E;&#x91CD;&#x590D;"><b>5.5. </b>{n} &#x7CBE;&#x786E;&#x91CD;&#x590D;</a></li><li><span class="title-icon "></span><a href="#&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;"><b>5.6. </b>&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x96C6;"><b>6. </b>&#x5B57;&#x7B26;&#x96C6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x96C6;_1"><b>6.1. </b>[] &#x5B57;&#x7B26;&#x96C6;</a></li><li><span class="title-icon "></span><a href="#&#x533A;&#x95F4;&#x7B26;"><b>6.2. </b>[-]&#x533A;&#x95F4;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x9664;&#x7B26;"><b>6.3. </b> &#x6392;&#x9664;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x8F6C;&#x4E49;&#x7B26;"><b>6.4. </b>[\]&#x8F6C;&#x4E49;&#x7B26;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8F6C;&#x4E49;&#x5B57;&#x7B26;"><b>7. </b>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8F6C;&#x4E49;&#x7B26;_1"><b>7.1. </b>\ &#x8F6C;&#x4E49;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#d&#x548C;d"><b>7.2. </b>\d&#x548C;\D</a></li><li><span class="title-icon "></span><a href="#s&#x548C;s"><b>7.3. </b>\s&#x548C;\S</a></li><li><span class="title-icon "></span><a href="#w&#x548C;w"><b>7.4. </b>\w&#x548C;\W</a></li><li><span class="title-icon "></span><a href="#&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;"><b>7.5. </b>&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7BA1;&#x9053;"><b>8. </b>&#x7BA1;&#x9053;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7BA1;&#x9053;&#x7B26;"><b>8.1. </b>| &#x7BA1;&#x9053;&#x7B26;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5206;&#x7EC4;"><b>9. </b>&#x5206;&#x7EC4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5206;&#x7EC4;&#x7B26;"><b>9.1. </b>() &#x5206;&#x7EC4;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x533F;&#x540D;&#x5206;&#x7EC4;"><b>9.2. </b>&#x533F;&#x540D;&#x5206;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x5177;&#x540D;&#x5206;&#x7EC4;"><b>9.3. </b>&#x5177;&#x540D;&#x5206;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x7EC4;&#x5F15;&#x7528;"><b>9.4. </b>&#x5206;&#x7EC4;&#x5F15;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x53D6;&#x6D88;&#x8BB0;&#x5F55;"><b>9.5. </b>&#x53D6;&#x6D88;&#x8BB0;&#x5F55;</a></li></ul><li><span class="title-icon "></span><a href="#&#x65AD;&#x8A00;&#x5339;&#x914D;"><b>10. </b>&#x65AD;&#x8A00;&#x5339;&#x914D;</a></li><ul><li><span class="title-icon "></span><a href="#exp"><b>10.1. </b>(?=exp)</a></li><li><span class="title-icon "></span><a href="#exp_1"><b>10.2. </b>(?<=exp)< a=""></=exp)<></a></li><li><span class="title-icon "></span><a href="#exp_2"><b>10.3. </b>(?!exp)</a></li><li><span class="title-icon "></span><a href="#exp_3"><b>10.4. </b>(?<!exp)</a></a></li></ul><li><span class="title-icon "></span><a href="#re&#x65B9;&#x6CD5;"><b>11. </b>re&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#findall"><b>11.1. </b>findall()</a></li><li><span class="title-icon "></span><a href="#finditer"><b>11.2. </b>finditer()</a></li><li><span class="title-icon "></span><a href="#search"><b>11.3. </b>search()</a></li><li><span class="title-icon "></span><a href="#match"><b>11.4. </b>match()</a></li><li><span class="title-icon "></span><a href="#group"><b>11.5. </b>group()</a></li><li><span class="title-icon "></span><a href="#groups"><b>11.6. </b>groups()</a></li><li><span class="title-icon "></span><a href="#groupdict"><b>11.7. </b>groupdict()</a></li><li><span class="title-icon "></span><a href="#split"><b>11.8. </b>split()</a></li><li><span class="title-icon "></span><a href="#sub"><b>11.9. </b>sub()</a></li><li><span class="title-icon "></span><a href="#subn"><b>11.10. </b>subn()</a></li><li><span class="title-icon "></span><a href="#complie"><b>11.11. </b>complie()</a></li></ul><li><span class="title-icon "></span><a href="#re&#x6A21;&#x5F0F;"><b>12. </b>re&#x6A21;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#rei"><b>12.1. </b>re.I</a></li><li><span class="title-icon "></span><a href="#rem"><b>12.2. </b>re.M</a></li><li><span class="title-icon "></span><a href="#res"><b>12.3. </b>re.S</a></li><li><span class="title-icon "></span><a href="#reu"><b>12.4. </b>re.U</a></li></ul><li><span class="title-icon "></span><a href="#&#x901A;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5927;&#x5168;"><b>13. </b>&#x901A;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5927;&#x5168;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x5B57;&#x6821;&#x9A8C;"><b>13.1. </b>&#x6570;&#x5B57;&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x6821;&#x9A8C;"><b>13.2. </b>&#x5B57;&#x7B26;&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x6821;&#x9A8C;"><b>13.3. </b>&#x5176;&#x4ED6;&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#&#x94B1;&#x5E01;&#x6821;&#x9A8C;"><b>13.4. </b>&#x94B1;&#x5E01;&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#&#x751F;&#x6D3B;&#x9700;&#x6C42;"><b>13.5. </b>&#x751F;&#x6D3B;&#x9700;&#x6C42;</a></li></ul></ul></div><a href="#re&#x7B80;&#x4ECB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="re&#x7B80;&#x4ECB;"><a name="re&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#re&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>1. re&#x7B80;&#x4ECB;</h1>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5176;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5C0F;&#x578B;&#x7684;&#xFF0C;&#x9AD8;&#x5EA6;&#x4E13;&#x4E1A;&#x5316;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x3002;</p>
+<p>&#x5728;Python&#x4E2D;&#xFF0C;&#x5B83;&#x88AB;&#x5185;&#x5D4C;&#x5728;&#x4E86;re&#x6A21;&#x5757;&#x91CC;&#x9762;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6A21;&#x5F0F;&#x88AB;&#x7F16;&#x8BD1;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5B57;&#x8282;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x7531;&#x7528;C&#x7F16;&#x5199;&#x7684;&#x5339;&#x914D;&#x5F15;&#x64CE;&#x6267;&#x884C;&#x3002;</p>
+<p><a href="https://docs.python.org/zh-cn/3.6/library/re.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<p>&#x672C;&#x6587;&#x4EC5;&#x9488;&#x5BF9;&#x53EF;&#x80FD;&#x7528;&#x5230;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#xFF0C;&#x5BF9;&#x4E0D;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x7B49;&#x8FDB;&#x884C;&#x4E86;&#x7B5B;&#x9009;&#x3002;</p>
+<h1 id="&#x65B9;&#x6CD5;&#x4E00;&#x89C8;"><a name="&#x65B9;&#x6CD5;&#x4E00;&#x89C8;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x4E00;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x65B9;&#x6CD5;&#x4E00;&#x89C8;</h1>
+<h2 id="&#x7B26;&#x53F7;&#x5927;&#x5168;"><a name="&#x7B26;&#x53F7;&#x5927;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x7B26;&#x53F7;&#x5927;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x7B26;&#x53F7;&#x5927;&#x5168;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7B26;&#x53F7;&#x5927;&#x5168;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x4E2D;&#x6587;&#x540D;&#x79F0;</th>
+<th>&#x91CA;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>&#x901A;&#x914D;&#x7B26;</td>
+<td>&#x5339;&#x914D;&#x9664;\n&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5339;&#x914D;\n&#x53EF;&#x66F4;&#x6362;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x4E3A;re.S&#x6216;re.DOTALL</td>
+</tr>
+<tr>
+<td>^</td>
+<td>&#x5F00;&#x59CB;&#x7B26;</td>
+<td>&#x5339;&#x914D;&#x4EE5;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;&#x68C0;&#x6D4B;&#x65F6;&#x53EA;&#x4F1A;&#x68C0;&#x6D4B;&#x5F00;&#x5934;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5E76;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>$</td>
+<td>&#x7ED3;&#x675F;&#x7B26;</td>
+<td>&#x5339;&#x914D;&#x4EE5;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x7ED3;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;&#x68C0;&#x6D4B;&#x65F6;&#x53EA;&#x4F1A;&#x68C0;&#x6D4B;&#x7ED3;&#x5C3E;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5E76;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>*</td>
+<td>&#x53EF;&#x6709;&#x91CD;&#x590D;&#x7B26;</td>
+<td>&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;0-&#x221E;&#x4F4D;*&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</td>
+</tr>
+<tr>
+<td>+</td>
+<td>&#x5FC5;&#x6709;&#x91CD;&#x590D;&#x7B26;</td>
+<td>&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;1-&#x221E;&#x4F4D;+&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</td>
+</tr>
+<tr>
+<td>?</td>
+<td>&#x5355;&#x4E00;&#x91CD;&#x590D;&#x7B26;</td>
+<td>&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;1-&#x221E;&#x4F4D;?&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>&#x8303;&#x56F4;&#x91CD;&#x590D;&#x7B26;</td>
+<td>&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;&#x5230;n-m&#x4F4D;{n,m}&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>&#x7CBE;&#x786E;&#x91CD;&#x590D;&#x7B26;</td>
+<td>&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x7CBE;&#x786E;&#x53D6;&#x5230;n&#x4F4D;{n}&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>&#x5B57;&#x7B26;&#x96C6;</td>
+<td>&#x5728;[]&#x4E2D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4EC5;&#x80FD;&#x5339;&#x914D;&#x5230;1&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x6240;&#x6709;&#x7B26;&#x53F7;&#x5931;&#x53BB;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF0C;&#x4EC5;&#x6709;- ^ \ &#x8FD9;3&#x4E2A;&#x7B26;&#x53F7;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;</td>
+</tr>
+<tr>
+<td>[-]</td>
+<td>&#x533A;&#x95F4;&#x7B26;</td>
+<td>&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x7684;-&#x53F7;&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;&#x4ECE;&#x591A;&#x5C11;&#x5230;&#x591A;&#x5C11;&#x533A;&#x95F4;&#x7684;&#x503C;&#xFF0C;&#x6309;&#x7167;ASCII&#x7801;&#x6392;&#x5E8F;&#xFF0C;&#x6BD4;&#x5982;[a-z0-9A-Z]&#x4EE3;&#x8868;&#x8FD9;1&#x4F4D;&#x53D6;&#x5168;&#x90E8;&#x7684;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;</td>
+</tr>
+<tr>
+<td><sup><a href="#fn_" id="reffn_"></a></sup></td>
+<td>&#x6392;&#x9664;&#x7B26;</td>
+<td>&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x7684;^&#x53F7;&#x4EE3;&#x8868;&#x975E;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6BD4;&#x5982;[^0-9]&#x4EE3;&#x8868;&#x8FD9;1&#x4F4D;&#x5E76;&#x975E;&#x662F;&#x6570;&#x5B57;</td>
+</tr>
+<tr>
+<td>[\]</td>
+<td>&#x8F6C;&#x4E49;&#x7B26;</td>
+<td>&#x8F6C;&#x4E49;&#x7B26;&#x5982;&#x679C;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x8D4B;&#x4E88;&#x7279;&#x6B8A;&#x7684;&#x610F;&#x4E49;</td>
+</tr>
+<tr>
+<td>\</td>
+<td>&#x8F6C;&#x4E49;&#x7B26;</td>
+<td>&#x8F6C;&#x4E49;&#x7B26;&#x5982;&#x679C;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x5916;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x8D4B;&#x4E88;&#x7279;&#x6B8A;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x53EF;&#x4EE5;&#x8BA9;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x5931;&#x53BB;&#x7279;&#x6B8A;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x672A;&#x7528;r&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x4EE4;&#x4EBA;&#x610F;&#x5916;&#x7684;&#x60C5;&#x51B5;&#x53D1;&#x751F;</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5341;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x5341;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[^0-9]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[^\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;,&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[a-z A-Z 0-9]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;,&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[a-z A-Z 0-9]</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x8FB9;&#x754C;&#xFF0C;&#x6BD4;&#x5982;&#x7A7A;&#x683C;,&amp;.#&#x7B49;(&#x4E0D;&#x5E38;&#x7528;)</td>
+</tr>
+<tr>
+<td><div style="display: inline-block;background-color: #000;width: 1px;height: 1.5rem;"></div></td>
+<td>&#x7BA1;&#x9053;&#x7B26;</td>
+<td>&#x76F8;&#x5F53;&#x4E8E;&#x6216;&#xFF0C;&#x6CE8;&#x610F;&#x4E0E;&#x5B57;&#x7B26;&#x96C6;&#x91CC;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x7BA1;&#x9053;&#x7B26;&#x5C06;&#x524D;&#x540E;&#x5206;&#x4E3A;2&#x6BB5;&#xFF0C;&#x5DE6;&#x53F3;&#x770B;&#x505A;1&#x4E2A;&#x6574;&#x4F53;&#xFF0C;&#x800C;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x7684;&#x6216;&#x4EC5;&#x4EC5;&#x4EE3;&#x8868;&#x4ECE;&#x4F17;&#x591A;&#x9009;&#x9879;&#x4E2D;&#x62FF;&#x51FA;1&#x4E2A;</td>
+</tr>
+<tr>
+<td>()</td>
+<td>&#x5206;&#x7EC4;&#x7B26;</td>
+<td>&#x5C06;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x5B57;&#x7B26;&#x770B;&#x505A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x5B83;&#x4EEC;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x82E5;&#x6574;&#x4E2A;&#x5339;&#x914D;&#x89C4;&#x5219;&#x4E2D;&#x65E0;&#x5B50;&#x5206;&#x7EC4;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E3A;&#x4E00;&#x7EC4;</td>
+</tr>
+<tr>
+<td>(?=exp)</td>
+<td>&#x96F6;&#x5BBD;&#x5148;&#x884C;&#x65AD;&#x8A00;</td>
+<td>&#x5339;&#x914D;&#x540E;&#x9762;&#x4E3A;exp&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>(?&lt;=exp)</td>
+<td>&#x96F6;&#x5BBD;&#x540E;&#x884C;&#x65AD;&#x8A00;</td>
+<td>&#x5339;&#x914D;&#x524D;&#x9762;&#x4E3A;exp&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>(?!exp)</td>
+<td>&#x96F6;&#x5BBD;&#x8D1F;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;</td>
+<td>&#x5339;&#x914D;&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x662F;exp&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>(?&lt;!exp)</td>
+<td>&#x96F6;&#x5BBD;&#x8D1F;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;</td>
+<td>&#x5339;&#x914D;&#x524D;&#x9762;&#x4E0D;&#x80FD;&#x662F;exp&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5339;&#x914D;&#x65B9;&#x6CD5;"><a name="&#x5339;&#x914D;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5339;&#x914D;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x5339;&#x914D;&#x65B9;&#x6CD5;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F;re&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;&#x6B63;&#x5219;&#x5339;&#x914D;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>findall()</td>
+<td>&#x5C06;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x81F3;1&#x4E2A;&#x5217;&#x8868;&#x4E2D;</td>
+</tr>
+<tr>
+<td>finditer()</td>
+<td>&#x5C06;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x81F3;1&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;</td>
+</tr>
+<tr>
+<td>search()</td>
+<td>&#x5C06;&#x9996;&#x6B21;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x81F3;search&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;group()&#x8FDB;&#x884C;&#x53D6;&#x503C;</td>
+</tr>
+<tr>
+<td>match()</td>
+<td>&#x5728;search()&#x57FA;&#x7840;&#x4E0A;&#x6DFB;&#x52A0;&#x4E86;^&#xFF0C;&#x4F7F;&#x4E4B;&#x53EA;&#x80FD;&#x5728;&#x5F00;&#x5934;&#x5339;&#x914D;</td>
+</tr>
+<tr>
+<td>group()</td>
+<td>&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x5BF9;search&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5B50;&#x7EC4;</td>
+</tr>
+<tr>
+<td>groups()</td>
+<td>&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x5BF9;search&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x5B50;&#x7EC4;</td>
+</tr>
+<tr>
+<td>groupdict()</td>
+<td>&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x5BF9;search&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x5177;&#x540D;&#x5B50;&#x7EC4;</td>
+</tr>
+<tr>
+<td>split()</td>
+<td>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x5206;&#x5272;&#xFF0C;&#x5176;&#x7B97;&#x6CD5;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4EE4;&#x4EBA;&#x610F;&#x5916;&#x7684;&#x60C5;&#x51B5;&#x53D1;&#x751F;</td>
+</tr>
+<tr>
+<td>sub()</td>
+<td>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#xFF0C;&#x6700;&#x5C11;&#x9700;&#x8981;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>subn()</td>
+<td>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#xFF0C;&#x6700;&#x5C11;&#x9700;&#x8981;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7956;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x66FF;&#x6362;&#x6210;&#x529F;&#x4E86;&#x51E0;&#x6B21;</td>
+</tr>
+<tr>
+<td>complie()</td>
+<td>&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x6807;&#x793A;&#x7B26;&#x8D4B;&#x4E88;&#x6307;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x8FBE;&#x5230;&#x7B80;&#x5316;&#x91CD;&#x590D;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x7684;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5339;&#x914D;&#x6A21;&#x5F0F;"><a name="&#x5339;&#x914D;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5339;&#x914D;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x5339;&#x914D;&#x6A21;&#x5F0F;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F;re&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;&#x6B63;&#x5219;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6A21;&#x5F0F;&#x7B80;&#x5199;</th>
+<th>&#x6A21;&#x5F0F;&#x5168;&#x5199;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>re.I</td>
+<td>re.IGNORECASE</td>
+<td>&#x4E0D;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x7684;&#x5339;&#x914D;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>re.M</td>
+<td>re.MULTILINE</td>
+<td>&#x89C6;&#x4E3A;&#x591A;&#x884C;&#x7684;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF0C;&#x4EE5;\n&#x4F5C;&#x4E3A;&#x884C;&#x5206;&#x5272;&#x7B26;</td>
+</tr>
+<tr>
+<td>re.S</td>
+<td>re.DOTALL</td>
+<td>&#x89C6;&#x4E3A;&#x5355;&#x884C;&#x7684;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x901A;&#x914D;&#x7B26;&#x53EF;&#x4EE5;&#x5339;&#x914D;\n</td>
+</tr>
+<tr>
+<td>re.U</td>
+<td>re.UNICODE</td>
+<td>&#x5BBD;&#x5B57;&#x7B26;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x652F;&#x6301;&#x5339;&#x914D;&#x5360;4&#x4E2A;&#x5B57;&#x7B26;&#x7684;UTF-16&#x5339;&#x914D;&#x6A21;&#x5F0F;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x521B;&#x5EFA;&#x6B63;&#x5219;"><a name="&#x521B;&#x5EFA;&#x6B63;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x6B63;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x521B;&#x5EFA;&#x6B63;&#x5219;</h1>
+<h2 id="refindall"><a name="refindall" class="anchor-navigation-ex-anchor" href="#refindall"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. re.findall()</h2>
+<p>&#x5728;&#x6D4B;&#x8BD5;&#x9636;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x5927;&#x90E8;&#x5206;&#x793A;&#x4F8B;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;re.findall()&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x5B83;&#x7684;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>def findall(pattern, string, flags=0):
+</code></pre><p>&#x53C2;&#x6570;&#x91CA;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>pattern&#xFF1A;&#x5339;&#x914D;&#x89C4;&#x5219;</li>
+<li>string&#xFF1A;&#x88AB;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>flags&#xFF1A;&#x5339;&#x914D;&#x6A21;&#x5F0F;</li>
+</ul>
+<p>&#x4E00;&#x6B21;&#x7B80;&#x5355;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5339;&#x914D;&#x4EE5;hello&#x5F00;&#x5934;&#x4E14;&#x4EE5;exp&#x7ED3;&#x5C3E;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x91C7;&#x7528;&#x591A;&#x884C;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre><code>import re
+string = &quot;hello world\nhello regexp\nhello python\n&quot;
+resultList = re.findall(
+    pattern=r&quot;^hello.*exp$&quot;,
+    string=string,
+    flags=re.M
+)
+
+print(resultList)
+
+# [&apos;hello regexp&apos;]
+</code></pre><h1 id="&#x57FA;&#x7840;&#x7B26;&#x53F7;"><a name="&#x57FA;&#x7840;&#x7B26;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x7B26;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x57FA;&#x7840;&#x7B26;&#x53F7;</h1>
+<h2 id="&#x901A;&#x914D;&#x7B26;"><a name="&#x901A;&#x914D;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x914D;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. . &#x901A;&#x914D;&#x7B26;</h2>
+<p>.&#x901A;&#x914D;&#x7B26;&#x4F1A;&#x5339;&#x914D;&#x9664;\n&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5339;&#x914D;\n&#x53EF;&#x66F4;&#x6362;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x4E3A;re.S&#x6216;re.DOTALL&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;11&#x4E2A;&#x9664;&#x5F00;\n&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x7EC4;&#x6210;&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;.&quot; * 11
+string = &quot;hello world\n123456abcdeABCDE&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;hello world&apos;, &apos;123456abcde&apos;]
+</code></pre><h2 id="&#x5F00;&#x59CB;&#x7B26;"><a name="&#x5F00;&#x59CB;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x59CB;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. ^ &#x5F00;&#x59CB;&#x7B26;</h2>
+<p>^&#x5F00;&#x59CB;&#x7B26;&#x4F1A;&#x5339;&#x914D;&#x4EE5;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;&#x68C0;&#x6D4B;&#x65F6;&#x53EA;&#x4F1A;&#x68C0;&#x6D4B;&#x5F00;&#x5934;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5E76;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x4EE5;P&#x5F00;&#x5934;&#x4E14;&#x540E;&#x9762;&#x5FC5;&#x987B;&#x662F;ython&#x52A0;&#x4E0A;7&#x4E2A;&#x9664;&#x5F00;\n&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;^Python.......&quot;
+string = &quot;Python regexp module&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;Python regexp&apos;]
+</code></pre><h2 id="&#x7ED3;&#x675F;&#x7B26;"><a name="&#x7ED3;&#x675F;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x675F;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. $ &#x7ED3;&#x675F;&#x7B26;</h2>
+<p>$&#x7ED3;&#x675F;&#x7B26;&#x4F1A;&#x5339;&#x914D;&#x4EE5;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x7ED3;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5728;&#x68C0;&#x6D4B;&#x65F6;&#x53EA;&#x4F1A;&#x68C0;&#x6D4B;&#x7ED3;&#x5C3E;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5E76;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5339;&#x914D;&#x4EE5;p&#x7ED3;&#x675F;&#xFF0C;&#x4E14;&#x524D;&#x9762;2&#x4E2A;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x662F;E&#x4E0E;x&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;Exp$&quot;
+string = &quot;Python regexp regExp RegExp&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;Exp&apos;]
+</code></pre><h1 id="&#x91CD;&#x590D;&#x7B26;"><a name="&#x91CD;&#x590D;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x590D;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x91CD;&#x590D;&#x7B26;</h1>
+<h2 id="&#x53EF;&#x6709;&#x91CD;&#x590D;"><a name="&#x53EF;&#x6709;&#x91CD;&#x590D;" class="anchor-navigation-ex-anchor" href="#&#x53EF;&#x6709;&#x91CD;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. * &#x53EF;&#x6709;&#x91CD;&#x590D;</h2>
+<p>*&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;0-&#x221E;&#x4F4D;*&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x5FC5;&#x987B;&#x662F;&#x4EE5;h&#x5F00;&#x5934;&#xFF0C;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x6709;0&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x9664;&#x4E86;\n&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x7D27;&#x63A5;&#x7740;\n&#x540E;&#x7EE7;&#x7EED;&#x5339;&#x914D;0&#x4E2A;&#x6216;&#x8005;n&#x4E2A;&#x9664;&#x4E86;\n&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x6700;&#x540E;&#x5FC5;&#x987B;&#x4EE5;p&#x8FDB;&#x884C;&#x7ED3;&#x5C3E;&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;^h.*\n.*p$&quot;
+string = &quot;hello Python\nregexp&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;hello Python\nregexp&apos;]
+</code></pre><p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x6709;3&#x4E2A;&#x6761;&#x4EF6;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;</p>
+<ul>
+<li>h&#x5F00;&#x5934;</li>
+<li>&#x4E2D;&#x95F4;&#x5FC5;&#x987B;&#x6709;\n</li>
+<li>p&#x7ED3;&#x675F;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x4F1A;&#x88AB;&#x5339;&#x914D;&#x5230;&#xFF1A;</p>
+<pre><code>string = &quot;h\np&quot;
+</code></pre><h2 id="&#x5FC5;&#x6709;&#x91CD;&#x590D;"><a name="&#x5FC5;&#x6709;&#x91CD;&#x590D;" class="anchor-navigation-ex-anchor" href="#&#x5FC5;&#x6709;&#x91CD;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. + &#x5FC5;&#x6709;&#x91CD;&#x590D;</h2>
+<p>+&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;1-&#x221E;&#x4F4D;+&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x5FC5;&#x987B;&#x662F;&#x4EE5;h&#x5F00;&#x5934;&#xFF0C;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x6709;1&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x9664;&#x4E86;\n&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x7D27;&#x63A5;&#x7740;\n&#x540E;&#x7EE7;&#x7EED;&#x5339;&#x914D;1&#x4E2A;&#x6216;&#x8005;n&#x4E2A;&#x9664;&#x4E86;\n&#x5916;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x6700;&#x540E;&#x5FC5;&#x987B;&#x4EE5;p&#x8FDB;&#x884C;&#x7ED3;&#x5C3E;&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;^h.+\n.+p$&quot;
+string = &quot;hello Python\nregexp&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;hello Python\nregexp&apos;]
+</code></pre><p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x6709;5&#x4E2A;&#x6761;&#x4EF6;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF1A;</p>
+<ul>
+<li>h&#x5F00;&#x5934;</li>
+<li>h&#x540E;&#x9762;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x6709;1&#x4E2A;&#x4EFB;&#x610F;&#x5B57;&#x7B26;</li>
+<li>&#x4E2D;&#x95F4;&#x5FC5;&#x987B;&#x6709;\n</li>
+<li>\n&#x540E;&#x9762;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x6709;1&#x4E2A;&#x4EFB;&#x610F;&#x5B57;&#x7B26;</li>
+<li>p&#x7ED3;&#x675F;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x4F1A;&#x88AB;&#x5339;&#x914D;&#x5230;&#xFF1A;</p>
+<pre><code>string = &quot;h\np&quot;
+</code></pre><h2 id="&#x5355;&#x4E00;&#x91CD;&#x590D;"><a name="&#x5355;&#x4E00;&#x91CD;&#x590D;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x4E00;&#x91CD;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. ? &#x5355;&#x4E00;&#x91CD;&#x590D;</h2>
+<p>?&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;1-&#x221E;&#x4F4D;?&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x53EF;&#x4EE5;&#x662F;1&#x5F00;&#x5934;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x662F;1&#x5F00;&#x5934;&#x4E14;&#x540E;&#x9762;&#x662F;2345678&#x4E14;&#x4EE5;9&#x7ED3;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;^1?23456789$&quot;
+string = &quot;123456789&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;123456789&apos;]
+</code></pre><p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x6709;2&#x4E2A;&#x6761;&#x4EF6;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#x5982;&#x679C;&#x4E0D;&#x662F;1&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x662F;2</li>
+<li>&#x540E;&#x9762;&#x5FC5;&#x987B;&#x8DDF;&#x4E0A;345678&#xFF0C;&#x4E14;&#x4EE5;9&#x7ED3;&#x5C3E;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x4F1A;&#x88AB;&#x5339;&#x914D;&#x5230;&#xFF1A;</p>
+<pre><code>string = &quot;23456789&quot;
+</code></pre><h2 id="nm-&#x8303;&#x56F4;&#x91CD;&#x590D;"><a name="nm-&#x8303;&#x56F4;&#x91CD;&#x590D;" class="anchor-navigation-ex-anchor" href="#nm-&#x8303;&#x56F4;&#x91CD;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>5.4. {n,m} &#x8303;&#x56F4;&#x91CD;&#x590D;</h2>
+<p>{n,m}&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;&#x5230;n-m&#x4F4D;{n,m}&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#xFF08;&#x9ED8;&#x8BA4;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;?&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF09;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x5305;&#x542B;4&#x4E2A;&#x6216;&#x8005;3&#x4E2A;&#x8FDE;&#x7EED;&#x662F;1&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;1{3,4}&quot;
+string = &quot;1111111&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;1111&apos;, &apos;111&apos;]
+</code></pre><h2 id="n-&#x7CBE;&#x786E;&#x91CD;&#x590D;"><a name="n-&#x7CBE;&#x786E;&#x91CD;&#x590D;" class="anchor-navigation-ex-anchor" href="#n-&#x7CBE;&#x786E;&#x91CD;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>5.5. {n} &#x7CBE;&#x786E;&#x91CD;&#x590D;</h2>
+<p>{n}&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x7CBE;&#x786E;&#x53D6;&#x5230;n&#x4F4D;{n}&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x5305;&#x542B;3&#x4E2A;&#x8FDE;&#x7EED;&#x7684;1&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;1{3}&quot;
+string = &quot;1111111&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;111&apos;, &apos;111&apos;]
+</code></pre><h2 id="&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;"><a name="&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>5.6. &#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;</h2>
+<p>&#x9ED8;&#x8BA4;&#x7684;*&#xFF0C;+&#xFF0C;?&#xFF0C;{n,m}&#x90FD;&#x662F;&#x8D2A;&#x5A6A;&#x53D6;&#x503C;&#x3002;</p>
+<p>&#x5373;&#x6709;&#x591A;&#x4E2A;&#x5C31;&#x53D6;&#x591A;&#x4E2A;&#xFF0C;&#x6CA1;&#x6709;&#x591A;&#x4E2A;&#x624D;&#x5C11;&#x53D6;&#x3002;</p>
+<p>&#x5728;&#x5B83;&#x4EEC;&#x540E;&#x9762;&#x52A0;&#x4E0A;?&#x5373;&#x53EF;&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#xFF0C;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>import re
+
+ruleList = [
+    # &#x53D6;0&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;a&#xFF0C;&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x540E;&#x53D6;0&#x4E2A;
+    &quot;a*?&quot;,
+    # &#x53D6;1&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;a&#xFF0C;&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x540E;&#x53D6;1&#x4E2A;
+    &quot;a+?&quot;,
+    # &#x53D6;0&#x4E2A;&#x6216;&#x8005;1&#x4E2A;a&#xFF0C;&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x540E;&#x53D6;0&#x4E2A;
+    &quot;a??&quot;,
+    # &#x53D6;3&#x4E2A;&#x6216;&#x8005;4&#x4E2A;a&#xFF0C;&#x53D6;&#x6D88;&#x8D2A;&#x5A6A;&#x540E;&#x53D6;3&#x4E2A;
+    &quot;a{3,4}&quot;
+]
+
+string = &quot;a&quot; * 7
+
+for rule in ruleList:
+    resultList = re.findall(pattern=rule, string=string)
+    print(resultList)
+
+# [&apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;]
+# [&apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;]
+# [&apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;]
+# [&apos;aaaa&apos;, &apos;aaa&apos;]
+</code></pre><h1 id="&#x5B57;&#x7B26;&#x96C6;"><a name="&#x5B57;&#x7B26;&#x96C6;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x5B57;&#x7B26;&#x96C6;</h1>
+<h2 id="&#x5B57;&#x7B26;&#x96C6;_1"><a name="&#x5B57;&#x7B26;&#x96C6;_1" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x96C6;_1"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. [] &#x5B57;&#x7B26;&#x96C6;</h2>
+<p>&#x5728;[]&#x4E2D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4EC5;&#x80FD;&#x5339;&#x914D;&#x5230;1&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x6240;&#x6709;&#x7B26;&#x53F7;&#x5931;&#x53BB;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF0C;&#x4EC5;&#x6709;- ^ \ &#x8FD9;3&#x4E2A;&#x7B26;&#x53F7;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x5305;&#x542B;1a&#x6216;&#x8005;2a&#x6216;&#x8005;3a&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;[123]a&quot;
+string = &quot;1a2a3a1b2b3b&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;1a&apos;, &apos;2a&apos;, &apos;3a&apos;]
+</code></pre><h2 id="&#x533A;&#x95F4;&#x7B26;"><a name="&#x533A;&#x95F4;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x533A;&#x95F4;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. [-]&#x533A;&#x95F4;&#x7B26;</h2>
+<p>&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x7684;-&#x53F7;&#x4EE3;&#x8868;&#x53EF;&#x4EE5;&#x53D6;&#x4ECE;&#x591A;&#x5C11;&#x5230;&#x591A;&#x5C11;&#x533A;&#x95F4;&#x7684;&#x503C;&#xFF0C;&#x6309;&#x7167;ASCII&#x7801;&#x6392;&#x5E8F;&#xFF0C;&#x6BD4;&#x5982;[a-z0-9A-Z]&#x4EE3;&#x8868;&#x8FD9;1&#x4F4D;&#x53D6;&#x5168;&#x90E8;&#x7684;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x6240;&#x6709;&#x7531;&#x8FDE;&#x7EED;&#x7684;&#x5B57;&#x6BCD;&#x6216;&#x8005;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;[0-9A-Za-z]+&quot;
+string = &quot;1b23c4d\n2342bbc&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;1b23c4d&apos;, &apos;2342bbc&apos;]
+</code></pre><h2 id="&#x6392;&#x9664;&#x7B26;"><a name="&#x6392;&#x9664;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x9664;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3.  &#x6392;&#x9664;&#x7B26;</h2>
+<p>&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x7684;^&#x53F7;&#x4EE3;&#x8868;&#x975E;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6BD4;&#x5982;[^0-9]&#x4EE3;&#x8868;&#x8FD9;1&#x4F4D;&#x5E76;&#x975E;&#x662F;&#x6570;&#x5B57;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x5C3E;&#x4E0D;&#x4E3A;&#x6570;&#x5B57;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x4E3A;&#x591A;&#x884C;&#x5339;&#x914D;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;.+[^0-9]$&quot;
+string = &quot;abc\n12x\n345&quot;
+resultList = re.findall(pattern=rule, string=string, flags=re.M)
+
+print(resultList)
+
+# [&apos;abc&apos;, &apos;12x&apos;]
+</code></pre><h2 id="&#x8F6C;&#x4E49;&#x7B26;"><a name="&#x8F6C;&#x4E49;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x4E49;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4. [\]&#x8F6C;&#x4E49;&#x7B26;</h2>
+<p>&#x8F6C;&#x4E49;&#x7B26;&#x5982;&#x679C;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x8D4B;&#x4E88;&#x7279;&#x6B8A;&#x7684;&#x610F;&#x4E49;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;\w&#x662F;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x5339;&#x914D;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;[\w]+&quot;
+string = &quot;abc\n12x\n345&quot;
+resultList = re.findall(pattern=rule, string=string, flags=re.M)
+
+print(resultList)
+
+# [&apos;abc&apos;, &apos;12x&apos;, &apos;345&apos;]
+</code></pre><h1 id="&#x8F6C;&#x4E49;&#x5B57;&#x7B26;"><a name="&#x8F6C;&#x4E49;&#x5B57;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x4E49;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x8F6C;&#x4E49;&#x5B57;&#x7B26;</h1>
+<h2 id="&#x8F6C;&#x4E49;&#x7B26;_1"><a name="&#x8F6C;&#x4E49;&#x7B26;_1" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x4E49;&#x7B26;_1"><i class="fa fa-link" aria-hidden="true"></i></a>7.1. \ &#x8F6C;&#x4E49;&#x7B26;</h2>
+<p>&#x8F6C;&#x4E49;&#x7B26;&#x5982;&#x679C;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x5916;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x8D4B;&#x4E88;&#x7279;&#x6B8A;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x53EF;&#x4EE5;&#x8BA9;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x5931;&#x53BB;&#x7279;&#x6B8A;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x672A;&#x7528;r&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x4EE4;&#x4EBA;&#x610F;&#x5916;&#x7684;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x3002;</p>
+<p>&#x5982;&#xFF0C;&#x5931;&#x53BB;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF1A;</p>
+<p>.&#x672C;&#x6765;&#x662F;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x662F;\.&#x5C31;&#x662F;&#x666E;&#x901A;&#x7684;.&#xFF0C;&#x518D;&#x4E5F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#x4E86;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x4E00;&#x4E2A;url&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;w{3}\.\w+\.com&quot;
+string = &quot;www.google.com www.biying.com&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;www.google.com&apos;, &apos;www.biying.com&apos;]
+</code></pre><p>&#x4EE5;&#x4E0B;&#x662F;&#x5E38;&#x7528;&#x52A0;&#x4E0A;\&#x540E;&#x5C31;&#x62E5;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x4E2D;&#x6587;&#x540D;&#x79F0;</th>
+<th>&#x91CA;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5341;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x5341;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[^0-9]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[^\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;,&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[a-z A-Z 0-9]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;,&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[a-z A-Z 0-9]</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>...</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x8FB9;&#x754C;&#xFF0C;&#x6BD4;&#x5982;&#x7A7A;&#x683C;,&amp;.#&#x7B49;(&#x4E0D;&#x5E38;&#x7528;)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="d&#x548C;d"><a name="d&#x548C;d" class="anchor-navigation-ex-anchor" href="#d&#x548C;d"><i class="fa fa-link" aria-hidden="true"></i></a>7.2. \d&#x548C;\D</h2>
+<p>\d&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5341;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[0-9]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;\d+&quot;
+string = &quot;123 abc 1a2b3c&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;123&apos;, &apos;1&apos;, &apos;2&apos;, &apos;3&apos;]
+</code></pre><p>\D&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x5341;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[^0-9]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;\D+&quot;
+string = &quot;123 abc 1a2b3c&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos; abc &apos;, &apos;a&apos;, &apos;b&apos;, &apos;c&apos;]
+</code></pre><h2 id="s&#x548C;s"><a name="s&#x548C;s" class="anchor-navigation-ex-anchor" href="#s&#x548C;s"><i class="fa fa-link" aria-hidden="true"></i></a>7.3. \s&#x548C;\S</h2>
+<p>\s&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[\t\n\r\f\v]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;\s&quot;
+string = &quot;123 abc 1a2b3c&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos; &apos;, &apos; &apos;]
+</code></pre><p>\S&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[^\t\n\r\f\v]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;\S&quot;
+string = &quot;123 abc 1a2b3c&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;1&apos;, &apos;a&apos;, &apos;2&apos;, &apos;b&apos;, &apos;3&apos;, &apos;c&apos;]
+</code></pre><h2 id="w&#x548C;w"><a name="w&#x548C;w" class="anchor-navigation-ex-anchor" href="#w&#x548C;w"><i class="fa fa-link" aria-hidden="true"></i></a>7.4. \w&#x548C;\W</h2>
+<p>\w&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;,&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[a-z A-Z 0-9]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;\w+&quot;
+string = &quot;user_name123 \t\n\f&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;user_name123&apos;]
+</code></pre><p>\W&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x975E;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;,&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x4F7F;&#x7528;[a-z A-Z 0-9]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;\W+&quot;
+string = &quot;user_name123 \t\n\f&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos; \t\n\x0c&apos;]
+</code></pre><h2 id="&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;"><a name="&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>7.5. &#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;</h2>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;re&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x548C;&#x9884;&#x6599;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x7B26;&#x3002;</p>
+<p>&#x6211;&#x60F3;&#x5339;&#x914D;1&#x4E2A;\&#x6216;&#x8005;\d&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;[\\d]&quot;
+string = &quot;123\\456\\&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;]
+</code></pre><p>&#x662F;&#x4EC0;&#x4E48;&#x539F;&#x56E0;&#x5BFC;&#x81F4;&#x4E86;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#xFF1F;&#x7531;&#x4E8E;re&#x6A21;&#x5757;&#x5EFA;&#x7ACB;&#x5728;Python&#x89E3;&#x91CA;&#x5668;&#x4E4B;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;\\d&#x4F1A;&#x88AB;&#x5206;&#x89E3;&#x6210;\d&#xFF0C;&#x6545;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210529112028774.png" alt="image-20210529112028774"></p>
+<p>&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5462;&#xFF1F;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF1A;</p>
+<pre><code>rule = &quot;[\\\\d]&quot;
+</code></pre><p>&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre><code>[&apos;\\&apos;, &apos;\\&apos;]
+</code></pre><p>d&#x88AB;&#x5F53;&#x6210;&#x4E86;&#x5355;&#x72EC;&#x7684;&#x666E;&#x901A;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E86;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210529112120780.png" alt="image-20210529112120780"></p>
+<p>&#x5176;&#x5B9E;&#x6700;&#x6709;&#x6548;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x5BF9;rule&#x91C7;&#x7528;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;[\\\d]&quot;
+string = &quot;123\\456\\&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;\\&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;, &apos;\\&apos;]
+</code></pre><p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210529112217506.png" alt="image-20210529112217506"></p>
+<p>&#x6240;&#x4EE5;&#x65E0;&#x8BBA;&#x4ECA;&#x540E;&#x5728;&#x4EC0;&#x4E48;&#x573A;&#x5408;&#x4E0B;&#xFF0C;&#x5BF9;&#x4E8E;rule&#x90FD;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x5B9A;&#x4E49;&#x5C31;ok&#x4E86;&#x3002;</p>
+<h1 id="&#x7BA1;&#x9053;"><a name="&#x7BA1;&#x9053;" class="anchor-navigation-ex-anchor" href="#&#x7BA1;&#x9053;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x7BA1;&#x9053;</h1>
+<h2 id="&#x7BA1;&#x9053;&#x7B26;"><a name="&#x7BA1;&#x9053;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x7BA1;&#x9053;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>8.1. | &#x7BA1;&#x9053;&#x7B26;</h2>
+<p>|&#x7BA1;&#x9053;&#x7B26;&#x76F8;&#x5F53;&#x4E8E;&#x6216;&#xFF0C;&#x6CE8;&#x610F;&#x4E0E;&#x5B57;&#x7B26;&#x96C6;&#x91CC;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x7BA1;&#x9053;&#x7B26;&#x5C06;&#x524D;&#x540E;&#x5206;&#x4E3A;2&#x6BB5;&#xFF0C;&#x5DE6;&#x53F3;&#x770B;&#x505A;1&#x4E2A;&#x6574;&#x4F53;&#xFF0C;&#x800C;&#x5B57;&#x7B26;&#x96C6;&#x4E2D;&#x7684;&#x6216;&#x4EC5;&#x4EC5;&#x4EE3;&#x8868;&#x4ECE;&#x4F17;&#x591A;&#x9009;&#x9879;&#x4E2D;&#x62FF;&#x51FA;1&#x4E2A;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5339;&#x914D;abc123&#x6216;&#x8005;456xyz&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;abc123|456xyz&quot;
+string = &quot;abcdefgabc123xyzqud456xyz&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;abc123&apos;, &apos;456xyz&apos;]
+</code></pre><h1 id="&#x5206;&#x7EC4;"><a name="&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x5206;&#x7EC4;</h1>
+<p>&#x63A8;&#x8350;&#x5728;&#x5206;&#x7EC4;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;re.search()&#x6216;&#x8005;re.match()&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x5206;&#x7EC4;&#x7B26;"><a name="&#x5206;&#x7EC4;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7EC4;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1. () &#x5206;&#x7EC4;&#x7B26;</h2>
+<p>()&#x5206;&#x7EC4;&#x7B26;&#x5C06;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x5B57;&#x7B26;&#x770B;&#x505A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x5B83;&#x4EEC;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x3002;&#x82E5;&#x6574;&#x4E2A;&#x5339;&#x914D;&#x89C4;&#x5219;&#x4E2D;&#x65E0;&#x5B50;&#x5206;&#x7EC4;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E3A;&#x4E00;&#x7EC4;&#xFF1A;</p>
+<p>&#x5982;&#x4E0B;&#xFF0C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x5B50;&#x5206;&#x7EC4;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E3A;1&#x7EC4;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x53EF;&#x901A;&#x8FC7;group(0)&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x6574;&#x7EC4;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;&lt;\w+&gt;.*&lt;/\w+&gt;&quot;
+string = &quot;&lt;div&gt;hello world&lt;/div&gt;&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0))
+
+# &lt;div&gt;hello world&lt;/div&gt;
+</code></pre><h2 id="&#x533F;&#x540D;&#x5206;&#x7EC4;"><a name="&#x533F;&#x540D;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x533F;&#x540D;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>9.2. &#x533F;&#x540D;&#x5206;&#x7EC4;</h2>
+<p>&#x533F;&#x540D;&#x5206;&#x7EC4;&#x5373;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#x7684;&#x5206;&#x7EC4;&#xFF0C;&#x5355;&#x7EAF;&#x7684;&#x7528;&#x62EC;&#x53F7;&#x5305;&#x88F9;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;&#x5B50;&#x5206;&#x7EC4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;groups()&#x65B9;&#x6CD5;&#x6765;&#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x5B50;&#x5206;&#x7EC4;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;3&#x4E2A;&#x533F;&#x540D;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x62FF;&#x5230;&#x6807;&#x7B7E;&#x540D;&#x5B57;&#xFF0C;&#x6807;&#x7B7E;&#x5185;&#x5BB9;&#xFF0C;&#x6807;&#x7B7E;&#x7ED3;&#x675F;</p>
+<pre><code>import re
+rule = r&quot;&lt;(\w+)&gt;(.*)&lt;/(\1)&gt;&quot; 
+string = &quot;&lt;div&gt;hello world&lt;/div&gt;&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groups())
+
+# (&apos;div&apos;, &apos;hello world&apos;, &apos;div&apos;)
+</code></pre><h2 id="&#x5177;&#x540D;&#x5206;&#x7EC4;"><a name="&#x5177;&#x540D;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x5177;&#x540D;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>9.3. &#x5177;&#x540D;&#x5206;&#x7EC4;</h2>
+<p>&#x5177;&#x540D;&#x5206;&#x7EC4;&#x7684;&#x610F;&#x601D;&#x662F;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x5206;&#x7EC4;&#x53D6;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#x662F;(?P\<subgroupname\>regexp)&#xFF0C;&#x5BF9;&#x4E8E;&#x5177;&#x540D;&#x5206;&#x7EC4;&#x6765;&#x8BF4;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;groupdict()&#x6765;&#x67E5;&#x770B;&#x5206;&#x7EC4;&#x7684;&#x540D;&#x5B57;&#x548C;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x3002;</subgroupname\></p>
+<p>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;3&#x4E2A;&#x5177;&#x540D;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x62FF;&#x5230;&#x6807;&#x7B7E;&#x540D;&#x5B57;&#xFF0C;&#x6807;&#x7B7E;&#x5185;&#x5BB9;&#xFF0C;&#x6807;&#x7B7E;&#x7ED3;&#x675F;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;&lt;(?P&lt;tagName&gt;\w+)&gt;(?P&lt;tagContext&gt;.*)&lt;/(?P&lt;tagEnd&gt;\1)&gt;&quot; 
+string = &quot;&lt;div&gt;hello world&lt;/div&gt;&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groupdict())
+
+# {&apos;tagName&apos;: &apos;div&apos;, &apos;tagContext&apos;: &apos;hello world&apos;, &apos;tagEnd&apos;: &apos;div&apos;}
+</code></pre><h2 id="&#x5206;&#x7EC4;&#x5F15;&#x7528;"><a name="&#x5206;&#x7EC4;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7EC4;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>9.4. &#x5206;&#x7EC4;&#x5F15;&#x7528;</h2>
+<p>&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x5B50;&#x5206;&#x7EC4;&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x5C31;&#x662F;1&#x4E2A;&#x5206;&#x7EC4;&#xFF0C;&#x7F16;&#x53F7;&#x4E3A;0.</p>
+<p>&#x800C;&#x5B9A;&#x4E49;&#x4E86;&#x5B50;&#x5206;&#x7EC4;&#x540E;&#xFF0C;&#x5B50;&#x5206;&#x7EC4;&#x7684;&#x7F16;&#x53F7;&#x4ECE;1&#x5F00;&#x59CB;&#xFF0C;&#x5411;&#x540E;&#x6392;&#x5217;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210529150156363.png" alt="image-20210529150156363"></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x7D22;&#x5F15;&#x7F16;&#x53F7;&#x5728;&#x540E;&#x9762;&#x5F15;&#x7528;&#x524D;&#x9762;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x4F5C;&#x4E3A;&#x540E;&#x9762;&#x7684;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF0C;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>\&#x7F16;&#x53F7;
+</code></pre><p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;&lt;(\w+)&gt;(.*)&lt;/(\1)&gt;&quot;
+string = &quot;&lt;div&gt;hello world&lt;/div&gt;&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groups())
+
+# (&apos;div&apos;, &apos;hello world&apos;, &apos;div&apos;)
+</code></pre><p>&#x5206;&#x7EC4;1&#x5339;&#x914D;&#x5230;&#x4EC0;&#x4E48;&#xFF0C;&#x540E;&#x9762;&#x7684;\1&#x7684;&#x5339;&#x914D;&#x89C4;&#x5219;&#x5C31;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210529150818874.png" alt="image-20210529150818874"></p>
+<p>&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x6210;&#x4E86;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5339;&#x914D;&#x4E0D;&#x5230;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x5206;&#x7EC4;1&#x5339;&#x914D;&#x5230;&#x7684;&#x5185;&#x5BB9;&#x662F;div&#xFF0C;&#x6240;&#x4EE5;\1&#x4E5F;&#x53EA;&#x80FD;&#x5339;&#x914D;div&#xFF1A;</p>
+<pre><code>string = &quot;&lt;div&gt;hello world&lt;/dav&gt;&quot;
+</code></pre><p>&#x5982;&#x679C;&#x524D;&#x9762;&#x5206;&#x7EC4;&#x662F;1&#x4E2A;&#x5177;&#x540D;&#x5206;&#x7EC4;&#xFF0C;&#x540E;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x8FDB;&#x884C;&#x5F15;&#x7528;&#xFF0C;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>(?P=&#x5206;&#x7EC4;&#x540D;)
+</code></pre><p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;&lt;(?P&lt;tagName&gt;\w+)&gt;(?P&lt;tagContext&gt;.*)&lt;/(?P&lt;tagEnd&gt;(?P=tagName))&gt;&quot;
+string = &quot;&lt;div&gt;hello world&lt;/div&gt;&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groupdict())
+
+# {&apos;tagName&apos;: &apos;div&apos;, &apos;tagContext&apos;: &apos;hello world&apos;, &apos;tagEnd&apos;: &apos;div&apos;}
+</code></pre><h2 id="&#x53D6;&#x6D88;&#x8BB0;&#x5F55;"><a name="&#x53D6;&#x6D88;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x53D6;&#x6D88;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>9.5. &#x53D6;&#x6D88;&#x8BB0;&#x5F55;</h2>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x5206;&#x7EC4;&#x90FD;&#x5177;&#x6709;&#x7F16;&#x53F7;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x53D6;&#x6D88;&#x67D0;&#x4E2A;&#x5B50;&#x5206;&#x7EC4;&#x7684;&#x7F16;&#x53F7;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;(?:)&#x6765;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x82E5;&#x8FD9;&#x6837;&#x505A;&#x5219;&#x8BE5;&#x5B50;&#x5206;&#x7EC4;&#x4E0D;&#x53EF;&#x88AB;&#x540E;&#x9762;&#x5F15;&#x7528;&#xFF0C;&#x4E5F;&#x4E0D;&#x53EF;&#x88AB;&#x83B7;&#x53D6;&#x5230;&#xFF0C;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;&lt;(?:\w+)&gt;(.*)&lt;/(?:\w+)&gt;&quot; 
+string = &quot;&lt;div&gt;hello world&lt;/div&gt;&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groups())
+
+# (&apos;hello world&apos;,)
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#xFF0C;&#x53EA;&#x6709;1&#x4E2A;&#x5B50;&#x5206;&#x7EC4;&#x3002;</p>
+<h1 id="&#x65AD;&#x8A00;&#x5339;&#x914D;"><a name="&#x65AD;&#x8A00;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x65AD;&#x8A00;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>10. &#x65AD;&#x8A00;&#x5339;&#x914D;</h1>
+<p>&#x65AD;&#x8A00;&#x5339;&#x914D;&#x867D;&#x7136;&#x90FD;&#x6709;1&#x4E2A;&#x62EC;&#x53F7;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x5E76;&#x4E0D;&#x662F;&#x5B50;&#x5206;&#x7EC4;&#x3002;</p>
+<p>&#x6545;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x4E5F;&#x4E0D;&#x4F1A;&#x5F53;&#x505A;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x4FDD;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x7406;&#x89E3;&#x4E3A;&#x5339;&#x914D;&#x65F6;&#x7684;&#x6761;&#x4EF6;&#x3002;</p>
+<h2 id="exp"><a name="exp" class="anchor-navigation-ex-anchor" href="#exp"><i class="fa fa-link" aria-hidden="true"></i></a>10.1. (?=exp)</h2>
+<p>&#x96F6;&#x5BBD;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x5339;&#x914D;&#x540E;&#x9762;&#x4E3A;exp&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x540E;&#x9762;&#x662F;world&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;.+(?=world)&quot; 
+string = &quot;hello world&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0))
+
+# hello
+</code></pre><h2 id="exp_1"><a name="exp_1" class="anchor-navigation-ex-anchor" href="#exp_1"><i class="fa fa-link" aria-hidden="true"></i></a>10.2. (?&lt;=exp)</h2>
+<p>&#x96F6;&#x5BBD;&#x540E;&#x884C;&#x65AD;&#x8A00;&#xFF0C;&#x5339;&#x914D;&#x524D;&#x9762;&#x4E3A;exp&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x524D;&#x9762;&#x662F;hello&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;(?&lt;=hello).+&quot; 
+string = &quot;hello world&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0))
+
+# world
+</code></pre><h2 id="exp_2"><a name="exp_2" class="anchor-navigation-ex-anchor" href="#exp_2"><i class="fa fa-link" aria-hidden="true"></i></a>10.3. (?!exp)</h2>
+<p>&#x96F6;&#x5BBD;&#x8D1F;&#x5411;&#x5148;&#x884C;&#x65AD;&#x8A00;&#xFF0C;&#x5339;&#x914D;&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x662F;exp&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;hello&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x662F;Java&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;hello (?!Java).*&quot; 
+string = &quot;hello Java hello Golang hello Python&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0))
+
+# hello Golang hello Python
+</code></pre><h2 id="exp_3"><a name="exp_3" class="anchor-navigation-ex-anchor" href="#exp_3"><i class="fa fa-link" aria-hidden="true"></i></a>10.4. (?&lt;!exp)</h2>
+<p>(?&lt;!exp)  &#x96F6;&#x5BBD;&#x8D1F;&#x5411;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x5339;&#x914D;&#x524D;&#x9762;&#x4E0D;&#x80FD;&#x662F;exp&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;hello&#x524D;&#x9762;&#x4E0D;&#x80FD;&#x662F;Golang&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;(?&lt;!Golang) hello .*&quot; 
+string = &quot;hello Java hello Golang hello Python&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0))
+
+# hello Golang hello Python
+</code></pre><h1 id="re&#x65B9;&#x6CD5;"><a name="re&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#re&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>11. re&#x65B9;&#x6CD5;</h1>
+<h2 id="findall"><a name="findall" class="anchor-navigation-ex-anchor" href="#findall"><i class="fa fa-link" aria-hidden="true"></i></a>11.1. findall()</h2>
+<p>&#x5C06;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x81F3;1&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x8BF4;&#x5B9E;&#x8BDD;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5728;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4E2D;&#x4E5F;&#x5F88;&#x5C11;&#x7528;&#x5230;&#xFF0C;&#x7531;&#x4E8E;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7684;&#x662F;1&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x6BD4;&#x8F83;&#x5360;&#x7528;&#x5185;&#x5B58;&#x3002;</p>
+<pre><code>import re
+rule = r&quot;\d+&quot; 
+string = &quot;123A567&quot;
+resultList = re.findall(pattern=rule, string=string)
+
+print(resultList)
+
+# [&apos;123&apos;, &apos;567&apos;]
+</code></pre><h2 id="finditer"><a name="finditer" class="anchor-navigation-ex-anchor" href="#finditer"><i class="fa fa-link" aria-hidden="true"></i></a>11.2. finditer()</h2>
+<p>&#x5C06;&#x6240;&#x6709;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x81F3;1&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x3002;</p>
+<p>finditer()&#x6BD4;findall()&#x66F4;&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF0C;&#x56E0;&#x6B64;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code>import re
+rule = r&quot;\d+&quot; 
+string = &quot;123A567&quot;
+resultIter = re.finditer(pattern=rule, string=string)
+
+print(resultIter)
+
+# &lt;callable_iterator object at 0x01BE1E50&gt;
+</code></pre><h2 id="search"><a name="search" class="anchor-navigation-ex-anchor" href="#search"><i class="fa fa-link" aria-hidden="true"></i></a>11.3. search()</h2>
+<p>&#x5C06;&#x9996;&#x6B21;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x81F3;search&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;group()&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x8FD4;&#x56DE;&#x9996;&#x6B21;&#x7684;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;\d+&quot; 
+string = &quot;123A567&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject)
+
+# &lt;_sre.SRE_Match object; span=(0, 3), match=&apos;123&apos;&gt;
+</code></pre><h2 id="match"><a name="match" class="anchor-navigation-ex-anchor" href="#match"><i class="fa fa-link" aria-hidden="true"></i></a>11.4. match()</h2>
+<p>&#x5728;search()&#x57FA;&#x7840;&#x4E0A;&#x6DFB;&#x52A0;&#x4E86;^&#xFF0C;&#x4F7F;&#x4E4B;&#x53EA;&#x80FD;&#x5728;&#x5F00;&#x5934;&#x5339;&#x914D;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x5230;&#x7684;&#x573A;&#x666F;&#x4E5F;&#x4E0D;&#x591A;&#x5427;&#xFF0C;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;\d+&quot; 
+string = &quot;123A567&quot;
+searchObject = re.match(pattern=rule, string=string)
+
+print(searchObject)
+
+# &lt;_sre.SRE_Match object; span=(0, 3), match=&apos;123&apos;&gt;
+</code></pre><h2 id="group"><a name="group" class="anchor-navigation-ex-anchor" href="#group"><i class="fa fa-link" aria-hidden="true"></i></a>11.5. group()</h2>
+<p>&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x5BF9;search&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5B50;&#x7EC4;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x53D6;&#x503C;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x6CA1;&#x6709;&#x5206;&#x7EC4;&#x65F6;&#x9ED8;&#x8BA4;&#x53D6;&#x5927;&#x7EC4;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;group()&#x65B9;&#x6CD5;&#x6216;&#x6307;&#x5B9A;&#x7F16;&#x53F7;0</li>
+<li>&#x80FD;&#x5BF9;&#x533F;&#x540D;&#x7684;&#x5B50;&#x7EC4;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#xFF0C;&#x8F93;&#x5165;&#x5B50;&#x7EC4;&#x7F16;&#x53F7;&#x5373;&#x53EF;&#xFF0C;&#x5B50;&#x7EC4;&#x7F16;&#x53F7;&#x4ECE;1&#x5F00;&#x59CB;</li>
+<li>&#x80FD;&#x5BF9;&#x5177;&#x540D;&#x7684;&#x5B50;&#x7EC4;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#xFF0C;&#x8F93;&#x5165;&#x5B50;&#x7EC4;&#x522B;&#x540D;&#x5373;&#x53EF;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;&#x9ED8;&#x8BA4;&#x6700;&#x5927;&#x7684;&#x7EC4;&#x5C31;&#x662F;&#x6240;&#x6709;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF0C;&#x7F16;&#x53F7;&#x4E3A;0.</p>
+<p>&#x5B50;&#x7EC4;&#x7F16;&#x53F7;&#x4ECE;1&#x5F00;&#x59CB;&#x5411;&#x540E;&#x6392;&#x5217;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x53D6;&#x51FA;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x3002;</p>
+<p>&#x5982;&#xFF0C;&#x6CA1;&#x6709;&#x5B50;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;group(0)&#x6216;&#x8005;&#x76F4;&#x63A5;&#x4F7F;&#x7528;group()&#x53D6;&#x51FA;&#x6700;&#x5927;&#x7684;&#x9ED8;&#x8BA4;&#x7EC4;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;.+&quot; 
+string = &quot;123A567&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group())
+
+# 123A567
+</code></pre><p>&#x5982;&#x679C;&#x6709;&#x591A;&#x5206;&#x7EC4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;1&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5B50;&#x7EC4;&#x7684;&#x7F16;&#x53F7;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x53D6;&#x51FA;&#x6765;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;(\d+)([A-Z])(\d+)&quot; 
+string = &quot;123A567&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0, 1, 2, 3))
+
+# (&apos;123A567&apos;, &apos;123&apos;, &apos;A&apos;, &apos;567&apos;)
+</code></pre><p>&#x5982;&#x679C;&#x6709;&#x5177;&#x540D;&#x5206;&#x7EC4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5206;&#x7EC4;&#x540D;&#x5C06;&#x5B83;&#x4EEC;&#x53D6;&#x51FA;&#x6765;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;(?P&lt;first&gt;\d+)(?P&lt;second&gt;[A-Z])(?P&lt;last&gt;\d+)&quot;
+string = &quot;123A567&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.group(0, &quot;first&quot;, &quot;second&quot;, &quot;last&quot;))
+
+# (&apos;123A567&apos;, &apos;123&apos;, &apos;A&apos;, &apos;567&apos;)
+</code></pre><h2 id="groups"><a name="groups" class="anchor-navigation-ex-anchor" href="#groups"><i class="fa fa-link" aria-hidden="true"></i></a>11.6. groups()</h2>
+<p>&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x5BF9;search&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x5B50;&#x7EC4;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x5B83;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;&#x6700;&#x5927;&#x7EC4;&#xFF0C;&#x4EC5;&#x80FD;&#x4EE5;&#x5143;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7684;&#x5B50;&#x7EC4;</li>
+<li>&#x80FD;&#x8FD4;&#x56DE;&#x533F;&#x540D;&#x5B50;&#x7EC4;&#x3001;&#x5177;&#x540D;&#x5B50;&#x7EC4;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF0C;groups()&#x4E0D;&#x80FD;&#x50CF;group()&#x90A3;&#x6837;&#x6307;&#x5B9A;&#x7EC4;&#x7684;&#x7F16;&#x53F7;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#xFF0C;&#x5B83;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F;1&#x4E2A;&#x5143;&#x7EC4;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;(?P&lt;first&gt;\d+)(?P&lt;second&gt;[A-Z])(?P&lt;last&gt;\d+)&quot;
+string = &quot;123A567&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groups())
+
+# (&apos;123A567&apos;, &apos;123&apos;, &apos;A&apos;, &apos;567&apos;)
+</code></pre><h2 id="groupdict"><a name="groupdict" class="anchor-navigation-ex-anchor" href="#groupdict"><i class="fa fa-link" aria-hidden="true"></i></a>11.7. groupdict()</h2>
+<p>&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x5BF9;search&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x5177;&#x540D;&#x5B50;&#x7EC4;</p>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x5B83;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;&#x6700;&#x5927;&#x7EC4;&#xFF0C;&#x4EC5;&#x80FD;&#x4EE5;&#x5B57;&#x5178;&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7684;&#x5177;&#x540D;&#x5B50;&#x7EC4;</li>
+<li>&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;&#x533F;&#x540D;&#x5B50;&#x7EC4;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>import re
+rule = r&quot;(?P&lt;first&gt;\d+)(?P&lt;second&gt;[A-Z])(?P&lt;last&gt;\d+)&quot;
+string = &quot;123A567&quot;
+searchObject = re.search(pattern=rule, string=string)
+
+print(searchObject.groupdict())
+
+# {&apos;first&apos;: &apos;123&apos;, &apos;second&apos;: &apos;A&apos;, &apos;last&apos;: &apos;567&apos;}
+</code></pre><h2 id="split"><a name="split" class="anchor-navigation-ex-anchor" href="#split"><i class="fa fa-link" aria-hidden="true"></i></a>11.8. split()</h2>
+<p>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x5206;&#x5272;&#xFF0C;&#x5176;&#x7B97;&#x6CD5;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4EE4;&#x4EBA;&#x610F;&#x5916;&#x7684;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>def split(pattern, string, maxsplit=0, flags=0):
+</code></pre><p>&#x53C2;&#x6570;&#x91CA;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>pattern&#xFF1A;&#x5339;&#x914D;&#x89C4;&#x5219;</li>
+<li>string&#xFF1A;&#x88AB;&#x5207;&#x5206;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>maxsplit&#xFF1A;&#x6700;&#x5927;&#x5207;&#x5206;&#x7684;&#x6B21;&#x6570;</li>
+<li>flags&#xFF1A;&#x5339;&#x914D;&#x6A21;&#x5F0F;</li>
+</ul>
+<p>&#x666E;&#x901A;&#x7684;3&#x4E2A;&#x5C0F;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>import re
+
+ # &#x6309;&#x7A7A;&#x683C;&#x5207;&#x5206;
+print(re.split(r&quot; &quot;, &quot;hello abc def&quot;)) 
+# [&apos;hello&apos;, &apos;abc&apos;, &apos;def&apos;]
+
+# &#x6309;&#x7A7A;&#x683C;&#x6216; | &#x5206;
+print(re.split(r&quot; |\|&quot;,&quot;hello abc|def&quot;)) 
+# [&apos;hello&apos;, &apos;abc&apos;, &apos;def&apos;]
+
+# &#x6309;&#x7A7A;&#x683C;&#x6216; | &#x5206;
+print(re.split(r&quot;[ |]&quot;,&quot;hello abc|def&quot;))
+# [&apos;hello&apos;, &apos;abc&apos;, &apos;def&apos;]
+</code></pre><p>&#x610F;&#x5916;&#x7684;&#x60C5;&#x51B5;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>import re
+
+# &#x5148;&#x6309;&#x7167;a&#x5207;&#x5206;&#xFF0C;&#x540E;&#x6309;&#x7167;b&#x5207;&#x5206;
+print(re.split(r&quot;[ab]&quot;,&quot;asdabcd&quot;))
+
+# &#x7B2C;&#x4E00;&#x6B21;&#x6309;a&#x6765;&#x5206;&#xFF1A;[&apos;&apos;, &apos;sd&apos;, &apos;bcd&apos;]
+# &#x7B2C;&#x4E8C;&#x6B21;&#x6309;b&#x6765;&#x5206;: [&apos;&apos;, &apos;sd&apos;, &apos;&apos;, &apos;cd&apos;]
+# &#x6309;b&#x7684;&#x5206;&#x6CD5;&#x7531;&#x4E8E;&#x662F;&#x7A7A;&#x3002;&#x6545;&#x524D;&#x8FDB;&#x4E00;&#x4F4D;
+
+# &#x7ED3;&#x679C;
+# [&apos;&apos;, &apos;sd&apos;, &apos;&apos;, &apos;cd&apos;]
+</code></pre><h2 id="sub"><a name="sub" class="anchor-navigation-ex-anchor" href="#sub"><i class="fa fa-link" aria-hidden="true"></i></a>11.9. sub()</h2>
+<p>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#xFF0C;&#x6700;&#x5C11;&#x9700;&#x8981;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>def sub(pattern, repl, string, count=0, flags=0):
+</code></pre><p>&#x53C2;&#x6570;&#x91CA;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>pattern&#xFF1A;&#x5339;&#x914D;&#x89C4;&#x5219;</li>
+<li>repl&#xFF1A;&#x65B0;&#x7684;&#x5B57;&#x7B26;</li>
+<li>string&#xFF1A;&#x88AB;&#x66FF;&#x6362;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>count&#xFF1A;&#x66FF;&#x6362;&#x6B21;&#x6570;</li>
+<li>flags&#xFF1A;&#x5339;&#x914D;&#x6A21;&#x5F0F;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>import re
+
+print(re.sub(r&quot;a|b&quot;, &quot;N&quot;, &quot;123a456b&quot;))
+# 123N456N
+</code></pre><h2 id="subn"><a name="subn" class="anchor-navigation-ex-anchor" href="#subn"><i class="fa fa-link" aria-hidden="true"></i></a>11.10. subn()</h2>
+<p>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#xFF0C;&#x6700;&#x5C11;&#x9700;&#x8981;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7956;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x66FF;&#x6362;&#x6210;&#x529F;&#x4E86;&#x51E0;&#x6B21;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code> def subn(pattern, repl, string, count=0, flags=0):
+</code></pre><p>&#x53C2;&#x6570;&#x91CA;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>pattern&#xFF1A;&#x5339;&#x914D;&#x89C4;&#x5219;</li>
+<li>repl&#xFF1A;&#x65B0;&#x7684;&#x5B57;&#x7B26;</li>
+<li>string&#xFF1A;&#x88AB;&#x66FF;&#x6362;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>count&#xFF1A;&#x66FF;&#x6362;&#x6B21;&#x6570;</li>
+<li>flags&#xFF1A;&#x5339;&#x914D;&#x6A21;&#x5F0F;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>import re
+
+print(re.subn(r&quot;a|b&quot;, &quot;N&quot;, &quot;123a456b&quot;))
+# (&apos;123N456N&apos;, 2)
+</code></pre><h2 id="complie"><a name="complie" class="anchor-navigation-ex-anchor" href="#complie"><i class="fa fa-link" aria-hidden="true"></i></a>11.11. complie()</h2>
+<p>complie()&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x6807;&#x793A;&#x7B26;&#x8D4B;&#x4E88;&#x6307;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x8FBE;&#x5230;&#x7B80;&#x5316;&#x91CD;&#x590D;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>def compile(pattern, flags=0):
+</code></pre><p>&#x53C2;&#x6570;&#x91CA;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>pattern&#xFF1A;&#x5339;&#x914D;&#x89C4;&#x5219;</li>
+<li>flags&#xFF1A;&#x5339;&#x914D;&#x6A21;&#x5F0F;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x6F14;&#x793A;&#xFF0C;&#x6211;&#x6709;&#x4E00;&#x4E2A;HTML&#x6587;&#x6863;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x8981;&#x5339;&#x914D;&#x6BCF;&#x4E2A;a&#x6807;&#x7B7E;&#x7684;&#x94FE;&#x63A5;&#x3001;a&#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import re
+
+#&#x3000;step01&#xFF1A;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x89C4;&#x5219;
+rule = re.compile(r&quot;&lt;a.*href=\&quot;(\w+\.\w+.\w+)\&quot;.*&gt;(.*)&lt;/a&gt;&quot;, flags=re.I)
+
+# step02: &#x4E66;&#x5199;HTML&#x6587;&#x6863;
+htmlDocument = &quot;&quot;&quot;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;www.baidu.com&quot; target=&quot;_self&quot;&gt;&#x767E;&#x5EA6;&#x641C;&#x7D22;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;www.google.com&quot;&gt;&#x8C37;&#x6B4C;&#x641C;&#x7D22;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;md-plain&quot; href=&quot;www.biying.com&quot;&gt;&#x5FC5;&#x5E94;&#x641C;&#x7D22;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&quot;&quot;&quot;
+
+# step03:&#x5F00;&#x59CB;&#x5339;&#x914D;
+resultList = rule.findall(htmlDocument)
+print(resultList)
+
+# [(&apos;www.baidu.com&apos;, &apos;&#x767E;&#x5EA6;&#x641C;&#x7D22;&apos;), (&apos;www.google.com&apos;, &apos;&#x8C37;&#x6B4C;&#x641C;&#x7D22;&apos;), (&apos;www.biying.com&apos;, &apos;&#x5FC5;&#x5E94;&#x641C;&#x7D22;&apos;)]
+</code></pre><h1 id="re&#x6A21;&#x5F0F;"><a name="re&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#re&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>12. re&#x6A21;&#x5F0F;</h1>
+<h2 id="rei"><a name="rei" class="anchor-navigation-ex-anchor" href="#rei"><i class="fa fa-link" aria-hidden="true"></i></a>12.1. re.I</h2>
+<p>I&#x6A21;&#x5F0F;&#x4E0B;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x6B64;&#x6A21;&#x5F0F;&#x4E0B;[a-z]&#x7B49;&#x540C;&#x4E8E;[a-zA-Z]&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;[a-z]+&quot;
+string = &quot;ABC1abc&quot;
+resultList = re.findall(pattern=rule, string=string, flags=re.I)
+
+print(resultList)
+
+# [&apos;ABC&apos;, &apos;abc&apos;]
+</code></pre><h2 id="rem"><a name="rem" class="anchor-navigation-ex-anchor" href="#rem"><i class="fa fa-link" aria-hidden="true"></i></a>12.2. re.M</h2>
+<p>M&#x6A21;&#x5F0F;&#x4E0B;&#x4F1A;&#x5C06;&#x6BCF;&#x4E00;&#x884C;&#x5355;&#x72EC;&#x5339;&#x914D;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5BF9;^&#x548C;$&#x7684;&#x4FEE;&#x9970;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF0C;&#x5339;&#x914D;&#x5FC5;&#x987B;&#x4EE5;j&#x5F00;&#x5934;&#x4E14;&#x4E3A;p&#x7ED3;&#x5C3E;&#x7684;&#x5B50;&#x4E32;&#xFF1A;</p>
+<pre><code>import re
+rule = &quot;^J.+t$&quot;
+string = &quot;Python\nJavaScript\nGolang&quot;
+resultList = re.findall(pattern=rule, string=string, flags=re.M)
+
+print(resultList)
+
+# [&apos;JavaScript&apos;]
+</code></pre><h2 id="res"><a name="res" class="anchor-navigation-ex-anchor" href="#res"><i class="fa fa-link" aria-hidden="true"></i></a>12.3. re.S</h2>
+<p>S&#x6A21;&#x5F0F;&#x4E0B;&#x4F1A;&#x5C06;&#x591A;&#x884C;&#x89C6;&#x4E3A;&#x5355;&#x884C;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;.&#x901A;&#x914D;&#x7B26;&#x53EF;&#x4EE5;&#x5339;&#x914D;\n&#x4E86;&#x3002;</p>
+<pre><code>import re
+rule = &quot;.+&quot;
+string = &quot;\n\n\n\n\n&quot;
+resultList = re.findall(pattern=rule, string=string, flags=re.S)
+
+print(resultList)
+
+# [&apos;\n\n\n\n\n&apos;]
+</code></pre><h2 id="reu"><a name="reu" class="anchor-navigation-ex-anchor" href="#reu"><i class="fa fa-link" aria-hidden="true"></i></a>12.4. re.U</h2>
+<p>U&#x6A21;&#x5F0F;&#x4F7F;&#x7528;&#x7684;&#x4E0D;&#x591A;&#xFF0C;&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x5360;4&#x4E2A;Bytes&#x7684;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x652F;&#x6301;&#xFF0C;&#x5C3D;&#x5728;Python2&#x4E2D;&#x9002;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;Python3&#x91CC;&#x7684;&#x5B57;&#x7B26;&#x90FD;&#x662F;Unicode&#x5B57;&#x7B26;&#x4E86;&#x3002;</p>
+<pre><code>import re
+rule = &quot;&#x1D4B3;&#x1D4B4;&quot;
+string = &quot;&#x1D4B3;&#x1D4B4;&#x1D4B3;&#x1D4B4;&#x1D4B3;&#x1D4B4;&quot;
+resultList = re.findall(pattern=rule, string=string, flags=re.U)
+
+print(resultList)
+
+# [&apos;&#x1D4B3;&#x1D4B4;&apos;, &apos;&#x1D4B3;&#x1D4B4;&apos;, &apos;&#x1D4B3;&#x1D4B4;&apos;]
+</code></pre><h1 id="&#x901A;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5927;&#x5168;"><a name="&#x901A;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5927;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5927;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>13. &#x901A;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5927;&#x5168;</h1>
+<p>&#x539F;&#x6587;&#x8F6C;&#x8F7D;&#x81F3;&#xFF1A;Java&#x540E;&#x7AEF;</p>
+<p>&#x539F;&#x6587;&#x5730;&#x5740;&#xFF1A;<a href="https://mp.weixin.qq.com/s/8sSDcxUsLCNhfHLkI9XKOQ" target="_blank">&#x70B9;&#x6211;&#x8DF3;&#x8F6C;</a></p>
+<h2 id="&#x6570;&#x5B57;&#x6821;&#x9A8C;"><a name="&#x6570;&#x5B57;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x5B57;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>13.1. &#x6570;&#x5B57;&#x6821;&#x9A8C;</h2>
+<ol>
+<li>&#x6570;&#x5B57;&#xFF1A;<code>^[0-9]*$</code></li>
+<li>n&#x4F4D;&#x7684;&#x6570;&#x5B57;&#xFF1A;<code>^\d{n}$</code></li>
+<li>&#x81F3;&#x5C11;n&#x4F4D;&#x7684;&#x6570;&#x5B57;&#xFF1A;<code>^\d{n,}$</code></li>
+<li>m-n&#x4F4D;&#x7684;&#x6570;&#x5B57;&#xFF1A;<code>^\d{m,n}$</code></li>
+<li>&#x96F6;&#x548C;&#x975E;&#x96F6;&#x5F00;&#x5934;&#x7684;&#x6570;&#x5B57;&#xFF1A;<code>^(0|[1-9][0-9]*)$</code></li>
+<li>&#x975E;&#x96F6;&#x5F00;&#x5934;&#x7684;&#x6700;&#x591A;&#x5E26;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;&#x7684;&#x6570;&#x5B57;&#xFF1A;<code>^([1-9][0-9]*)+(.[0-9]{1,2})?$</code></li>
+<li>&#x5E26;1-2&#x4F4D;&#x5C0F;&#x6570;&#x7684;&#x6B63;&#x6570;&#x6216;&#x8D1F;&#x6570;&#xFF1A;<code>^(\-)?\d+(\.\d{1,2})?$</code></li>
+<li>&#x6B63;&#x6570;&#x3001;&#x8D1F;&#x6570;&#x3001;&#x548C;&#x5C0F;&#x6570;&#xFF1A;<code>^(\-|\+)?\d+(\.\d+)?$</code></li>
+<li>&#x6709;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;&#x7684;&#x6B63;&#x5B9E;&#x6570;&#xFF1A;<code>^[0-9]+(.[0-9]{2})?$</code></li>
+<li>&#x6709;1~3&#x4F4D;&#x5C0F;&#x6570;&#x7684;&#x6B63;&#x5B9E;&#x6570;&#xFF1A;<code>^[0-9]+(.[0-9]{1,3})?$</code></li>
+<li>&#x975E;&#x96F6;&#x7684;&#x6B63;&#x6574;&#x6570;&#xFF1A;<code>^[1-9]\d*$ &#x6216; ^([1-9][0-9]*){1,3}$ &#x6216; ^\+?[1-9][0-9]*$</code></li>
+<li>&#x975E;&#x96F6;&#x7684;&#x8D1F;&#x6574;&#x6570;&#xFF1A;<code>^\-[1-9][]0-9&quot;*$ &#x6216; ^-[1-9]\d*$</code></li>
+<li>&#x975E;&#x8D1F;&#x6574;&#x6570;&#xFF1A;<code>^\d+$ &#x6216; ^[1-9]\d*|0$</code></li>
+<li>&#x975E;&#x6B63;&#x6574;&#x6570;&#xFF1A;<code>^-[1-9]\d*|0$ &#x6216; ^((-\d+)|(0+))$</code></li>
+<li>&#x975E;&#x8D1F;&#x6D6E;&#x70B9;&#x6570;&#xFF1A;<code>^\d+(\.\d+)?$ &#x6216; ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$</code></li>
+<li>&#x975E;&#x6B63;&#x6D6E;&#x70B9;&#x6570;&#xFF1A;<code>^((-\d+(\.\d+)?)|(0+(\.0+)?))$ &#x6216; ^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$</code></li>
+<li>&#x6B63;&#x6D6E;&#x70B9;&#x6570;&#xFF1A;<code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$ &#x6216; ^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></li>
+<li>&#x8D1F;&#x6D6E;&#x70B9;&#x6570;&#xFF1A;<code>^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$ &#x6216; ^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$</code></li>
+<li>&#x6D6E;&#x70B9;&#x6570;&#xFF1A;<code>^(-?\d+)(\.\d+)?$ &#x6216; ^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$</code></li>
+</ol>
+<h2 id="&#x5B57;&#x7B26;&#x6821;&#x9A8C;"><a name="&#x5B57;&#x7B26;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>13.2. &#x5B57;&#x7B26;&#x6821;&#x9A8C;</h2>
+<ol>
+<li>&#x6C49;&#x5B57;&#xFF1A;<code>^[\u4e00-\u9fa5]{0,}$</code></li>
+<li>&#x82F1;&#x6587;&#x548C;&#x6570;&#x5B57;&#xFF1A;<code>^[A-Za-z0-9]+$ &#x6216; ^[A-Za-z0-9]{4,40}$</code></li>
+<li>&#x957F;&#x5EA6;&#x4E3A;3-20&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF1A;<code>^.{3,20}$</code></li>
+<li>&#x7531;26&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>^[A-Za-z]+$</code></li>
+<li>&#x7531;26&#x4E2A;&#x5927;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>^[A-Z]+$</code></li>
+<li>&#x7531;26&#x4E2A;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>^[a-z]+$</code></li>
+<li>&#x7531;&#x6570;&#x5B57;&#x548C;26&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>^[A-Za-z0-9]+$</code></li>
+<li>&#x7531;&#x6570;&#x5B57;&#x3001;26&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6216;&#x8005;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>^\w+$ &#x6216; ^\w{3,20}</code></li>
+<li>&#x4E2D;&#x6587;&#x3001;&#x82F1;&#x6587;&#x3001;&#x6570;&#x5B57;&#x5305;&#x62EC;&#x4E0B;&#x5212;&#x7EBF;&#xFF1A;<code>^[\u4E00-\u9FA5A-Za-z0-9_]+$</code></li>
+<li>&#x4E2D;&#x6587;&#x3001;&#x82F1;&#x6587;&#x3001;&#x6570;&#x5B57;&#x4F46;&#x4E0D;&#x5305;&#x62EC;&#x4E0B;&#x5212;&#x7EBF;&#x7B49;&#x7B26;&#x53F7;&#xFF1A;<code>^[\u4E00-\u9FA5A-Za-z0-9]+$ &#x6216; ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</code></li>
+<li>&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x542B;&#x6709;<code>^%&amp;&apos;,;=?$\&quot;</code>&#x7B49;&#x5B57;&#x7B26;&#xFF1A;<code>[^%&amp;&apos;,;=?$\x22]+</code></li>
+<li>&#x7981;&#x6B62;&#x8F93;&#x5165;&#x542B;&#x6709;~&#x7684;&#x5B57;&#x7B26;<code>[^~\x22]+</code></li>
+</ol>
+<h2 id="&#x5176;&#x4ED6;&#x6821;&#x9A8C;"><a name="&#x5176;&#x4ED6;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>13.3. &#x5176;&#x4ED6;&#x6821;&#x9A8C;</h2>
+<p><code>.*</code>&#x5339;&#x914D;&#x9664; <code>\n</code> &#x4EE5;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;&#x3002;</p>
+<p><code>/[\u4E00-\u9FA5]/</code> &#x6C49;&#x5B57;</p>
+<p><code>/[\uFF00-\uFFFF]/</code> &#x5168;&#x89D2;&#x7B26;&#x53F7;</p>
+<p><code>/[\u0000-\u00FF]/</code> &#x534A;&#x89D2;&#x7B26;&#x53F7;</p>
+<h2 id="&#x94B1;&#x5E01;&#x6821;&#x9A8C;"><a name="&#x94B1;&#x5E01;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x94B1;&#x5E01;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>13.4. &#x94B1;&#x5E01;&#x6821;&#x9A8C;</h2>
+<p>1.&#x6709;&#x56DB;&#x79CD;&#x94B1;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;:&quot;10000.00&quot; &#x548C; &quot;10,000.00&quot;, &#x548C;&#x6CA1;&#x6709; &quot;&#x5206;&quot; &#x7684; &quot;10000&quot; &#x548C; &quot;10,000&quot;&#xFF1A;<code>^[1-9][0-9]*$</code></p>
+<p>2.&#x8FD9;&#x8868;&#x793A;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x4E0D;&#x4EE5;0&#x5F00;&#x5934;&#x7684;&#x6570;&#x5B57;,&#x4F46;&#x662F;,&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&quot;0&quot;&#x4E0D;&#x901A;&#x8FC7;,&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;&#xFF1A;<code>^(0|[1-9][0-9]*)$</code></p>
+<p>3.&#x4E00;&#x4E2A;0&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x4E0D;&#x4EE5;0&#x5F00;&#x5934;&#x7684;&#x6570;&#x5B57;.&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x5F00;&#x5934;&#x6709;&#x4E00;&#x4E2A;&#x8D1F;&#x53F7;&#xFF1A;<code>^(0|-?[1-9][0-9]*)$</code></p>
+<p>4.&#x8FD9;&#x8868;&#x793A;&#x4E00;&#x4E2A;0&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x4E3A;&#x8D1F;&#x7684;&#x5F00;&#x5934;&#x4E0D;&#x4E3A;0&#x7684;&#x6570;&#x5B57;.&#x8BA9;&#x7528;&#x6237;&#x4EE5;0&#x5F00;&#x5934;&#x597D;&#x4E86;.&#x628A;&#x8D1F;&#x53F7;&#x7684;&#x4E5F;&#x53BB;&#x6389;,&#x56E0;&#x4E3A;&#x94B1;&#x603B;&#x4E0D;&#x80FD;&#x662F;&#x8D1F;&#x7684;&#x5427;.&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x8981;&#x52A0;&#x7684;&#x662F;&#x8BF4;&#x660E;&#x53EF;&#x80FD;&#x7684;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#xFF1A;<code>^[0-9]+(.[0-9]+)?$</code></p>
+<p>5.&#x5FC5;&#x987B;&#x8BF4;&#x660E;&#x7684;&#x662F;,&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x9762;&#x81F3;&#x5C11;&#x5E94;&#x8BE5;&#x6709;1&#x4F4D;&#x6570;,&#x6240;&#x4EE5;&quot;10.&quot;&#x662F;&#x4E0D;&#x901A;&#x8FC7;&#x7684;,&#x4F46;&#x662F; &quot;10&quot; &#x548C; &quot;10.2&quot; &#x662F;&#x901A;&#x8FC7;&#x7684;&#xFF1A;<code>^[0-9]+(.[0-9]{2})?$</code></p>
+<p>6.&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x89C4;&#x5B9A;&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x9762;&#x5FC5;&#x987B;&#x6709;&#x4E24;&#x4F4D;,&#x5982;&#x679C;&#x4F60;&#x8BA4;&#x4E3A;&#x592A;&#x82DB;&#x523B;&#x4E86;,&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#xFF1A;<code>^[0-9]+(.[0-9]{1,2})?$</code></p>
+<p>7.&#x8FD9;&#x6837;&#x5C31;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x53EA;&#x5199;&#x4E00;&#x4F4D;&#x5C0F;&#x6570;.&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x8BE5;&#x8003;&#x8651;&#x6570;&#x5B57;&#x4E2D;&#x7684;&#x9017;&#x53F7;&#x4E86;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#xFF1A;<code>^[0-9]{1,3}(,[0-9]{3})*(.[0-9]{1,2})?$</code></p>
+<p>8.1&#x5230;3&#x4E2A;&#x6570;&#x5B57;,&#x540E;&#x9762;&#x8DDF;&#x7740;&#x4EFB;&#x610F;&#x4E2A; &#x9017;&#x53F7;+3&#x4E2A;&#x6570;&#x5B57;,&#x9017;&#x53F7;&#x6210;&#x4E3A;&#x53EF;&#x9009;,&#x800C;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#xFF1A;<code>^([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(.[0-9]{1,2})?$</code></p>
+<h2 id="&#x751F;&#x6D3B;&#x9700;&#x6C42;"><a name="&#x751F;&#x6D3B;&#x9700;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6D3B;&#x9700;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>13.5. &#x751F;&#x6D3B;&#x9700;&#x6C42;</h2>
+<ol>
+<li>Email&#x5730;&#x5740;&#xFF1A;<code>^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</code></li>
+<li>&#x57DF;&#x540D;&#xFF1A;<code>[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</code></li>
+<li>InternetURL&#xFF1A;<code>[a-zA-z]+://[^\s]* &#x6216; ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$</code></li>
+<li>&#x624B;&#x673A;&#x53F7;&#x7801;&#xFF1A;<code>^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</code></li>
+<li>&#x7535;&#x8BDD;&#x53F7;&#x7801;(&quot;XXX-XXXXXXX&quot;&#x3001;&quot;XXXX-XXXXXXXX&quot;&#x3001;&quot;XXX-XXXXXXX&quot;&#x3001;&quot;XXX-XXXXXXXX&quot;&#x3001;&quot;XXXXXXX&quot;&#x548C;&quot;XXXXXXXX)&#xFF1A;<code>^(\(\d{3,4}-)|\d{3.4}-)?\d{7,8}$</code></li>
+<li>&#x56FD;&#x5185;&#x7535;&#x8BDD;&#x53F7;&#x7801;(0511-4405222&#x3001;021-87888822)&#xFF1A;<code>\d{3}-\d{8}|\d{4}-\d{7}</code></li>
+<li>&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;(15&#x4F4D;&#x3001;18&#x4F4D;&#x6570;&#x5B57;)&#xFF1A;<code>^\d{15}|\d{18}$</code></li>
+<li>&#x77ED;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;(&#x6570;&#x5B57;&#x3001;&#x5B57;&#x6BCD;x&#x7ED3;&#x5C3E;)&#xFF1A;<code>^([0-9]){7,18}(x|X)?$ &#x6216; ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$</code></li>
+<li>&#x5E10;&#x53F7;&#x662F;&#x5426;&#x5408;&#x6CD5;(&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x5141;&#x8BB8;5-16&#x5B57;&#x8282;&#xFF0C;&#x5141;&#x8BB8;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;)&#xFF1A;<code>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</code></li>
+<li>&#x5BC6;&#x7801;(&#x4EE5;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x957F;&#x5EA6;&#x5728;6~18&#x4E4B;&#x95F4;&#xFF0C;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;)&#xFF1A;<code>^[a-zA-Z]\w{5,17}$</code></li>
+<li>&#x5F3A;&#x5BC6;&#x7801;(&#x5FC5;&#x987B;&#x5305;&#x542B;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x957F;&#x5EA6;&#x5728;8-10&#x4E4B;&#x95F4;)&#xFF1A;<code>^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$</code></li>
+<li>&#x65E5;&#x671F;&#x683C;&#x5F0F;&#xFF1A;<code>^\d{4}-\d{1,2}-\d{1,2}</code></li>
+<li>&#x4E00;&#x5E74;&#x7684;12&#x4E2A;&#x6708;(01&#xFF5E;09&#x548C;1&#xFF5E;12)&#xFF1A;<code>^(0?[1-9]|1[0-2])$</code></li>
+<li>&#x4E00;&#x4E2A;&#x6708;&#x7684;31&#x5929;(01&#xFF5E;09&#x548C;1&#xFF5E;31)&#xFF1A;<code>^((0?[1-9])|((1|2)[0-9])|30|31)$</code></li>
+<li>xml&#x6587;&#x4EF6;&#xFF1A;<code>^([a-zA-Z]+-?)+[a-zA-Z0-9]+\\.[x|X][m|M][l|L]$</code></li>
+<li>&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>[\u4e00-\u9fa5]</code></li>
+<li>&#x53CC;&#x5B57;&#x8282;&#x5B57;&#x7B26;&#xFF1A;<code>[^\x00-\xff]</code> (&#x5305;&#x62EC;&#x6C49;&#x5B57;&#x5728;&#x5185;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;(&#x4E00;&#x4E2A;&#x53CC;&#x5B57;&#x8282;&#x5B57;&#x7B26;&#x957F;&#x5EA6;&#x8BA1;2&#xFF0C;ASCII&#x5B57;&#x7B26;&#x8BA1;1))</li>
+<li>&#x7A7A;&#x767D;&#x884C;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>\n\s*\r</code> (&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5220;&#x9664;&#x7A7A;&#x767D;&#x884C;)</li>
+<li>HTML&#x6807;&#x8BB0;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>&lt;(\S*?)[^&gt;]*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt;</code> (&#x7F51;&#x4E0A;&#x6D41;&#x4F20;&#x7684;&#x7248;&#x672C;&#x592A;&#x7CDF;&#x7CD5;&#xFF0C;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x4E5F;&#x4EC5;&#x4EC5;&#x80FD;&#x90E8;&#x5206;&#xFF0C;&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x5D4C;&#x5957;&#x6807;&#x8BB0;&#x4F9D;&#x65E7;&#x65E0;&#x80FD;&#x4E3A;&#x529B;)</li>
+<li>&#x9996;&#x5C3E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>^\s*|\s*$&#x6216;(^\s*)|(\s*$)</code> (&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5220;&#x9664;&#x884C;&#x9996;&#x884C;&#x5C3E;&#x7684;&#x7A7A;&#x767D;&#x5B57;&#x7B26;(&#x5305;&#x62EC;&#x7A7A;&#x683C;&#x3001;&#x5236;&#x8868;&#x7B26;&#x3001;&#x6362;&#x9875;&#x7B26;&#x7B49;&#x7B49;)&#xFF0C;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x8868;&#x8FBE;&#x5F0F;)</li>
+<li>&#x817E;&#x8BAF;QQ&#x53F7;&#xFF1A;<code>[1-9][0-9]{4,}</code> (&#x817E;&#x8BAF;QQ&#x53F7;&#x4ECE;10000&#x5F00;&#x59CB;)</li>
+<li>&#x4E2D;&#x56FD;&#x90AE;&#x653F;&#x7F16;&#x7801;&#xFF1A;<code>[1-9]\d{5}(?!\d)</code> (&#x4E2D;&#x56FD;&#x90AE;&#x653F;&#x7F16;&#x7801;&#x4E3A;6&#x4F4D;&#x6570;&#x5B57;)</li>
+<li>IP&#x5730;&#x5740;&#xFF1A;<code>\d+\.\d+\.\d+\.\d+</code> (&#x63D0;&#x53D6;IP&#x5730;&#x5740;&#x65F6;&#x6709;&#x7528;)</li>
+<li>IP&#x5730;&#x5740;&#xFF1A;<code>((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))</code></li>
+<li>IP-v4&#x5730;&#x5740;&#xFF1A;<code>\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b</code> (&#x63D0;&#x53D6;IP&#x5730;&#x5740;&#x65F6;&#x6709;&#x7528;)</li>
+<li>&#x6821;&#x9A8C;IP-v6&#x5730;&#x5740;:<code>(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))</code></li>
+<li>&#x5B50;&#x7F51;&#x63A9;&#x7801;&#xFF1A;<code>((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))</code></li>
+<li>&#x6821;&#x9A8C;&#x65E5;&#x671F;:<code>^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$</code>(&#x201C;yyyy-mm-dd&#x201C; &#x683C;&#x5F0F;&#x7684;&#x65E5;&#x671F;&#x6821;&#x9A8C;&#xFF0C;&#x5DF2;&#x8003;&#x8651;&#x5E73;&#x95F0;&#x5E74;&#x3002;)</li>
+<li>&#x62BD;&#x53D6;&#x6CE8;&#x91CA;&#xFF1A;<code>&lt;!--(.*?)--&gt;</code></li>
+<li>&#x67E5;&#x627E;CSS&#x5C5E;&#x6027;:<code>^\\s*[a-zA-Z\\-]+\\s*[:]{1}\\s[a-zA-Z0-9\\s.#]+[;]{1}</code></li>
+<li>&#x63D0;&#x53D6;&#x9875;&#x9762;&#x8D85;&#x94FE;&#x63A5;:<code>(&lt;a\\s*(?!.*\\brel=)[^&gt;]*)(href=&quot;https?:\\/\\/)((?!(?:(?:www\\.)?&apos;.implode(&apos;|(?:www\\.)?&apos;, $follow_list).&apos;))[^&quot; rel=&quot;external nofollow&quot; ]+)&quot;((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;</code></li>
+<li>&#x63D0;&#x53D6;&#x7F51;&#x9875;&#x56FE;&#x7247;:<code>\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\&quot;\\&apos;]{0,1}([^\\&quot;\\&apos;\\ &gt;]*)</code></li>
+<li>&#x63D0;&#x53D6;&#x7F51;&#x9875;&#x989C;&#x8272;&#x4EE3;&#x7801;:<code>^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$</code></li>
+<li>&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x6548;&#x9A8C;:<code>^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?&quot;&lt;&gt;|]+\\.txt(l)?$</code></li>
+<li>&#x5224;&#x65AD;IE&#x7248;&#x672C;&#xFF1A;<code>^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$</code></li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x4E91;&#x5D16;&#x5148;&#x751F; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-10 21:36:42
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="logging.html" class="navigation navigation-prev " aria-label="Previous page: 内置模块：logging">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="importlib.html" class="navigation navigation-next " aria-label="Next page: 内置模块：importlib">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"内置模块：re","level":"1.3.4.14","depth":3,"next":{"title":"内置模块：importlib","level":"1.3.4.15","depth":3,"path":"Python/Python模块与包/importlib.md","ref":"./Python/Python模块与包/importlib.md","articles":[]},"previous":{"title":"内置模块：logging","level":"1.3.4.13","depth":3,"path":"Python/Python模块与包/logging.md","ref":"./Python/Python模块与包/logging.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","splitter","expandable-chapters-small","code","github","-sharing","sharing-plus","auto-scroll-table","disqus","katex","tbfed-pagefooter","sectionx","simple-page-toc","anchor-navigation-ex","edit-link","accordion","livereload"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 云崖先生 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"starstower"},"github":{"url":"https://github.com/KahnDepot"},"livereload":{},"simple-page-toc":{"maxDepth":5,"skipFirstH1":true},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":true,"qzone":false},"edit-link":{"label":"编辑此页面","base":"https://github.com/KahnDepot/startowernode/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"云崖先生","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"星塔Node","language":"zh-hans","gitbook":"*","description":"一个自用的文档库"},"file":{"path":"Python/Python模块与包/re.md","mtime":"2021-06-10T13:36:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-13T07:08:57.834Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

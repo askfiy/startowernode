@@ -1,22 +1,21 @@
 # None
 
-None是Python中经常出现的一种类型，但其实关于它的描述并不是很多，很多人也会忽略。
-
-其实None里也有一些需要了解的知识点。
-
-它常用于初始化数据，并且是函数默认的返回值。
+None是Python中经常出现的一种类型，但其实关于它的描述并不是很多，因此None也经常被人忽略。
 
 None是一种不可变类型，同时也是基础的原子类型，即不可分割，不能容纳其他对象。
 
+它常用于初始化数据，并且是函数默认的返回值。
+
 # 基本声明
 
-Node的声明方式仅有字面量声明：
+None的声明方式仅有字面量声明：
 
 ```
 empty = None
-print("值:%r,类型：%r" % (empty, type(empty)))
+print("value : %r\ntype : %r" % (empty, type(empty)))
 
-# 值:None,类型：<class 'NoneType'>
+# value : None
+# type : <class 'NoneType'>
 ```
 
 
@@ -78,4 +77,3 @@ None一般用于对一个变量进行初始化，可能我们还没想好这个�
 temp = None
 ```
 
-除此之外，None也常见于function的返回值中，并且Python中function默认的返回值就是None。
