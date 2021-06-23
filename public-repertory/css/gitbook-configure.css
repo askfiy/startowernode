@@ -15,12 +15,11 @@
     display: none !important;
 }
 
-.markdown-section ol, .markdown-section ul{
-    margin:0 2rem;
+.markdown-section ol, .markdown-section ul {
+    margin: 0 2rem;
 }
 
-
-.markdown-section ol p, .markdown-section ul p{
+.markdown-section ol p, .markdown-section ul p {
     text-indent: unset;
 }
 
@@ -28,10 +27,6 @@
     margin-top: 1.4rem;
 }
 
-li[data-level='1.1']{
+li[data-level='1.1'], #book-search-results>div.search-noresults>section>footer>span.footer-modification {
     display: none;
 }
-
-/*nav[role="navigation"] span{*/
-/*    padding-left: 10px !important;*/
-/*}*/

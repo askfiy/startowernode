@@ -80,19 +80,20 @@
         * [元类编程](./Python/Python面向对象/元类编程.md)
         * [异常处理](./Python/Python面向对象/异常处理.md)
     * [Python数算基础](./Python/Python数算基础/summary.md)
-        * 算法与数构
-        * 算法渐进分析
-        * 算法之递归篇
-        * 算法之搜索篇
-        * 算法之排序篇
-        * 数构之线性结构
-        * 数构之链表相关
-        * 数构之树相关
-        * 数构之图相关
+        * [算法与数构](./Python/Python数算基础/算法与数构.md)
+        * [list和dict性能](./Python/Python数算基础/list和dict性能.md)
+        * [数构之线构篇](./Python/Python数算基础/数构之线构篇.md)
+        * [数构之哈希篇](./Python/Python数算基础/数构之哈希篇.md)
+        * [数构之链表篇](./Python/Python数算基础/数构之链表篇.md)
+        * [算法之递归篇](./Python/Python数算基础/算法之递归篇.md)
+        * [算法之搜索篇](./Python/Python数算基础/算法之搜索篇.md)
+        * [算法之排序篇](./Python/Python数算基础/算法之排序篇.md)
+        * [数构之树相关](./Python/Python数算基础/数构之树相关.md)
     * [Python设计模式](./Python/Python设计模式/summary.md)
+        * [设计模式](./Python/Python设计模式/设计模式.md)
         * [普通工厂模式](./Python/Python设计模式/普通工厂模式.md)
-        * [抽象工厂模式](./Python/Python设计模式/普通工厂模式.md)
-        * [建造者模式](./Python/Python设计模式/普通工厂模式.md)
+        * [抽象工厂模式](./Python/Python设计模式/抽象工厂模式.md)
+        * [建造者模式](./Python/Python设计模式/建造者模式.md)
         * 单例模式
         * 原型模式
         * 适配器模式
