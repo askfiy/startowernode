@@ -94,26 +94,26 @@
         * [普通工厂模式](./Python/Python设计模式/普通工厂模式.md)
         * [抽象工厂模式](./Python/Python设计模式/抽象工厂模式.md)
         * [建造者模式](./Python/Python设计模式/建造者模式.md)
-        * 单例模式
-        * 原型模式
-        * 适配器模式
-        * 桥接模式
-        * 组合模式
-        * 外观模式
-        * 代理模式
-        * 装饰器模式
-        * 享元模式
-        * 责任链模式
-        * 解释器模式
-        * 迭代器模式
-        * 观察者模式
-        * 中介者模式
-        * 访问者模式
-        * 备忘录模式
-        * 命令模式
-        * 状态模式
-        * 策略模式
-        * 模板模式
+        * [单例模式](./Python/Python设计模式/单例模式.md)
+        * [原型模式](./Python/Python设计模式/原型模式.md)
+        * [适配器模式](./Python/Python设计模式/适配器模式.md)
+        * [桥接模式](./Python/Python设计模式/桥接模式.md)
+        * [组合模式](./Python/Python设计模式/组合模式.md)
+        * [外观模式](./Python/Python设计模式/外观模式.md)
+        * [代理模式](./Python/Python设计模式/代理模式.md)
+        * [装饰器模式](./Python/Python设计模式/装饰器模式.md)
+        * [享元模式](./Python/Python设计模式/享元模式.md)
+        * [责任链模式](./Python/Python设计模式/责任链模式.md)
+        * [解释器模式](./Python/Python设计模式/解释器模式.md)
+        * [迭代器模式](./Python/Python设计模式/迭代器模式.md)
+        * [观察者模式](./Python/Python设计模式/观察者模式.md)
+        * [中介者模式](./Python/Python设计模式/中介者模式.md)
+        * [访问者模式](./Python/Python设计模式/访问者模式.md)
+        * [备忘录模式](./Python/Python设计模式/备忘录模式.md)
+        * [命令模式](./Python/Python设计模式/命令模式.md)
+        * [状态模式](./Python/Python设计模式/状态模式.md)
+        * [策略模式](./Python/Python设计模式/策略模式.md)
+        * [模板模式](./Python/Python设计模式/模板模式.md)
     * [Python网络编程](./Python/Python网络编程/summary.md)
         * [socket编程](./Python/Python网络编程/summary.md)
         * [TCP粘包](./Python/Python网络编程/summary.md)
