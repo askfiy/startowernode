@@ -213,9 +213,9 @@ if __name__ == '__main__':
 
 
 
-Python3.5中不支持序列化bytes类型。
+Python3.6以及Python2.7之前均不支持反序列化bytes类型。
 
-其他版本中均可以支持。
+也就是说json.loads()一个bytes类型会抛出异常。
 
 
 

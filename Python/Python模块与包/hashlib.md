@@ -217,7 +217,22 @@ server端    --------->     client端
 首先是方式1，将文件所有内容hash校验一遍，安全系数最高，速度最慢。
 
 ```
-res = ""m =  hashlib.sha256()f = open(file="test.txt",mode="rb")while 1:    temp = f.read(1024)    # ❶    m.update(temp) # ❷    if not len(temp):        f.close()        hash_res = m.hexdigest() # ❸        breakprint(hash_res) # 48dd13d8629b4a15f791dec773cab271895187a11683a3d19d4877a8c256cb70
+res = ""
+m =  hashlib.sha256()
+
+f = open(file="test.txt",mode="rb")
+while 1:
+    temp = f.read(1024)
+    # ❶
+    m.update(temp) # ❷
+    if not len(temp):
+        f.close()
+        hash_res = m.hexdigest() # ❸
+        break
+
+print(hash_res) 
+
+# 48dd13d8629b4a15f791dec773cab271895187a11683a3d19d4877a8c256cb70
 ```
 
 ❶：更新hash值
@@ -233,7 +248,29 @@ res = ""m =  hashlib.sha256()f = open(file="test.txt",mode="rb")while 1:    temp
 迅雷等下载软件均采用此种方式，前提是要让用户知道我们seek()的文件指针点在哪里:
 
 ```
-m =  hashlib.sha256()f = open(file="1.txt",mode="rb")# ❶f.seek(20,0)temp = f.read(10)m.update(temp)# ❷f.seek(20,1)temp = f.read(10)m.update(temp)# ❸f.seek(-20,2)temp = f.read(10)m.update(temp)# ❹hash_res = m.hexdigest()print(hash_res) # daffa21b2be95802d2beeb1f66ce5feb61195e31074120a605421563f775e360
+m =  hashlib.sha256()
+f = open(file="1.txt",mode="rb")
+
+# ❶
+f.seek(20,0)
+temp = f.read(10)
+m.update(temp)
+
+# ❷
+f.seek(20,1)
+temp = f.read(10)
+m.update(temp)
+
+# ❸
+f.seek(-20,2)
+temp = f.read(10)
+m.update(temp)
+
+# ❹
+hash_res = m.hexdigest()
+print(hash_res) 
+
+# daffa21b2be95802d2beeb1f66ce5feb61195e31074120a605421563f775e360
 ```
 
 ❶：在文件的开始位置，读取10个bytes，用作生成hash值的源内容部分
@@ -253,8 +290,14 @@ hmac模块的使用与hashlib大同小异。但是在某些方面会比hashlib�
 它也是一个内置模块，以下是简单的使用：
 
 ```
->>> import hmac>>> hmacObject = hmac.new("hello world".encode("u8"), digestmod="md5")>>> hmacObject.update("salt".encode("u8"))>>> hashValue = hmacObject.digest()>>> hashValueb'\xf3Q\xff\xb2V{\x88\xfe\x0e\x9aX\x19\xbf\x12\xf3<'>>> 
+>>> import hmac
+>>> hmacObject = hmac.new("hello world".encode("u8"), digestmod="md5")
+>>> hmacObject.update("salt".encode("u8"))
+>>> hashValue = hmacObject.digest()
+>>> hashValue
+b'\xf3Q\xff\xb2V{\x88\xfe\x0e\x9aX\x19\xbf\x12\xf3<'
+>>> 
 ```
 
-
+另外，还有一个compare_digest()方法，放入2个bytes类型，用于判断他们的值是否一致。
 
