@@ -139,7 +139,7 @@ console.log(!!"");
 // false
 ```
 
-6）引用类型的布尔值总为true，如array和object：
+6）引用类型的布尔值总为true，无论它其中是否有值，如array和object，以及map和set：
 
 ```
 "use strict";
@@ -148,10 +148,42 @@ console.log(!![]);
 console.log(!![1, 2, 3]);
 console.log(!!{});
 console.log(!!{ x: 1, y: 2 });
+console.log(!!new Map());
+console.log(!!new Map([["x", 1], ["y", 2]]));
+console.log(!!new Set());
+console.log(!!new Set([1, 1, 2, 2, 3, 3]));
 
 // true
 // true
 // true
+// true
+// true
+// true
+// true
+// true
+```
+
+7）要判断容器类型是否为空，则需要通过length或者size以及其他方法进行判断，如下所示：
+
+```
+"use strict";
+
+console.log(!![].length);
+console.log(!![1, 2, 3].length);
+console.log(!!Object.keys({}).length);
+console.log(!!Object.keys({ x: 1, y: 2 }).length);
+console.log(!!new Map().size);
+console.log(!!new Map([["x", 1], ["y", 2]]).size);
+console.log(!!new Set().size);
+console.log(!!new Set([1, 1, 2, 2, 3, 3]).size);
+
+// false
+// true
+// false
+// true
+// false
+// true
+// false
 // true
 ```
 

@@ -39,7 +39,6 @@
 | [Event.target](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/target) | 对事件原始目标的引用，这里的原始目标指最初派发（dispatch）事件时指定的目标 |
 | [Event.currentTarget](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/currentTarget) | 当前正在执行事件的对象，如果有事件冒泡发生，它将是不断变化的 |
 | [Event.cancelable](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/cancelable) | 一个布尔值，表示事件是否可以取消                             |
-| [Event.defaultPrevented](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/defaultPrevented) | 一个布尔值，表示 [event.preventDefault()](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault) 方法是否取消了事件的默认行为 |
 | [Event.bubbles](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/bubbles) | 一个布尔值，用来表示该事件是否会在 DOM 中冒泡                |
 | [Event.eventPhase](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/eventPhase) | 表示事件流正被处理到了哪个阶段                               |
 
@@ -1170,7 +1169,7 @@ unload事件会在文档卸载时触发，它位于beforeunload事件之后。
 | blur   | 元素失去焦点后触发                 |
 | input  | 元素内容发生改变后触发             |
 | click  | 单击了某个表单项                   |
-| change | 元素内容发生并且失去焦点改变时触发 |
+| change | 元素内容发生改变并且失去焦点时触发 |
 | submit | 提交表单时触发                     |
 
 注意，node.focus()和node.blur()可强制的让元素获取、失去焦点。

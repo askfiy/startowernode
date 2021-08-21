@@ -1053,6 +1053,7 @@ document.getElmentByClassName()方法可根据class属性获取元素节点集�
 document.querySelectorAll()方法可根据CSS Selectors获取元素节点集合。
 
 - 注意！不论是document对象还是普通的节点对象都能使用该方法！
+- CSS的:checked选择器能够获取所有已被选中的radio、checkbox元素，而使用querySelectorAll(“:checked”)仅能获取所有默认被选中的radio、checkbox元素
 
 它返回NodeList元素集合对象：
 
@@ -1108,6 +1109,7 @@ document.querySelector()方法可根据CSS Selectors获取元素节点。
 
 - 注意！不论是document对象还是普通的节点对象都能使用该方法！
 - 如果有多个符合条件的元素，则只返回第一个，也就是说它相当于document.querySelectorAll()[0]
+- CSS的:checked选择器能够获取所有已被选中的radio、checkbox元素，而使用querySelector(“:checked”)仅能获取一个默认被选中的radio、checkbox元素
 
 它返回单一被选中的元素节点：
 
@@ -1197,6 +1199,56 @@ JavaScript为表单的查找提供了单独的属性接口：
 
 
 
+## 获取被选中的单、复选框
+
+单纯的使用:checked选择器，只会找到默认被选中的单选框、复选框、以及option，对于后续手动添加的单选框复选框是检测不到的。
+
+若想获取所有被选中的单、复选框，只有循环单选框、复选框列表，判定其是否具有属性checked才行。
+
+如下所示：
+
+```
+<body>
+    <form action="#" name="register">
+        <div>
+            <label for="male">男</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="female">女</label>
+            <input type="radio" name="gender" id="female" value="female">
+        </div>
+        <div>
+            <label for="basketball">篮球</label></label></label>
+            <input type="checkbox" name="hobby" id="baketball" value="basketball">
+            <label for="football">足球</label>
+            <input type="checkbox" name="hobby" id="football" value="football" checked>
+            <label for="volleyball">排球</label>
+            <input type="checkbox" name="hobby" id="volleyball" value="volleyball">
+        </div>
+        <div>
+            <button type="button">检测</button>
+        </div>
+    </form>
+</body>
+<script>
+
+    "use strict";
+
+    let btnNode = document.querySelector("button");
+    let radioAndCheckboxNodeList = document.forms.register.querySelectorAll("input[type=radio], input[type=checkbox]");
+
+
+    btnNode.addEventListener("click", (event) => {
+        let checkedRadioCheckbox = Array.from(radioAndCheckboxNodeList).filter((element, index) => {
+            return element.checked
+        })
+        console.log(checkedRadioCheckbox);
+    });
+
+</script>
+```
+
+
+
 ## 获取select选中值
 
 如果想获取select中被选中的option，则可使用以下方法：
@@ -1230,12 +1282,11 @@ JavaScript为表单的查找提供了单独的属性接口：
     let btnNode = document.querySelector("button");
     let selectNode = document.forms.register.city;
     btnNode.addEventListener("click", (event) => {
-        Array.from(selectNode.options, (option, index, array) => {
-            if (option.selected) {
-                console.log(option.value, option.innerText, "被选中");
-            }
+        let selectedOption = Array.from(selectNode.options).filter((element, index, array) => {
+            return element.selected;
         });
-    });
+        console.log(selectedOption);
+    })
 
 </script>
 ```
@@ -3606,8 +3657,8 @@ classList属性下可使用的方法如下表所示：
 | 方法                 | 描述                                                         |
 | -------------------- | ------------------------------------------------------------ |
 | classList.contains() | 检测某个class是否存在                                        |
-| classList.add()      | 新增class                                                    |
-| classList.remove()   | 删除class                                                    |
+| classList.add()      | 新增一个或多个class                                          |
+| classList.remove()   | 删除一个或多个class                                          |
 | classList.toggle()   | 如果class以存在，则删除，如果class不存在，则新增，相当于切换 |
 
 1）检测某个class是否存在：
@@ -3672,7 +3723,7 @@ classList属性下可使用的方法如下表所示：
 </html>
 ```
 
-2）新增class：
+2）新增class，可用空格进行分割，进而一次添加多个class：
 
 ```
 <!DOCTYPE html>
@@ -3726,7 +3777,7 @@ classList属性下可使用的方法如下表所示：
 </html>
 ```
 
-3）删除class：
+3）删除class，可用空格进行分割，进而一次删除多个class：
 
 ```
 <!DOCTYPE html>

@@ -18,7 +18,7 @@ XMLHttpRequest是JavaScript中原生的，历史悠久的一种发送网络请�
 
 ## 后端代码
 
-为了方便后续代码测试，我们后端采用Python-flask框架来完成。
+为了方便后续前后端交互的代码测试，我们后端采用Python-flask框架来完成。
 
 - IP：localhost
 - PORT：5700
@@ -462,18 +462,17 @@ class Ajax {
         this.beforeSend = beforeSend || function (xhr) { };
 
         // 该函数默认会自动的根据dataType对象responseText进行解码
-        this.dataFilter = dataFilter || function (responseText, dataType) {
-            switch (dataType) {
+        this.dataFilter = dataFilter || function (data, ty) {
+            switch (ty) {
                 case "application/json": case "json":
-                    // 新增，this.xhr.responseJSON属性
-                    this.xhr.responseJSON = JSON.parse(responseText);
-                    return this.xhr.responseJSON;
+                    this.xhr.responseJSON = JSON.parse(data);
+                    return this.xhr.responseJSON
                 default:
-                    return responseText;
+                    return data
             }
         };
-        this.success = success || function (responseText, statusText) { };
-        this.error = error || function (responseText, statusText) { };
+        this.success = success || function (data, statusText) { };
+        this.error = error || function (xhr, statusText) { };
         this.complete = complete || function (xhr, statusText) { };
 
 
@@ -491,8 +490,8 @@ class Ajax {
     }
 
     bindStateChangeEvent() {
-        let resultText = "";
-        let statusText = "";
+        let data = "";
+        let textStatus = "";
 
         // 绑定回调函数，这里采用匿名函数使this指向Object，否则this将指向xhr
         this.xhr.addEventListener("readystatechange", () => {
@@ -502,15 +501,15 @@ class Ajax {
                     break
                 case 4:
                     // 回调函数dataFilter的dataType参数如果你设定了就传递设定的值，如果未设定就用响应头里的contentType进行传递
-                    resultText = this.dataFilter(this.xhr.responseText, this.dataType || this.xhr.getResponseHeader("Content-Type").toLowerCase());
+                    data = this.dataFilter(this.xhr.responseText, this.dataType || this.xhr.getResponseHeader("Content-Type").toLowerCase());
                     if (this.xhr.statusText === "OK") {
-                        statusText = "success";
-                        this.success(resultText, statusText);
+                        textStatus = "success";
+                        this.success(data, textStatus);
                     } else {
-                        statusText = "error";
-                        this.error(this.xhr, "error");
+                        textStatus = "error";
+                        this.error(this.xhr, textStatus);
                     }
-                    this.complete(this.xhr, statusText);
+                    this.complete(this.xhr, textStatus);
                     break
             }
         });
@@ -684,7 +683,7 @@ window.$ = { ajax: getAjax, serialize, serializeArray };
 
 如支持的原生上传数据格式实现：
 
-- 仅支持上传k-v的对象，不支持上传数组
+- 仅支持上传k-v的对象，不支持上传数组（仅针对非JSON数据格式的发送）
 - 前端上传的数据中，不允许出现对象嵌套的形式。如{"k1":{"k1-1":v1}}，这样只会得到{“k1” : “object”}
 - 如果前端传递的是一个Array，如 {"k1":[1, 2, 3, 4]} 则需要添加一个属性 traditional:true，否则后端将接收不到该参数。（实际上接受的时候要使用request.POST.get("k1[]")）来进行接受，这是有问题的
 
@@ -697,27 +696,29 @@ window.$ = { ajax: getAjax, serialize, serializeArray };
 发送GET请求示例如下：
 
 ```
-// 发送GET请求
 $.ajax({
     url: "http://localhost:5700/get",
-    method: "get",
-    headers: {
-        "user_head": "Hello World",
+    method: "GET",
+    dataType: "JSON",
+    headers: { "user_head": "Hello World" },
+    data: { name: "Jack", age: 18, gender: "male" },
+    success: (data, textStatus) => {
+        console.log("成功");
+        console.log(data);
+        console.log(textStatus);
     },
-    data: { "name": "Jack", "age": 18 },
-    dataType: "json",
-    success: (responseText, statusText) => {
-        console.log(responseText);
-        console.log(statusText);
+    error: (xhr, textStatus) => {
+        console.log("失败");
+        console.log(xhr);
+        console.log(textStatus);
     },
-    error: (responseText, statusText) => {
-        console.log(responseText);
-        console.log(statusText);
-    },
-    complete: (xhr, statusText) => {
-        console.log("此处可获取响应头");
+    complete: (xhr, textStatus) => {
+        console.log("总是执行,此处可获取响应头");
+        console.log(xhr);
+        console.log(textStatus);
     }
 })
+
 ```
 
 
@@ -727,27 +728,29 @@ $.ajax({
 发送POST请求示例如下：
 
 ```
- // 发送post请求
- $.ajax({
+$.ajax({
     url: "http://localhost:5700/post",
-    method: "post",
-    headers: {
-        "user_head": "Hello World",
+    method: "POST",
+    dataType: "JSON",
+    headers: { "user_head": "Hello World" },
+    data: { name: "Jack", age: 18, gender: "male" },
+    success: (data, textStatus) => {
+        console.log("成功");
+        console.log(data);
+        console.log(textStatus);
     },
-    data: { "name": "Jack", "age": 18 },
-    dataType: "json",
-    success: (responseText, statusText) => {
-        console.log(responseText);
-        console.log(statusText);
+    error: (xhr, textStatus) => {
+        console.log("失败");
+        console.log(xhr);
+        console.log(textStatus);
     },
-    error: (responseText, statusText) => {
-        console.log(responseText);
-        console.log(statusText);
-    },
-    complete: (xhr, statusText) => {
-        console.log("此处可获取响应头");
+    complete: (xhr, textStatus) => {
+        console.log("总是执行,此处可获取响应头");
+        console.log(xhr);
+        console.log(textStatus);
     }
 })
+
 ```
 
 
@@ -756,29 +759,34 @@ $.ajax({
 
 ## 如何发送JSON数据
 
-发送JSON格式数据示例如下：
+发送JSON格式数据示例如下。
+
+你需要手动指定contentType为application/json和手动的对上传数据进行序列化
+
+如果你发送JSON格式的数据，是支持上传数组格式的数据的：
 
 ```
-// 发送json格式数据
 $.ajax({
     url: "http://localhost:5700/json",
-    method: "post",
-    headers: {
-        "user_head": "Hello World",
+    method: "POST",                                                      // 必须是POST
+    dataType: "JSON",
+    headers: { "user_head": "Hello World" },
+    contentType: "application/json",                                     // 1.手动指定请求头中contentType的格式
+    data: JSON.stringify([1, 2, 3, 4, 5]),                               // 2.手动的对上传数据进行JSON序列化
+    success: (data, textStatus) => {
+        console.log("成功");
+        console.log(data);
+        console.log(textStatus);
     },
-    data: JSON.stringify({ "name": "Jack", "age": 18 }),    // 1.手动进行JSON格式化
-    dataType: "json",
-    contentType: "application/json",                        // 2.请求头中声明本次发送的是JSON格式数据
-    success: (responseText, statusText) => {
-        console.log(responseText);
-        console.log(statusText);
+    error: (xhr, textStatus) => {
+        console.log("失败");
+        console.log(xhr);
+        console.log(textStatus);
     },
-    error: (responseText, statusText) => {
-        console.log(responseText);
-        console.log(statusText);
-    },
-    complete: (xhr, statusText) => {
-        console.log("此处可获取响应头");
+    complete: (xhr, textStatus) => {
+        console.log("总是执行,此处可获取响应头");
+        console.log(xhr);
+        console.log(textStatus);
     }
 })
 ```
@@ -793,22 +801,12 @@ $.ajax({
 
 - serialize()：提取form表单中的数据项，并对其做url编码处理，返回一个字符串，注意，它不会提取文件选择框
 
-- serializeArray()：提取form表单中的数据，并将其构建为一个name：value的数组，注意，它不会提取文件选择框，最终格式为 [{name:value}, {name:value}, {name:value}]，
+- serializeArray()：提取form表单中的数据，并将其构建为一个name：value的数组，注意，它不会提取文件选择框，最终格式为 [{name : “attribute”, value : “input”}, {name : “attribute”, value : “input”}]
 
 
 示例如下，如果是serialize()则直接提交即可：
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <body>
     <form action="#" id="register">
         <div>
@@ -856,27 +854,30 @@ $.ajax({
 
     </form>
 </body>
+
 <script src="./demo.js"></script>
 <script>
     document.querySelector("button").addEventListener("click", (event) => {
         $.ajax({
             url: "http://localhost:5700/post",
-            method: "post",
-            headers: {
-                "user_head": "Hello World",
-            },
+            method: "POST",
+            headers: { "user_head": "Hello World" },
             data: $.serialize("#register"),
-            dataType: "json",
-            success: (responseText, statusText) => {
-                console.log(responseText);
-                console.log(statusText);
+            dataType: "JSON",
+            success: (data, textStatus) => {
+                console.log("成功");
+                console.log(data);
+                console.log(textStatus);
             },
-            error: (responseText, statusText) => {
-                console.log(responseText);
-                console.log(statusText);
+            error: (xhr, textStatus) => {
+                console.log("失败");
+                console.log(xhr);
+                console.log(textStatus);
             },
-            complete: (xhr, statusText) => {
-                console.log("此处可获取响应头");
+            complete: (xhr, textStatus) => {
+                console.log("总是执行,此处可获取响应头");
+                console.log(xhr);
+                console.log(textStatus);
             }
         })
 
@@ -892,16 +893,6 @@ $.ajax({
 如果是serializeArray()，需要使用appliction/json的方式进行提交，因为该方法返回的是一个数组：
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <body>
     <form action="#" id="register">
         <div>
@@ -949,41 +940,43 @@ $.ajax({
 
     </form>
 </body>
+
 <script src="./demo.js"></script>
 <script>
     document.querySelector("button").addEventListener("click", (event) => {
         $.ajax({
             url: "http://localhost:5700/json",
-            method: "post",
-            headers: {
-                "user_head": "Hello World",
+            method: "POST",
+            headers: { "user_head": "Hello World" },
+            contentType: "application/json",                        // 1.手动指定请求头中contentType的格式
+            data: JSON.stringify($.serializeArray("#register")),  // 2.手动的对上传数据进行JSON序列化
+            dataType: "JSON",
+            success: (data, textStatus) => {
+                console.log("成功");
+                console.log(data);
+                console.log(textStatus);
             },
-            data: JSON.stringify($.serializeArray("#register")),    // 1.手动进行JSON格式化
-            dataType: "json",
-            contentType: "application/json",                        // 2.请求头中声明本次发送的是JSON格式数据
-            success: (responseText, statusText) => {
-                console.log(responseText);
-                console.log(statusText);
+            error: (xhr, textStatus) => {
+                console.log("失败");
+                console.log(xhr);
+                console.log(textStatus);
             },
-            error: (responseText, statusText) => {
-                console.log(responseText);
-                console.log(statusText);
-            },
-            complete: (xhr, statusText) => {
-                console.log("此处可获取响应头");
+            complete: (xhr, textStatus) => {
+                console.log("总是执行,此处可获取响应头");
+                console.log(xhr);
+                console.log(textStatus);
             }
         })
 
-
         console.log($.serializeArray("#register"));
         // Array(7)
-        // 0: {username: "云崖"}
-        // 1: {password: "123"}
-        // 2: {gender: "male"}
-        // 3: {hobby: "basketball"}
-        // 4: {hobby: "football"}
-        // 5: {city: "shanghai"}
-        // 6: {city: "shenzhen"}
+        // 0: {name: "username", value: "云崖"}
+        // 1: {name: "password", value: "123"}
+        // 2: {name: "gender", value: "male"}
+        // 3: {name: "hobby", value: "basketball"}
+        // 4: {name: "hobby", value: "football"}
+        // 5: {name: "city", value: "shanghai"}
+        // 6: {name: "city", value: "shenzhen"}
     })
 
 </script>
@@ -1009,16 +1002,6 @@ $.ajax({
 示例如下，我们使用FormData搭配serializeArray()方法实现一个真正意义上的异步提交表单：
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <body>
     <form action="#" id="register">
         <div>
@@ -1066,6 +1049,7 @@ $.ajax({
 
     </form>
 </body>
+
 <script src="./demo.js"></script>
 <script>
     document.querySelector("button").addEventListener("click", (event) => {
@@ -1088,24 +1072,26 @@ $.ajax({
         // 发送json格式数据
         $.ajax({
             url: "http://localhost:5700/file",
-            method: "post",
-            headers: {
-                "user_head": "Hello World",
-            },
+            method: "POST",
+            headers: {"user_head": "Hello World"}
             data: fd,            // 直接发送ForData对象即可
-            dataType: "json",
+            dataType: "JSON",
             contentType: false,  // 必须设置为false
             processData: false,  // 必须设置为false
-            success: (responseText, statusText) => {
-                console.log(responseText);
-                console.log(statusText);
+            success: (data, textStatus) => {
+                console.log("成功");
+                console.log(data);
+                console.log(textStatus);
             },
-            error: (xhr, statusText) => {
-                console.log(xhr.responseText);
-                console.log(statusText);
+            error: (xhr, textStatus) => {
+                console.log("失败");
+                console.log(xhr);
+                console.log(textStatus);
             },
-            complete: (xhr, statusText) => {
-                console.log(statusText);
+            complete: (xhr, textStatus) => {
+                console.log("总是执行,此处可获取响应头");
+                console.log(xhr);
+                console.log(textStatus);
             }
         })
     })
