@@ -416,88 +416,118 @@ console.log(ins.bmi);
 
 ## public
 
-public指不受保护的、公开的属性。类的内部或外部均可访问到该属性。
+public指不受保护的、公开的属性。类的内部或外部及其子类均可访问或者修改该属性。
 
 默认所有的属性都是public：
 
 ```
-"use strict";
-
 class Person {
 
-    constructor(userName, userAge, userGender) {
-        this.userName = userName;
-        this.userAge = userAge;
-        this.userGender = userGender;
+    constructor(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
     getInfo() {
-        return `name : ${this.userName}\nage : ${this.userAge}\ngender : ${this.userGender}`
+        // ❶ 类的内部可以进行访问，也可以进行修改
+        return `name : ${this.name}\nage : ${this.age}\ngender : ${this.gender}`
+    }
+
+    setAge(age) {
+        this.age = age;
     }
 
 }
 
-let ins = new Person("Jack", 18, "male");
-console.log(ins);
 
-// Person { userName: 'Jack', userAge: 18, userGender: 'male' }
+let person = new Person("Jack", 18, "male");
+
+// ❷ 类的外部也可以进行访问和修改
+console.log(person.getInfo());
+person.setAge(22);
+
+person.name = "--Jack--";
+console.log(person.name);
+
+
+// ❸ 被继承的子类中也可以进行访问和修改
+class Child extends Person {
+    constructor(name, age, gender) {
+        super(name, age, gender)
+        this.name = "Mary";  // 可以修改
+    }
+}
+
+let child = new Child("Tom", 12, "male");
+
+console.log(child.getInfo());
 ```
 
 
 
 ## private
 
-private指受保护的、私有的属性。仅能在类的内部访问，外部是访问不到的，且不允许被继承。
+private指受保护的、私有的属性。仅能在当前类的内部访问或修改，外部的访问和修改是做不到的，但可通过类内部暴露的接口方法进行访问。
 
 private属性经常与属性代理一起使用，使用#关键字定义私有属性即可：
 
 ```
-"use strict";
-
 class Person {
-    // 1.声明私有属性
-    #userAge;
-    #userGender;
 
-    constructor(userName, userAge, userGender) {
-        this.userName = userName;
+    // 必须先声明私有属性
+    // 方法没有私有的一说，它们都是存在原型链上的，故不用声明
+    #name;
+    #age;
+    #gender;
 
-        // 2.使用私有属性
-        this.#userAge = userAge;
-        this.#userGender = userGender;
+    constructor(name, age, gender) {
+        this.#name = name;
+        this.#age = age;
+        this.#gender = gender;
     }
 
     getInfo() {
-        if (this.#check){
-            return `name : ${this.userName}\nage : ${this.#userAge}\ngender : ${this.#userGender}`
-        }
-        // 如果信息不全，则抛出异常
-        throw new Error("Incomplete information")
+        // ❶ 类的内部可以进行访问，也可以进行修改
+        return `name : ${this.#name}\nage : ${this.#age}\ngender : ${this.#gender}`
     }
 
-
-    // 3.私有方法不需要声明 验证信息是否齐全
-    #check() {
-        return this.userName && this.#userAge && this.#userGender
+    setAge(age) {
+        this.age = age;
     }
 
 }
 
-let ins = new Person("Jack", 18, "male");
-console.log(ins.getInfo());
 
-// ins.#check()
-// Uncaught SyntaxError: Private field '#check' must be declared in an enclosing class
+let person = new Person("Jack", 18, "male");
 
-// ins.#userAge
-// Uncaught SyntaxError: Private field '#userAge' must be declared in an enclosing class
+// ❷ 类的外部仅能通过类内部暴露的接口方法访问，直接访问是访问不到的
+console.log(person.getInfo());
+person.setAge(22);
+
+// person.#name = "--Jack--";
+// console.log(person.#name);
+
+
+// ❸ 被继承的子类中不能进行访问和修改，但可以通过类内部暴露的接口方法进行访问和修改
+class Child extends Person {
+    constructor(name, age, gender) {
+        super(name, age, gender)
+        // this.#name = "Mary";  // 不可以修改 抛出异常！
+    }
+}
+
+let child = new Child("Tom", 12, "male");
+
+console.log(child.getInfo());
+child.setAge(10);
 ```
 
 
 
 ## protected
 
-protected是指受保护的，半私有的属性。仅能在类的内部访问，外部是访问不到的，但它允许被继承
+protected是指受保护的，半私有的属性。仅能在类的内部访问和修改，外部的访问和修改是做不到的，但它允许在子类中进行访问和修改。
 
 下面介绍三种半私有封装方式。
 
@@ -505,7 +535,7 @@ protected是指受保护的，半私有的属性。仅能在类的内部访问�
 
 ### 下划线封装法
 
-这是一种君子约定的封装法，使用单下划线或者双下划线进行封装。
+这是一种君子约定的封装法，使用单下划线进行封装。
 
 它其实并不会有任何强制性措施，只是告诉使用者，请不要在外部使用该属性。
 
@@ -519,11 +549,11 @@ class Person {
     constructor(userName, userAge, userGender) {
         this.userName = userName;
         this._userAge = userAge;
-        this.__userGender = userGender;
+        this._userGender = userGender;
     }
 
     getInfo() {
-        return `name : ${this.userName}\nage : ${this._userAge}\ngender : ${this.__userGender}`
+        return `name : ${this.userName}\nage : ${this._userAge}\ngender : ${this._userGender}`
     }
 
 }
@@ -532,7 +562,7 @@ let ins = new Person("Jack", 18, "male");
 
 // 外部依然可以访问，君子约定而已
 console.log(ins._userAge);
-console.log(ins.__userGender);
+console.log(ins._userGender);
 
 // 18
 // male
@@ -546,7 +576,7 @@ console.log(ins.__userGender);
 
 由于我们的代码都是在一个模块中进行封装的，所以使用Symbol()来进行私有封装非常的方便。
 
-除非使用者打开源代码找到Symbol键，否则他只能通过提供的接口来拿到数据。
+除非使用者打开源代码找到Symbol键，否则他只能通过提供的类内部暴露的接口方法来拿到数据。
 
 ```
 "use strict";

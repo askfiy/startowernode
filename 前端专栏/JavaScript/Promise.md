@@ -35,7 +35,7 @@ JavaScript是一门单线程的编程语言，所以没有真正意义上的并�
 
 - setInterval
 - setTimeout
-- setTimmediate  Node.Js独有
+- setImmediate  Node.Js独有
 - XHR callbackfn
 - event callbackfn
 - requestAnimationFrame
