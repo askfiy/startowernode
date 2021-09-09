@@ -1,0 +1,4810 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>过渡时间 · 星塔Node</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="云崖先生">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../public-repertory/css/gitbook-configure.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="帧动画.html" />
+    
+    
+    <link rel="prev" href="变形动画.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../杂谈专栏/summary.html">
+            
+                <a href="../../杂谈专栏/summary.html">
+            
+                    
+                    杂谈专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../杂谈专栏/编程语言区别.html">
+            
+                <a href="../../杂谈专栏/编程语言区别.html">
+            
+                    
+                    编程语言区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../杂谈专栏/详解字符编码.html">
+            
+                <a href="../../杂谈专栏/详解字符编码.html">
+            
+                    
+                    详解字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../杂谈专栏/放一些常见题目.html">
+            
+                <a href="../../杂谈专栏/放一些常见题目.html">
+            
+                    
+                    常见问题大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../杂谈专栏/一些常见软件的安装目录.html">
+            
+                <a href="../../杂谈专栏/一些常见软件的安装目录.html">
+            
+                    
+                    常见软件安装目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../杂谈专栏/HTTP服务相关.html">
+            
+                <a href="../../杂谈专栏/HTTP服务相关.html">
+            
+                    
+                    HTTP服务相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../杂谈专栏/推荐电子书.html">
+            
+                <a href="../../杂谈专栏/推荐电子书.html">
+            
+                    
+                    推荐电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Python/summary.html">
+            
+                <a href="../../Python/summary.html">
+            
+                    
+                    Python专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Python/Python快速入门/summary.html">
+            
+                <a href="../../Python/Python快速入门/summary.html">
+            
+                    
+                    Python快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../Python/Python快速入门/Python简介.html">
+            
+                <a href="../../Python/Python快速入门/Python简介.html">
+            
+                    
+                    Python简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../Python/Python快速入门/Python安装.html">
+            
+                <a href="../../Python/Python快速入门/Python安装.html">
+            
+                    
+                    Python安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../Python/Python快速入门/pip简单使用.html">
+            
+                <a href="../../Python/Python快速入门/pip简单使用.html">
+            
+                    
+                    pip简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../Python/Python快速入门/Python虚拟环境.html">
+            
+                <a href="../../Python/Python快速入门/Python虚拟环境.html">
+            
+                    
+                    Python虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../Python/Python快速入门/Python常用工具.html">
+            
+                <a href="../../Python/Python快速入门/Python常用工具.html">
+            
+                    
+                    Python常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../Python/Python快速入门/PEP8规范说明.html">
+            
+                <a href="../../Python/Python快速入门/PEP8规范说明.html">
+            
+                    
+                    PEP8规范说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Python/Python基础知识/summary.html">
+            
+                <a href="../../Python/Python基础知识/summary.html">
+            
+                    
+                    Python基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../Python/Python基础知识/代码与注释.html">
+            
+                <a href="../../Python/Python基础知识/代码与注释.html">
+            
+                    
+                    代码与注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../Python/Python基础知识/变量与常量.html">
+            
+                <a href="../../Python/Python基础知识/变量与常量.html">
+            
+                    
+                    变量与常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../Python/Python基础知识/整形与浮点型.html">
+            
+                <a href="../../Python/Python基础知识/整形与浮点型.html">
+            
+                    
+                    整形与浮点型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../Python/Python基础知识/列表类型.html">
+            
+                <a href="../../Python/Python基础知识/列表类型.html">
+            
+                    
+                    列表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../Python/Python基础知识/元组类型.html">
+            
+                <a href="../../Python/Python基础知识/元组类型.html">
+            
+                    
+                    元组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../Python/Python基础知识/字符串类型.html">
+            
+                <a href="../../Python/Python基础知识/字符串类型.html">
+            
+                    
+                    字符串类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../Python/Python基础知识/字典类型.html">
+            
+                <a href="../../Python/Python基础知识/字典类型.html">
+            
+                    
+                    字典类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../Python/Python基础知识/集合类型.html">
+            
+                <a href="../../Python/Python基础知识/集合类型.html">
+            
+                    
+                    集合类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../Python/Python基础知识/布尔类型.html">
+            
+                <a href="../../Python/Python基础知识/布尔类型.html">
+            
+                    
+                    布尔类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../Python/Python基础知识/单例None.html">
+            
+                <a href="../../Python/Python基础知识/单例None.html">
+            
+                    
+                    单例None
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.11" data-path="../../Python/Python基础知识/内存管理.html">
+            
+                <a href="../../Python/Python基础知识/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.12" data-path="../../Python/Python基础知识/深浅拷贝.html">
+            
+                <a href="../../Python/Python基础知识/深浅拷贝.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.13" data-path="../../Python/Python基础知识/输入与输出.html">
+            
+                <a href="../../Python/Python基础知识/输入与输出.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.14" data-path="../../Python/Python基础知识/运算符相关.html">
+            
+                <a href="../../Python/Python基础知识/运算符相关.html">
+            
+                    
+                    运算符相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.15" data-path="../../Python/Python基础知识/分支结构.html">
+            
+                <a href="../../Python/Python基础知识/分支结构.html">
+            
+                    
+                    分支结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.16" data-path="../../Python/Python基础知识/流程控制.html">
+            
+                <a href="../../Python/Python基础知识/流程控制.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.17" data-path="../../Python/Python基础知识/推导式.html">
+            
+                <a href="../../Python/Python基础知识/推导式.html">
+            
+                    
+                    推导式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.18" data-path="../../Python/Python基础知识/字符编码.html">
+            
+                <a href="../../Python/Python基础知识/字符编码.html">
+            
+                    
+                    字符编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.19" data-path="../../Python/Python基础知识/文件操作.html">
+            
+                <a href="../../Python/Python基础知识/文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Python/Python函数相关/summary.html">
+            
+                <a href="../../Python/Python函数相关/summary.html">
+            
+                    
+                    Python函数相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../Python/Python函数相关/初识函数.html">
+            
+                <a href="../../Python/Python函数相关/初识函数.html">
+            
+                    
+                    初识函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../Python/Python函数相关/使用函数.html">
+            
+                <a href="../../Python/Python函数相关/使用函数.html">
+            
+                    
+                    使用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../Python/Python函数相关/参数详解.html">
+            
+                <a href="../../Python/Python函数相关/参数详解.html">
+            
+                    
+                    参数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../Python/Python函数相关/命名空间.html">
+            
+                <a href="../../Python/Python函数相关/命名空间.html">
+            
+                    
+                    命名空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../../Python/Python函数相关/高阶函数.html">
+            
+                <a href="../../Python/Python函数相关/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../../Python/Python函数相关/递归函数.html">
+            
+                <a href="../../Python/Python函数相关/递归函数.html">
+            
+                    
+                    递归函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../../Python/Python函数相关/匿名函数.html">
+            
+                <a href="../../Python/Python函数相关/匿名函数.html">
+            
+                    
+                    匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../../Python/Python函数相关/内置函数.html">
+            
+                <a href="../../Python/Python函数相关/内置函数.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../../Python/Python函数相关/装饰器.html">
+            
+                <a href="../../Python/Python函数相关/装饰器.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="../../Python/Python函数相关/迭代器.html">
+            
+                <a href="../../Python/Python函数相关/迭代器.html">
+            
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.11" data-path="../../Python/Python函数相关/生成器.html">
+            
+                <a href="../../Python/Python函数相关/生成器.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../Python/Python模块与包/summary.html">
+            
+                <a href="../../Python/Python模块与包/summary.html">
+            
+                    
+                    Python模块与包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../Python/Python模块与包/目录规范.html">
+            
+                <a href="../../Python/Python模块与包/目录规范.html">
+            
+                    
+                    目录规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../Python/Python模块与包/Python模块.html">
+            
+                <a href="../../Python/Python模块与包/Python模块.html">
+            
+                    
+                    Python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../Python/Python模块与包/Python包.html">
+            
+                <a href="../../Python/Python模块与包/Python包.html">
+            
+                    
+                    Python包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../Python/Python模块与包/time.html">
+            
+                <a href="../../Python/Python模块与包/time.html">
+            
+                    
+                    内置模块：time
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../Python/Python模块与包/datetime.html">
+            
+                <a href="../../Python/Python模块与包/datetime.html">
+            
+                    
+                    内置模块：datetime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../Python/Python模块与包/random.html">
+            
+                <a href="../../Python/Python模块与包/random.html">
+            
+                    
+                    内置模块：random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../../Python/Python模块与包/os.html">
+            
+                <a href="../../Python/Python模块与包/os.html">
+            
+                    
+                    内置模块：os
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../../Python/Python模块与包/sys.html">
+            
+                <a href="../../Python/Python模块与包/sys.html">
+            
+                    
+                    内置模块：sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="../../Python/Python模块与包/json&pickle&shelve.html">
+            
+                <a href="../../Python/Python模块与包/json&pickle&shelve.html">
+            
+                    
+                    内置模块：json&pickle&shelve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="../../Python/Python模块与包/hashlib.html">
+            
+                <a href="../../Python/Python模块与包/hashlib.html">
+            
+                    
+                    内置模块：hashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="../../Python/Python模块与包/configparser.html">
+            
+                <a href="../../Python/Python模块与包/configparser.html">
+            
+                    
+                    内置模块：configparser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="../../Python/Python模块与包/subprocess.html">
+            
+                <a href="../../Python/Python模块与包/subprocess.html">
+            
+                    
+                    内置模块：subprocess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="../../Python/Python模块与包/logging.html">
+            
+                <a href="../../Python/Python模块与包/logging.html">
+            
+                    
+                    内置模块：logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.14" data-path="../../Python/Python模块与包/re.html">
+            
+                <a href="../../Python/Python模块与包/re.html">
+            
+                    
+                    内置模块：re
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.15" data-path="../../Python/Python模块与包/importlib.html">
+            
+                <a href="../../Python/Python模块与包/importlib.html">
+            
+                    
+                    内置模块：importlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.16" data-path="../../Python/Python模块与包/collections.html">
+            
+                <a href="../../Python/Python模块与包/collections.html">
+            
+                    
+                    内置模块：collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.17" data-path="../../Python/Python模块与包/itertools.html">
+            
+                <a href="../../Python/Python模块与包/itertools.html">
+            
+                    
+                    内置模块：itertools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.18" data-path="../../Python/Python模块与包/functools.html">
+            
+                <a href="../../Python/Python模块与包/functools.html">
+            
+                    
+                    内置模块：functools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.19" data-path="../../Python/Python模块与包/模块包库框架的区别.html">
+            
+                <a href="../../Python/Python模块与包/模块包库框架的区别.html">
+            
+                    
+                    模块包库框架的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../Python/Python面向对象/summary.html">
+            
+                <a href="../../Python/Python面向对象/summary.html">
+            
+                    
+                    Python面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../Python/Python面向对象/编程范式.html">
+            
+                <a href="../../Python/Python面向对象/编程范式.html">
+            
+                    
+                    编程范式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../Python/Python面向对象/类与对象.html">
+            
+                <a href="../../Python/Python面向对象/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../../Python/Python面向对象/类的方法.html">
+            
+                <a href="../../Python/Python面向对象/类的方法.html">
+            
+                    
+                    类的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../../Python/Python面向对象/属性代理.html">
+            
+                <a href="../../Python/Python面向对象/属性代理.html">
+            
+                    
+                    属性代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../../Python/Python面向对象/封装.html">
+            
+                <a href="../../Python/Python面向对象/封装.html">
+            
+                    
+                    封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../../Python/Python面向对象/继承.html">
+            
+                <a href="../../Python/Python面向对象/继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../../Python/Python面向对象/多态.html">
+            
+                <a href="../../Python/Python面向对象/多态.html">
+            
+                    
+                    多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../../Python/Python面向对象/抽象基类.html">
+            
+                <a href="../../Python/Python面向对象/抽象基类.html">
+            
+                    
+                    抽象基类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../../Python/Python面向对象/自省反射.html">
+            
+                <a href="../../Python/Python面向对象/自省反射.html">
+            
+                    
+                    自省反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="../../Python/Python面向对象/双下大全.html">
+            
+                <a href="../../Python/Python面向对象/双下大全.html">
+            
+                    
+                    双下大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.11" data-path="../../Python/Python面向对象/描述符类.html">
+            
+                <a href="../../Python/Python面向对象/描述符类.html">
+            
+                    
+                    描述符类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.12" data-path="../../Python/Python面向对象/元类编程.html">
+            
+                <a href="../../Python/Python面向对象/元类编程.html">
+            
+                    
+                    元类编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.13" data-path="../../Python/Python面向对象/异常处理.html">
+            
+                <a href="../../Python/Python面向对象/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../Python/Python数算基础/summary.html">
+            
+                <a href="../../Python/Python数算基础/summary.html">
+            
+                    
+                    Python数算基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../Python/Python数算基础/算法与数构.html">
+            
+                <a href="../../Python/Python数算基础/算法与数构.html">
+            
+                    
+                    算法与数构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../../Python/Python数算基础/list和dict性能.html">
+            
+                <a href="../../Python/Python数算基础/list和dict性能.html">
+            
+                    
+                    list和dict性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../../Python/Python数算基础/数构之线构篇.html">
+            
+                <a href="../../Python/Python数算基础/数构之线构篇.html">
+            
+                    
+                    数构之线构篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../../Python/Python数算基础/数构之哈希篇.html">
+            
+                <a href="../../Python/Python数算基础/数构之哈希篇.html">
+            
+                    
+                    数构之哈希篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../../Python/Python数算基础/数构之链表篇.html">
+            
+                <a href="../../Python/Python数算基础/数构之链表篇.html">
+            
+                    
+                    数构之链表篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.6" data-path="../../Python/Python数算基础/算法之递归篇.html">
+            
+                <a href="../../Python/Python数算基础/算法之递归篇.html">
+            
+                    
+                    算法之递归篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.7" data-path="../../Python/Python数算基础/算法之搜索篇.html">
+            
+                <a href="../../Python/Python数算基础/算法之搜索篇.html">
+            
+                    
+                    算法之搜索篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.8" data-path="../../Python/Python数算基础/算法之排序篇.html">
+            
+                <a href="../../Python/Python数算基础/算法之排序篇.html">
+            
+                    
+                    算法之排序篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.9" data-path="../../Python/Python数算基础/数构之树相关.html">
+            
+                <a href="../../Python/Python数算基础/数构之树相关.html">
+            
+                    
+                    数构之树相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../Python/Python设计模式/summary.html">
+            
+                <a href="../../Python/Python设计模式/summary.html">
+            
+                    
+                    Python设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../../Python/Python设计模式/设计模式.html">
+            
+                <a href="../../Python/Python设计模式/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../../Python/Python设计模式/普通工厂模式.html">
+            
+                <a href="../../Python/Python设计模式/普通工厂模式.html">
+            
+                    
+                    普通工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../../Python/Python设计模式/抽象工厂模式.html">
+            
+                <a href="../../Python/Python设计模式/抽象工厂模式.html">
+            
+                    
+                    抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../../Python/Python设计模式/建造者模式.html">
+            
+                <a href="../../Python/Python设计模式/建造者模式.html">
+            
+                    
+                    建造者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="../../Python/Python设计模式/单例模式.html">
+            
+                <a href="../../Python/Python设计模式/单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="../../Python/Python设计模式/原型模式.html">
+            
+                <a href="../../Python/Python设计模式/原型模式.html">
+            
+                    
+                    原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="../../Python/Python设计模式/适配器模式.html">
+            
+                <a href="../../Python/Python设计模式/适配器模式.html">
+            
+                    
+                    适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="../../Python/Python设计模式/桥接模式.html">
+            
+                <a href="../../Python/Python设计模式/桥接模式.html">
+            
+                    
+                    桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" data-path="../../Python/Python设计模式/组合模式.html">
+            
+                <a href="../../Python/Python设计模式/组合模式.html">
+            
+                    
+                    组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.10" data-path="../../Python/Python设计模式/外观模式.html">
+            
+                <a href="../../Python/Python设计模式/外观模式.html">
+            
+                    
+                    外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.11" data-path="../../Python/Python设计模式/代理模式.html">
+            
+                <a href="../../Python/Python设计模式/代理模式.html">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.12" data-path="../../Python/Python设计模式/装饰器模式.html">
+            
+                <a href="../../Python/Python设计模式/装饰器模式.html">
+            
+                    
+                    装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.13" data-path="../../Python/Python设计模式/享元模式.html">
+            
+                <a href="../../Python/Python设计模式/享元模式.html">
+            
+                    
+                    享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.14" data-path="../../Python/Python设计模式/责任链模式.html">
+            
+                <a href="../../Python/Python设计模式/责任链模式.html">
+            
+                    
+                    责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.15" data-path="../../Python/Python设计模式/解释器模式.html">
+            
+                <a href="../../Python/Python设计模式/解释器模式.html">
+            
+                    
+                    解释器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.16" data-path="../../Python/Python设计模式/迭代器模式.html">
+            
+                <a href="../../Python/Python设计模式/迭代器模式.html">
+            
+                    
+                    迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.17" data-path="../../Python/Python设计模式/观察者模式.html">
+            
+                <a href="../../Python/Python设计模式/观察者模式.html">
+            
+                    
+                    观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.18" data-path="../../Python/Python设计模式/中介者模式.html">
+            
+                <a href="../../Python/Python设计模式/中介者模式.html">
+            
+                    
+                    中介者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.19" data-path="../../Python/Python设计模式/访问者模式.html">
+            
+                <a href="../../Python/Python设计模式/访问者模式.html">
+            
+                    
+                    访问者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.20" data-path="../../Python/Python设计模式/备忘录模式.html">
+            
+                <a href="../../Python/Python设计模式/备忘录模式.html">
+            
+                    
+                    备忘录模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.21" data-path="../../Python/Python设计模式/命令模式.html">
+            
+                <a href="../../Python/Python设计模式/命令模式.html">
+            
+                    
+                    命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.22" data-path="../../Python/Python设计模式/状态模式.html">
+            
+                <a href="../../Python/Python设计模式/状态模式.html">
+            
+                    
+                    状态模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.23" data-path="../../Python/Python设计模式/策略模式.html">
+            
+                <a href="../../Python/Python设计模式/策略模式.html">
+            
+                    
+                    策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.24" data-path="../../Python/Python设计模式/模板模式.html">
+            
+                <a href="../../Python/Python设计模式/模板模式.html">
+            
+                    
+                    模板模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../Python/Python网络编程/summary.html">
+            
+                <a href="../../Python/Python网络编程/summary.html">
+            
+                    
+                    Python网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../../Python/Python网络编程/socket编程.html">
+            
+                <a href="../../Python/Python网络编程/socket编程.html">
+            
+                    
+                    socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../../Python/Python网络编程/TCP粘包.html">
+            
+                <a href="../../Python/Python网络编程/TCP粘包.html">
+            
+                    
+                    TCP粘包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../../Python/Python网络编程/socketserver使用.html">
+            
+                <a href="../../Python/Python网络编程/socketserver使用.html">
+            
+                    
+                    socketserver使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.4" data-path="../../Python/Python网络编程/socketserver源码.html">
+            
+                <a href="../../Python/Python网络编程/socketserver源码.html">
+            
+                    
+                    socketserver源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../Python/Python并发编程/summary.html">
+            
+                <a href="../../Python/Python并发编程/summary.html">
+            
+                    
+                    Python并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../../Python/Python并发编程/任务处理发展史.html">
+            
+                <a href="../../Python/Python并发编程/任务处理发展史.html">
+            
+                    
+                    任务处理发展史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../../Python/Python并发编程/并发与并行.html">
+            
+                <a href="../../Python/Python并发编程/并发与并行.html">
+            
+                    
+                    并发与并行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../../Python/Python并发编程/线程与进程.html">
+            
+                <a href="../../Python/Python并发编程/线程与进程.html">
+            
+                    
+                    线程与进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.4" data-path="../../Python/Python并发编程/GIL锁.html">
+            
+                <a href="../../Python/Python并发编程/GIL锁.html">
+            
+                    
+                    GIL锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.5" data-path="../../Python/Python并发编程/threading模块使用.html">
+            
+                <a href="../../Python/Python并发编程/threading模块使用.html">
+            
+                    
+                    threading模块使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.6" data-path="../../Python/Python并发编程/threading线程锁.html">
+            
+                <a href="../../Python/Python并发编程/threading线程锁.html">
+            
+                    
+                    threading线程锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.7" data-path="../../Python/Python并发编程/threading.local功能介绍.html">
+            
+                <a href="../../Python/Python并发编程/threading.local功能介绍.html">
+            
+                    
+                    threading.local功能介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.8" data-path="../../Python/Python并发编程/multiprocessing模块使用.html">
+            
+                <a href="../../Python/Python并发编程/multiprocessing模块使用.html">
+            
+                    
+                    multiprocessing模块使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.9" data-path="../../Python/Python并发编程/线程或进程通信.html">
+            
+                <a href="../../Python/Python并发编程/线程或进程通信.html">
+            
+                    
+                    线程或进程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.10" data-path="../../Python/Python并发编程/生产者消费者模型.html">
+            
+                <a href="../../Python/Python并发编程/生产者消费者模型.html">
+            
+                    
+                    生产者消费者模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.11" data-path="../../Python/Python并发编程/使用执行器提交任务.html">
+            
+                <a href="../../Python/Python并发编程/使用执行器提交任务.html">
+            
+                    
+                    使用执行器提交任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.12" data-path="../../Python/Python并发编程/Linux五大IO模型.html">
+            
+                <a href="../../Python/Python并发编程/Linux五大IO模型.html">
+            
+                    
+                    Linux五大I/O模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.13" data-path="../../Python/Python并发编程/常见IO示例演示.html">
+            
+                <a href="../../Python/Python并发编程/常见IO示例演示.html">
+            
+                    
+                    常见I/O示例演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.14" data-path="../../Python/Python并发编程/协程asynic.html">
+            
+                <a href="../../Python/Python并发编程/协程asynic.html">
+            
+                    
+                    协程 asynic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../Python/Python驱动程序/summary.html">
+            
+                <a href="../../Python/Python驱动程序/summary.html">
+            
+                    
+                    Python驱动程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" >
+            
+                <span>
+            
+                    
+                    Python操纵MySQL
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" >
+            
+                <span>
+            
+                    
+                    Python操纵Redis
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" >
+            
+                <span>
+            
+                    
+                    Python操纵MongoDB
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.4" >
+            
+                <span>
+            
+                    
+                    Python操纵Elasticsearch
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.5" >
+            
+                <span>
+            
+                    
+                    Python操纵RabbitMQ
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.6" >
+            
+                <span>
+            
+                    
+                    ORM框架：SQLALchemy的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../summary.html">
+            
+                <a href="../summary.html">
+            
+                    
+                    前端专栏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../HTML/summary.html">
+            
+                <a href="../HTML/summary.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../HTML/基础知识.html">
+            
+                <a href="../HTML/基础知识.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../HTML/声明系标签.html">
+            
+                <a href="../HTML/声明系标签.html">
+            
+                    
+                    声明系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../HTML/结构系标签.html">
+            
+                <a href="../HTML/结构系标签.html">
+            
+                    
+                    结构系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../HTML/文本系标签.html">
+            
+                <a href="../HTML/文本系标签.html">
+            
+                    
+                    文本系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../HTML/链接系标签.html">
+            
+                <a href="../HTML/链接系标签.html">
+            
+                    
+                    链接系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../HTML/列表系标签.html">
+            
+                <a href="../HTML/列表系标签.html">
+            
+                    
+                    列表系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../HTML/表格系标签.html">
+            
+                <a href="../HTML/表格系标签.html">
+            
+                    
+                    表格系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../HTML/表单系标签.html">
+            
+                <a href="../HTML/表单系标签.html">
+            
+                    
+                    表单系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../HTML/媒体系标签.html">
+            
+                <a href="../HTML/媒体系标签.html">
+            
+                    
+                    媒体系标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="基础知识.html">
+            
+                <a href="基础知识.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="选择器.html">
+            
+                <a href="选择器.html">
+            
+                    
+                    选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="属性继承.html">
+            
+                <a href="属性继承.html">
+            
+                    
+                    属性继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="常见单位.html">
+            
+                <a href="常见单位.html">
+            
+                    
+                    常见单位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="文本控制.html">
+            
+                <a href="文本控制.html">
+            
+                    
+                    文本控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="数据样式.html">
+            
+                <a href="数据样式.html">
+            
+                    
+                    数据样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="背景处理.html">
+            
+                <a href="背景处理.html">
+            
+                    
+                    背景处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="盒子模型.html">
+            
+                <a href="盒子模型.html">
+            
+                    
+                    盒子模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="浮动布局.html">
+            
+                <a href="浮动布局.html">
+            
+                    
+                    浮动布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="定位布局.html">
+            
+                <a href="定位布局.html">
+            
+                    
+                    定位布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="弹性布局.html">
+            
+                <a href="弹性布局.html">
+            
+                    
+                    弹性布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="栅格布局.html">
+            
+                <a href="栅格布局.html">
+            
+                    
+                    栅格布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.13" data-path="变形动画.html">
+            
+                <a href="变形动画.html">
+            
+                    
+                    变形动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.14" data-path="过渡时间.html">
+            
+                <a href="过渡时间.html">
+            
+                    
+                    过渡时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.15" data-path="帧动画.html">
+            
+                <a href="帧动画.html">
+            
+                    
+                    帧动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.16" data-path="响应式布局.html">
+            
+                <a href="响应式布局.html">
+            
+                    
+                    响应式布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../JavaScript/summary.html">
+            
+                <a href="../JavaScript/summary.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../JavaScript/基础介绍.html">
+            
+                <a href="../JavaScript/基础介绍.html">
+            
+                    
+                    基础介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../JavaScript/变量与常量.html">
+            
+                <a href="../JavaScript/变量与常量.html">
+            
+                    
+                    变量与常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../JavaScript/运算符相关.html">
+            
+                <a href="../JavaScript/运算符相关.html">
+            
+                    
+                    运算符相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../JavaScript/分支结构.html">
+            
+                <a href="../JavaScript/分支结构.html">
+            
+                    
+                    分支结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../JavaScript/流程控制.html">
+            
+                <a href="../JavaScript/流程控制.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../JavaScript/Number.html">
+            
+                <a href="../JavaScript/Number.html">
+            
+                    
+                    Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../JavaScript/Boolean.html">
+            
+                <a href="../JavaScript/Boolean.html">
+            
+                    
+                    Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="../JavaScript/undefined&null.html">
+            
+                <a href="../JavaScript/undefined&null.html">
+            
+                    
+                    undefined&null
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="../JavaScript/String.html">
+            
+                <a href="../JavaScript/String.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="../JavaScript/Array.html">
+            
+                <a href="../JavaScript/Array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.11" data-path="../JavaScript/Map&WeakMap.html">
+            
+                <a href="../JavaScript/Map&WeakMap.html">
+            
+                    
+                    Map&WeakMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.12" data-path="../JavaScript/Set&WeakSet.html">
+            
+                <a href="../JavaScript/Set&WeakSet.html">
+            
+                    
+                    Set&WeakSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.13" data-path="../JavaScript/函数相关.html">
+            
+                <a href="../JavaScript/函数相关.html">
+            
+                    
+                    函数相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.14" data-path="../JavaScript/函数闭包.html">
+            
+                <a href="../JavaScript/函数闭包.html">
+            
+                    
+                    函数闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.15" data-path="../JavaScript/面向对象.html">
+            
+                <a href="../JavaScript/面向对象.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.16" data-path="../JavaScript/this指向.html">
+            
+                <a href="../JavaScript/this指向.html">
+            
+                    
+                    this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.17" data-path="../JavaScript/属性特征.html">
+            
+                <a href="../JavaScript/属性特征.html">
+            
+                    
+                    属性特征
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.18" data-path="../JavaScript/属性代理.html">
+            
+                <a href="../JavaScript/属性代理.html">
+            
+                    
+                    属性代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.19" data-path="../JavaScript/原型继承.html">
+            
+                <a href="../JavaScript/原型继承.html">
+            
+                    
+                    原型继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.20" data-path="../JavaScript/class语法糖.html">
+            
+                <a href="../JavaScript/class语法糖.html">
+            
+                    
+                    class语法糖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.21" data-path="../JavaScript/JSON.html">
+            
+                <a href="../JavaScript/JSON.html">
+            
+                    
+                    JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.22" data-path="../JavaScript/Symbol.html">
+            
+                <a href="../JavaScript/Symbol.html">
+            
+                    
+                    Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.23" data-path="../JavaScript/Date.html">
+            
+                <a href="../JavaScript/Date.html">
+            
+                    
+                    Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.24" data-path="../JavaScript/Math.html">
+            
+                <a href="../JavaScript/Math.html">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.25" data-path="../JavaScript/RegExp.html">
+            
+                <a href="../JavaScript/RegExp.html">
+            
+                    
+                    RegExp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.26" data-path="../JavaScript/window对象.html">
+            
+                <a href="../JavaScript/window对象.html">
+            
+                    
+                    window对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.27" data-path="../JavaScript/DOM操作.html">
+            
+                <a href="../JavaScript/DOM操作.html">
+            
+                    
+                    DOM操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.28" data-path="../JavaScript/Event操作.html">
+            
+                <a href="../JavaScript/Event操作.html">
+            
+                    
+                    Event操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.29" data-path="../JavaScript/空间坐标.html">
+            
+                <a href="../JavaScript/空间坐标.html">
+            
+                    
+                    空间坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.30" data-path="../JavaScript/XmlHttpRequest.html">
+            
+                <a href="../JavaScript/XmlHttpRequest.html">
+            
+                    
+                    XmlHttpRequest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.31" data-path="../JavaScript/JSONP.html">
+            
+                <a href="../JavaScript/JSONP.html">
+            
+                    
+                    JSONP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.32" data-path="../JavaScript/伪Ajax请求.html">
+            
+                <a href="../JavaScript/伪Ajax请求.html">
+            
+                    
+                    伪Ajax请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.33" data-path="../JavaScript/Promise.html">
+            
+                <a href="../JavaScript/Promise.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.34" data-path="../JavaScript/手动实现Promise.html">
+            
+                <a href="../JavaScript/手动实现Promise.html">
+            
+                    
+                    手动实现Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.35" data-path="../JavaScript/异常处理.html">
+            
+                <a href="../JavaScript/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.36" data-path="../JavaScript/模块封装.html">
+            
+                <a href="../JavaScript/模块封装.html">
+            
+                    
+                    模块封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.37" data-path="../JavaScript/综合练习.html">
+            
+                <a href="../JavaScript/综合练习.html">
+            
+                    
+                    综合练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../jQuery/summary.html">
+            
+                <a href="../jQuery/summary.html">
+            
+                    
+                    jQuery
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../jQuery/基础介绍.html">
+            
+                <a href="../jQuery/基础介绍.html">
+            
+                    
+                    基础介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../jQuery/选择器.html">
+            
+                <a href="../jQuery/选择器.html">
+            
+                    
+                    选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../jQuery/筛选器.html">
+            
+                <a href="../jQuery/筛选器.html">
+            
+                    
+                    筛选器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../jQuery/属性内容.html">
+            
+                <a href="../jQuery/属性内容.html">
+            
+                    
+                    属性内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../jQuery/文档操作.html">
+            
+                <a href="../jQuery/文档操作.html">
+            
+                    
+                    文档操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../jQuery/样式操作.html">
+            
+                <a href="../jQuery/样式操作.html">
+            
+                    
+                    样式操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../jQuery/事件操作.html">
+            
+                <a href="../jQuery/事件操作.html">
+            
+                    
+                    事件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../jQuery/空间坐标.html">
+            
+                <a href="../jQuery/空间坐标.html">
+            
+                    
+                    空间坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../jQuery/动画效果.html">
+            
+                <a href="../jQuery/动画效果.html">
+            
+                    
+                    动画效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../jQuery/插件扩展.html">
+            
+                <a href="../jQuery/插件扩展.html">
+            
+                    
+                    插件扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../jQuery/网络请求.html">
+            
+                <a href="../jQuery/网络请求.html">
+            
+                    
+                    网络请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../TypeScript/summary.html">
+            
+                <a href="../TypeScript/summary.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../TypeScript/基本介绍.html">
+            
+                <a href="../TypeScript/基本介绍.html">
+            
+                    
+                    基本介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../TypeScript/类型相关.html">
+            
+                <a href="../TypeScript/类型相关.html">
+            
+                    
+                    类型相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../TypeScript/配置文件.html">
+            
+                <a href="../TypeScript/配置文件.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../TypeScript/面向对象.html">
+            
+                <a href="../TypeScript/面向对象.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../TypeScript/抽象基类.html">
+            
+                <a href="../TypeScript/抽象基类.html">
+            
+                    
+                    抽象基类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../TypeScript/定义接口.html">
+            
+                <a href="../TypeScript/定义接口.html">
+            
+                    
+                    定义接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../TypeScript/泛型介绍.html">
+            
+                <a href="../TypeScript/泛型介绍.html">
+            
+                    
+                    泛型介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Node.js/summary.html">
+            
+                <a href="../Node.js/summary.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../Node.js/基础介绍.html">
+            
+                <a href="../Node.js/基础介绍.html">
+            
+                    
+                    基础介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../Node.js/模块系统.html">
+            
+                <a href="../Node.js/模块系统.html">
+            
+                    
+                    模块系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../Node.js/包管理器.html">
+            
+                <a href="../Node.js/包管理器.html">
+            
+                    
+                    包管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../Node.js/Ts+Node.html">
+            
+                <a href="../Node.js/Ts+Node.html">
+            
+                    
+                    Ts+Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../Node.js/process.html">
+            
+                <a href="../Node.js/process.html">
+            
+                    
+                    process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../Node.js/事件操作.html">
+            
+                <a href="../Node.js/事件操作.html">
+            
+                    
+                    事件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../Node.js/定时器.html">
+            
+                <a href="../Node.js/定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="../Node.js/路径处理.html">
+            
+                <a href="../Node.js/路径处理.html">
+            
+                    
+                    路径处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="../Node.js/文件操作.html">
+            
+                <a href="../Node.js/文件操作.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.10" data-path="../Node.js/Buffer.html">
+            
+                <a href="../Node.js/Buffer.html">
+            
+                    
+                    Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.11" data-path="../Node.js/Stream.html">
+            
+                <a href="../Node.js/Stream.html">
+            
+                    
+                    Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.12" data-path="../Node.js/Web开发.html">
+            
+                <a href="../Node.js/Web开发.html">
+            
+                    
+                    Web开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Vue/summary.html">
+            
+                <a href="../Vue/summary.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >过渡时间</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6E21;&#x65F6;&#x95F4;"><b>1. </b>&#x8FC7;&#x6E21;&#x65F6;&#x95F4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><b>1.1. </b>&#x57FA;&#x7840;&#x77E5;&#x8BC6;</a></li><li><span class="title-icon "></span><a href="#&#x52A8;&#x753B;&#x5C5E;&#x6027;"><b>1.2. </b>&#x52A8;&#x753B;&#x5C5E;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5143;&#x7D20;&#x72B6;&#x6001;"><b>2. </b>&#x5143;&#x7D20;&#x72B6;&#x6001;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;&#x5F62;&#x6001;"><b>2.1. </b>&#x521D;&#x59CB;&#x5F62;&#x6001;</a></li><li><span class="title-icon "></span><a href="#&#x53D8;&#x5316;&#x5F62;&#x6001;"><b>2.2. </b>&#x53D8;&#x5316;&#x5F62;&#x6001;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6E21;&#x6548;&#x679C;"><b>3. </b>&#x8FC7;&#x6E21;&#x6548;&#x679C;</a></li><ul><li><span class="title-icon "></span><a href="#transition-property"><b>3.1. </b>transition-property</a></li><li><span class="title-icon "></span><a href="#&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;"><b>3.2. </b>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x7981;&#x7528;&#x5C5E;&#x6027;"><b>3.3. </b>&#x7981;&#x7528;&#x5C5E;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;"><b>4. </b>&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#transitionend"><b>4.1. </b>transitionend</a></li></ul><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6E21;&#x65F6;&#x95F4;_1"><b>5. </b>&#x8FC7;&#x6E21;&#x65F6;&#x95F4;</a></li><ul><li><span class="title-icon "></span><a href="#transition-duration"><b>5.1. </b>transition-duration</a></li><li><span class="title-icon "></span><a href="#&#x7EDF;&#x4E00;&#x65F6;&#x95F4;"><b>5.2. </b>&#x7EDF;&#x4E00;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#&#x4E24;&#x4E2A;&#x65F6;&#x95F4;"><b>5.3. </b>&#x4E24;&#x4E2A;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x4E2A;&#x65F6;&#x95F4;"><b>5.4. </b>&#x591A;&#x4E2A;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x540C;&#x65F6;&#x95F4;"><b>5.5. </b>&#x4E0D;&#x540C;&#x65F6;&#x95F4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6E21;&#x901F;&#x7387;"><b>6. </b>&#x8FC7;&#x6E21;&#x901F;&#x7387;</a></li><ul><li><span class="title-icon "></span><a href="#transition-timing-function"><b>6.1. </b>transition-timing-function</a></li><li><span class="title-icon "></span><a href="#&#x9ED8;&#x8BA4;&#x53C2;&#x6570;"><b>6.2. </b>&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;"><b>6.3. </b>&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;</a></li><li><span class="title-icon "></span><a href="#&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;"><b>6.4. </b>&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;</a></li><li><span class="title-icon "></span><a href="#&#x6B65;&#x8FDB;&#x901F;&#x5EA6;"><b>6.5. </b>&#x6B65;&#x8FDB;&#x901F;&#x5EA6;</a></li><li><span class="title-icon "></span><a href="#&#x65F6;&#x949F;&#x6548;&#x679C;"><b>6.6. </b>&#x65F6;&#x949F;&#x6548;&#x679C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;"><b>7. </b>&#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;</a></li><ul><li><span class="title-icon "></span><a href="#transition-delay"><b>7.1. </b>transition-delay</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;"><b>7.2. </b>&#x57FA;&#x672C;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x503C;&#x5EF6;&#x8FDF;"><b>7.3. </b>&#x591A;&#x503C;&#x5EF6;&#x8FDF;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x8D1F;&#x503C;"><b>7.4. </b>&#x4F7F;&#x7528;&#x8D1F;&#x503C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7EC4;&#x5408;&#x5B9A;&#x4E49;"><b>8. </b>&#x7EC4;&#x5408;&#x5B9A;&#x4E49;</a></li><ul><li><span class="title-icon "></span><a href="#transition"><b>8.1. </b>transition</a></li><li><span class="title-icon "></span><a href="#&#x70B9;&#x8D5E;&#x6848;&#x4F8B;"><b>8.2. </b>&#x70B9;&#x8D5E;&#x6848;&#x4F8B;</a></li></ul></ul></div><a href="#&#x8FC7;&#x6E21;&#x65F6;&#x95F4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8FC7;&#x6E21;&#x65F6;&#x95F4;"><a name="&#x8FC7;&#x6E21;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6E21;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x8FC7;&#x6E21;&#x65F6;&#x95F4;</h1>
+<h2 id="&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><a name="&#x57FA;&#x7840;&#x77E5;&#x8BC6;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x57FA;&#x7840;&#x77E5;&#x8BC6;</h2>
+<p>&#x5728;&#x4E86;&#x89E3;CSS&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5148;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;CSS&#x7684;&#x53D8;&#x5F62;&#x52A8;&#x753B;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x7684;&#x5143;&#x7D20;&#x5728;&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7279;&#x5730;&#x7684;&#x4E3A;&#x5B83;&#x8BBE;&#x7F6E;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#xFF0C;&#x6574;&#x4E2A;&#x53D8;&#x5316;&#x8FC7;&#x7A0B;&#x5176;&#x5B9E;&#x662F;&#x4EE5;&#x6BEB;&#x79D2;&#x7EA7;&#x522B;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x8FC7;&#x7A0B;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x8089;&#x773C;&#x4E0D;&#x6613;&#x5BDF;&#x89C9;&#x3002;</p>
+<p>&#x6545;&#x6211;&#x4EEC;&#x8981;&#x5B66;&#x4E60;CSS&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#xFF0C;&#x6765;&#x8BA9;&#x5B83;&#x7684;&#x53D8;&#x5316;&#x8FC7;&#x7A0B;&#x66F4;&#x52A0;&#x5E73;&#x6ED1;&#x3002;</p>
+<h2 id="&#x52A8;&#x753B;&#x5C5E;&#x6027;"><a name="&#x52A8;&#x753B;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x753B;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x52A8;&#x753B;&#x5C5E;&#x6027;</h2>
+<p>&#x4E0D;&#x662F;&#x6240;&#x6709;css&#x5C5E;&#x6027;&#x90FD;&#x6709;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#xFF0C;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties" target="_blank">&#x67E5;&#x770B;&#x652F;&#x6301;&#x52A8;&#x753B;&#x7684;CSS&#x5C5E;&#x6027;</a> &#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BB2;&#x6709;&#x4E2D;&#x95F4;&#x503C;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x5982;&#x5BBD;&#x5EA6;&#x3001;&#x900F;&#x660E;&#x5EA6;&#x7B49;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x4E0B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6BD4;&#x5982;&#x8FB9;&#x6846;&#x7684;&#x6837;&#x5F0F;&#x5C31;&#x4E0D;&#x652F;&#x6301;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x7684;&#x8BF8;&#x5982;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x9AD8;&#x5EA6;&#x5BBD;&#x5EA6;&#x7B49;&#x7B49;&#x90FD;&#x662F;&#x652F;&#x6301;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x7684;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222229559-178885252-20210719222009508.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5728;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x53BB;&#x7684;&#x77AC;&#x95F4;&#xFF0C;&#x8FB9;&#x6846;&#x7684;&#x6837;&#x5F0F;&#x5C31;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x4E86;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x518D;&#x8DDF;&#x968F;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x6E10;&#x53D8;&#x3002;</p>
+<p>&#x800C;&#x5176;&#x4ED6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8BF8;&#x5982;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x5706;&#x89D2;&#x7B49;&#x90FD;&#x662F;&#x8DDF;&#x968F;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x6E10;&#x53D8;&#x7684;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
+            background: #747d8c;
+            border: 10px solid #ff6348;
+            /* &#x6DFB;&#x52A0;&#x8FC7;&#x6E21;&#x65F6;&#x95F4; 1s */
+            transition: 1s;
+        }
+
+        body:hover div {
+            background: #5352ed;
+            border: 10px dotted #ffa502;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transform: translate(100px, 100px);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h1 id="&#x5143;&#x7D20;&#x72B6;&#x6001;"><a name="&#x5143;&#x7D20;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x5143;&#x7D20;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5143;&#x7D20;&#x72B6;&#x6001;</h1>
+<h2 id="&#x521D;&#x59CB;&#x5F62;&#x6001;"><a name="&#x521D;&#x59CB;&#x5F62;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5F62;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x521D;&#x59CB;&#x5F62;&#x6001;</h2>
+<p>&#x6307;&#x5F53;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x540E;&#x7684;&#x6837;&#x5F0F;&#x72B6;&#x6001;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x8868;&#x5355;&#x8BBE;&#x7F6E;&#x7684;&#x521D;&#x59CB;&#x6837;&#x5F0F;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222228920-546310715-20210719222016269.png" alt="image-20200721200023223"></p>
+<h2 id="&#x53D8;&#x5316;&#x5F62;&#x6001;"><a name="&#x53D8;&#x5316;&#x5F62;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x53D8;&#x5316;&#x5F62;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x53D8;&#x5316;&#x5F62;&#x6001;</h2>
+<p>&#x6307;&#x5143;&#x7D20;&#x7531;&#x521D;&#x59CB;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x540E;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6BD4;&#x5982;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x3001;&#x8868;&#x5355;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#x540E;&#x7684;&#x5F62;&#x6001;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222228536-1429319050-20210719222019690.gif" alt="&#x8F93;&#x5165;&#x6846;&#x52A8;&#x753B;&#x8FC7;&#x6E21;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            &#x2022; padding: 20px;
+        }
+
+        input {
+            border: solid 5px #e67e22;
+            height: 60px;
+            width: 400px;
+            margin-bottom: 20px;
+            transition: 2s;
+        }
+
+        input:hover {
+            border: solid 5px #000 !important;
+        }
+
+        input:focus {
+            background: #e67e22;
+        }
+
+        input:checked {
+            position: relative;
+            width: 60px;
+            height: 60;
+            border: none;
+        }
+
+        input:checked::before {
+            content: &apos;&#x2A57;&apos;;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            box-sizing: border-box;
+            background: #3498db;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;input type=&quot;text&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; checked&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h1 id="&#x8FC7;&#x6E21;&#x6548;&#x679C;"><a name="&#x8FC7;&#x6E21;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6E21;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x8FC7;&#x6E21;&#x6548;&#x679C;</h1>
+<h2 id="transition-property"><a name="transition-property" class="anchor-navigation-ex-anchor" href="#transition-property"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. transition-property</h2>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;&#x5E94;&#x7528;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x3002;</p>
+<ul>
+<li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;all&#x5373;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x90FD;&#x53D1;&#x751F;&#x8FC7;&#x6E21;&#x6548;&#x679C;</p>
+</li>
+<li><p>&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;</p>
+</li>
+</ul>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x8BE5;&#x9009;&#x9879;&#x65F6;&#xFF0C;&#x6CE8;&#x610F;&#x8981;&#x548C;transition-duration&#x642D;&#x914D;&#x4F7F;&#x7528;&#x624D;&#x80FD;&#x751F;&#x6548;&#xFF0C;&#x8FD9;&#x4E2A;&#x624D;&#x662F;&#x975E;&#x7B80;&#x5199;&#x7684;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x3002;</p>
+<p>transition&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x7B80;&#x5199;&#x5F62;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;transition-duration&#x4E0E;transition&#x8FDB;&#x884C;&#x642D;&#x914D;&#x4F7F;&#x7528;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x751F;&#x6548;transition-duration&#x3002;</p>
+<h2 id="&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;"><a name="&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x5C5E;&#x6027;&#x8BBE;&#x7F6E;</h2>
+<p>&#x6CE8;&#x610F;&#x770B;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x91CC;transition-duration&#x53EA;&#x8BBE;&#x7F6E;&#x4E86;&#x5706;&#x89D2;&#x4E0E;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x8BF8;&#x5982;&#x5BBD;&#x5EA6;&#x9AD8;&#x5EA6;&#x80CC;&#x666F;&#x989C;&#x8272;&#x7B49;&#x5747;&#x672A;&#x8BBE;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x53BB;&#x7684;&#x4E00;&#x77AC;&#x95F4;&#x672A;&#x8BBE;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#x7ACB;&#x523B;&#x4EA7;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x800C;&#x5706;&#x89D2;&#x548C;&#x900F;&#x660E;&#x5EA6;&#x662F;&#x968F;&#x7740;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x6E10;&#x6E10;&#x53D8;&#x5316;&#x7684;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222227968-934479928-20210719222025609.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: #f39c12;
+            transition-property: border-radius, opacity;
+            /* &#x8FD9;&#x4E2A;&#x624D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x8BBE;&#x7F6E;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#xFF0C;
+                        transition&#x53EA;&#x662F;&#x7B80;&#x5199;&#x5F62;&#x5F0F; */
+            transition-duration: 1s;
+            opacity: .5;
+
+        }
+
+        main:hover div {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background: #2ecc71;
+            opacity: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x7981;&#x7528;&#x5C5E;&#x6027;"><a name="&#x7981;&#x7528;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x7981;&#x7528;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x7981;&#x7528;&#x5C5E;&#x6027;</h2>
+<p>&#x5F53;&#x8BBE;&#x7F6E;transition-property:none;&#x540E;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53D8;&#x5316;&#x5F62;&#x6001;&#x5747;&#x4E0D;&#x4F1A;&#x8DDF;&#x968F;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5168;&#x90E8;&#x90FD;&#x662F;&#x77AC;&#x53D1;&#x5B8C;&#x6210;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222227423-290790018-20210719222030619.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: #f39c12;
+            transition-property: none;
+            /* &#x8FD9;&#x4E2A;&#x624D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x8BBE;&#x7F6E;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#xFF0C;
+                        transition&#x53EA;&#x662F;&#x7B80;&#x5199;&#x5F62;&#x5F0F; */
+            transition-duration: 1s;
+            opacity: .5;
+
+        }
+
+        main:hover div {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background: #2ecc71;
+            opacity: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h1 id="&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;"><a name="&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</h1>
+<h2 id="transitionend"><a name="transitionend" class="anchor-navigation-ex-anchor" href="#transitionend"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. transitionend</h2>
+<p>&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x8FC7;&#x6E21;&#x7ED3;&#x675F;&#x540E;&#x6267;&#x884C;&#x7684;JS&#x4E8B;&#x4EF6;&#xFF0C;&#x7B80;&#x5199;&#x5C5E;&#x6027;&#x4F1A;&#x89E6;&#x53D1;&#x591A;&#x6B21;&#x5982; border-radius &#x4F1A;&#x89E6;&#x53D1;&#x56DB;&#x6B21;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E0D;&#x96BE;&#x7406;&#x89E3;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x4E3A;border-bottom-left-radius &#x7B49;&#x56DB;&#x4E2A;&#x5C5E;&#x6027;&#x72EC;&#x7ACB;&#x8BBE;&#x7F6E;&#x8FC7;&#x6E21;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4F1A;&#x6709;&#x56DB;&#x6B21;&#x4E8B;&#x4EF6;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>propertyName</td>
+<td>&#x7ED3;&#x675F;&#x8FC7;&#x6E21;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td>elapsedTime</td>
+<td>&#x8FC7;&#x6E21;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>pseudoElement</td>
+<td>&#x8FC7;&#x6E21;&#x7684;&#x4F2A;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>isTrusted</td>
+<td>true:&#x7528;&#x6237;&#x89E6;&#x53D1;&#xFF0C;false:&#x811A;&#x672C;&#x89E6;&#x53D1;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x6709;JS&#x6765;&#x76D1;&#x542C;&#x8BE5;&#x4E8B;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x68C0;&#x6D4B;&#x7684;\<div\>&#x6807;&#x7B7E;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x7ED3;&#x675F;&#x540E;&#x89E6;&#x53D1;&#x4E86;transitionend&#x4E8B;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x663E;&#x793A;&#x51FA;&#x4E86;&#x606D;&#x5019;&#x591A;&#x65F6;&#x7684;&#x5B57;&#x6837;&#x3002;</div\></p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222226900-1646723795-20210719222039669.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x3000;&#x3000;</p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #57606f;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: #f39c12;
+
+            transition-duration: 1s;
+
+            position: relative;
+
+
+        }
+
+        div:after {
+            content: &quot;&#x606D;&#x5019;&#x591A;&#x65F6;&quot;;
+            color: #fff;
+            width: 100%;
+            font-size: 1.4em;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            bottom: -50px;
+            transform: scale(0);
+            transition-duration: 1s;
+
+        }
+
+        main:hover div {
+            transform: rotate(360deg);
+        }
+
+        main:hover div.show-after::after {
+            transform: scale(1) skew(360deg);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;script&gt;
+    // &#x68C0;&#x6D4B;div&#x7684; transitionend &#x4E8B;&#x4EF6;
+    document.querySelector(&apos;div&apos;).addEventListener(&apos;transitionend&apos;, function (e) {
+        console.log(e);
+        // &#x7ED9;div&#x6DFB;&#x52A0;class&#x4E3A;show-after
+        document.querySelector(&apos;div&apos;).className = &apos;show-after&apos;;
+    })
+&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre><p>&#x6B64;&#x65F6;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x6D4F;&#x89C8;&#x5668;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x6B63;&#x597D;&#x5BF9;&#x5E94;&#x4E0A;&#x8868;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222226320-2145824560-20210719222058991.png" alt="image-20200721205754261"></p>
+<h1 id="&#x8FC7;&#x6E21;&#x65F6;&#x95F4;_1"><a name="&#x8FC7;&#x6E21;&#x65F6;&#x95F4;_1" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6E21;&#x65F6;&#x95F4;_1"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x8FC7;&#x6E21;&#x65F6;&#x95F4;</h1>
+<h2 id="transition-duration"><a name="transition-duration" class="anchor-navigation-ex-anchor" href="#transition-duration"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. transition-duration</h2>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4F7F;&#x7528;&#x5355;&#x4F4D;&#x4E3A; ms&#x6BEB;&#x79D2;&#x3001;s&#x79D2;</li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0s&#x4E0D;&#x4EA7;&#x751F;&#x8FC7;&#x6E21;&#x6548;&#x679C;</li>
+<li>&#x4E00;&#x4E2A;&#x503C;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x65F6;&#x95F4;</li>
+<li>&#x4E8C;&#x4E2A;&#x503C;&#x65F6;&#xFF0C;&#x5947;&#x6570;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x5076;&#x6570;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;</li>
+<li>&#x53D8;&#x5316;&#x5C5E;&#x6027;&#x6570;&#x91CF;&#x5927;&#x4E8E;&#x65F6;&#x95F4;&#x6570;&#x91CF;&#x65F6;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x518D;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x5F00;&#x59CB;&#x91CD;&#x590D;&#x4F7F;&#x7528;</li>
+</ul>
+<h2 id="&#x7EDF;&#x4E00;&#x65F6;&#x95F4;"><a name="&#x7EDF;&#x4E00;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x7EDF;&#x4E00;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. &#x7EDF;&#x4E00;&#x65F6;&#x95F4;</h2>
+<p>&#x8BA9;&#x6240;&#x6709;&#x52A8;&#x753B;&#x7684;&#x53D8;&#x5F62;&#x5728;&#x7EDF;&#x4E00;&#x65F6;&#x95F4;&#x5185;&#x5B8C;&#x6210;&#xFF1A;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/&#x7EDF;&#x4E00;&#x65F6;&#x95F4;.gif" alt="&#x7EDF;&#x4E00;&#x65F6;&#x95F4;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            padding: 80px;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #34495e;
+            border-radius: 50%;
+            opacity: 0.2;
+            transition-property: background-color, transform, opacity, border-radius;
+            transition-duration: 3s;
+        }
+
+        div:hover {
+            opacity: 1;
+            border-radius: 0;
+            transform: scale(2) rotate(180deg);
+            background-color: #e67e22;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x4E24;&#x4E2A;&#x65F6;&#x95F4;"><a name="&#x4E24;&#x4E2A;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x4E24;&#x4E2A;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. &#x4E24;&#x4E2A;&#x65F6;&#x95F4;</h2>
+<p>&#x4E0B;&#x9762;&#x5171;&#x6709;&#x56DB;&#x4E2A;&#x5C5E;&#x6027;&#x5E76;&#x8BBE;&#x7F6E;&#x4E86;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x503C;&#xFF0C;1,3&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;2,4&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x3002;</p>
+<pre><code>...
+div {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  opacity: 0.2;
+  transition-property: background-color, transform, opacity, border-radius;
+  transition-duration: 200ms, 5s;
+}
+...
+</code></pre><h2 id="&#x591A;&#x4E2A;&#x65F6;&#x95F4;"><a name="&#x591A;&#x4E2A;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x4E2A;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>5.4. &#x591A;&#x4E2A;&#x65F6;&#x95F4;</h2>
+<p>&#x4E0B;&#x9762;&#x5171;&#x6709;&#x56DB;&#x4E2A;&#x5C5E;&#x6027;&#x5E76;&#x8BBE;&#x7F6E;&#x4E86;&#x4E09;&#x4E2A;&#x65F6;&#x95F4;&#x503C;&#xFF0C;1,2,3&#x5C5E;&#x6027;&#x4F7F;&#x7528;1,2,3&#x65F6;&#x95F4;&#x503C;&#xFF0C;&#x7B2C;&#x56DB;&#x4E2A;&#x5C5E;&#x6027;&#x518D;&#x4ECE;&#x65B0;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x503C;&#x3002;</p>
+<pre><code>...
+div {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  opacity: 0.2;
+  transition-property: background-color, transform, opacity, border-radius;
+  transition-duration: 200ms, 5s, 2s;
+}
+...
+</code></pre><h2 id="&#x4E0D;&#x540C;&#x65F6;&#x95F4;"><a name="&#x4E0D;&#x540C;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x540C;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>5.5. &#x4E0D;&#x540C;&#x65F6;&#x95F4;</h2>
+<p>&#x53EF;&#x4EE5;&#x4E3A;&#x521D;&#x59CB;&#x4E0E;&#x53D8;&#x5316;&#x72B6;&#x6001;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5C06;hover&#x8BBE;&#x7F6E;&#x4E3A;3s&#xFF0C;&#x5F53;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x65F6;&#x53D8;&#x5316;&#x65F6;&#x95F4;&#x4E3A;3s&#x3002;</p>
+<p>&#x521D;&#x59CB;&#x8BBE;&#x7F6E;&#x4E3A;1s&#x5373;&#x8868;&#x793A;&#x53D8;&#x5316;&#x5230;&#x521D;&#x59CB;&#x72B6;&#x6001;&#x9700;&#x8981;1s&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/&#x4E0D;&#x540C;&#x65F6;&#x95F4;.gif" alt="&#x4E0D;&#x540C;&#x65F6;&#x95F4;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            padding: 80px;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #e67e22;
+            border-radius: 50%;
+            transition-property: background-color, transform, opacity, border-radius;
+            /* &#x7ED3;&#x675F;&#x65F6;&#x95F4;&#xFF0C;&#x53D8;&#x56DE;&#x521D;&#x59CB;&#x72B6;&#x6001;  &#x5982;&#x679C;&#x53EA;&#x6709;&#x8BE5;&#x65F6;&#x95F4;&#xFF0C;&#x5219;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x4E5F;&#x91C7;&#x7528;&#x5B83; */
+            transition-duration: 1s;
+        }
+
+        div:hover {
+            border-radius: 0;
+            transform: scale(2) rotate(180deg);
+            background-color: #e67e22;
+            /* &#x8FC7;&#x6E21;&#x65F6;&#x95F4; */
+            transition-duration: 3s;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h1 id="&#x8FC7;&#x6E21;&#x901F;&#x7387;"><a name="&#x8FC7;&#x6E21;&#x901F;&#x7387;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6E21;&#x901F;&#x7387;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x8FC7;&#x6E21;&#x901F;&#x7387;</h1>
+<h2 id="transition-timing-function"><a name="transition-timing-function" class="anchor-navigation-ex-anchor" href="#transition-timing-function"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. transition-timing-function</h2>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6574;&#x4F53;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x53EF;&#x5728; <a href="https://cubic-bezier.com/" target="_blank">https://cubic-bezier.com</a> &#x7F51;&#x7AD9;&#x5728;&#x7EBF;&#x4F53;&#x9A8C;&#x6548;&#x679C;&#x5DEE;&#x5F02;&#x3002;</p>
+<h2 id="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;"><a name="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. &#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x5E38;&#x89C1;&#x7684;transition-timing-function&#x8FC7;&#x6E21;&#x6548;&#x679C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear</td>
+<td>&#x89C4;&#x5B9A;&#x4EE5;&#x76F8;&#x540C;&#x901F;&#x5EA6;&#x5F00;&#x59CB;&#x81F3;&#x7ED3;&#x675F;&#x7684;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#xFF08;&#x7B49;&#x4E8E; cubic-bezier(0,0,1,1)&#xFF09;</td>
+</tr>
+<tr>
+<td>ease</td>
+<td>&#x5F00;&#x59CB;&#x6162;&#xFF0C;&#x7136;&#x540E;&#x5FEB;&#xFF0C;&#x6162;&#x4E0B;&#x6765;&#xFF0C;&#x7ED3;&#x675F;&#x65F6;&#x975E;&#x5E38;&#x6162;&#xFF08;cubic-bezier(0.25,0.1,0.25,1)&#xFF09;&#x3002;&#x9ED8;&#x8BA4;&#x503C;</td>
+</tr>
+<tr>
+<td>ease-in</td>
+<td>&#x5F00;&#x59CB;&#x6162;&#xFF0C;&#x7ED3;&#x675F;&#x5FEB;&#xFF08;&#x7B49;&#x4E8E; cubic-bezier(0.42,0,1,1)&#xFF09;</td>
+</tr>
+<tr>
+<td>ease-out</td>
+<td>&#x5F00;&#x59CB;&#x5FEB;&#xFF0C;&#x7ED3;&#x675F;&#x6162;&#xFF08;&#x7B49;&#x4E8E; cubic-bezier(0,0,0.58,1)&#xFF09;</td>
+</tr>
+<tr>
+<td>ease-in-out</td>
+<td>&#x4E2D;&#x95F4;&#x5FEB;&#xFF0C;&#x4E24;&#x8FB9;&#x6162;&#xFF08;&#x7B49;&#x4E8E; cubic-bezier(0.42,0,0.58,1)&#xFF09;</td>
+</tr>
+<tr>
+<td>cubic-bezier(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td>&#x5728; cubic-bezier &#x51FD;&#x6570;&#x4E2D;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;"><a name="&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#&#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3. &#x5DEE;&#x5F02;&#x5BF9;&#x6BD4;</h2>
+<p>&#x6211;&#x4EEC;&#x7528;linear&#x548C;ease&#x6765;&#x505A;&#x4E00;&#x4E2A;&#x5BF9;&#x6BD4;&#xFF0C;&#x5DE6;&#x8FB9;&#x662F;linear&#xFF0C;&#x53F3;&#x8FB9;&#x662F;ease&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x4ED6;&#x4EEC;&#x7684;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x90FD;&#x662F;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x89C6;&#x89C9;&#x4E0A;&#x6709;&#x6240;&#x5DEE;&#x5F02;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222225683-1335134605-20210719222122214.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            height: 400px;
+            width: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid #ddd;
+        }
+
+        main div {
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            transition-duration: 3s;
+        }
+
+        main div:nth-child(1) {
+            background-color: #ff4757;
+            transition-timing-function: linear;
+        }
+
+        main div:nth-child(2) {
+            background-color: #3742fa;
+            transition-timing-function: ease;
+        }
+
+        main:hover div {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;"><a name="&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;" class="anchor-navigation-ex-anchor" href="#&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4. &#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;</h2>
+<p>&#x5176;&#x5B9E;&#x4E0D;&#x7BA1;&#x662F;linear&#x6216;&#x8005;&#x662F;ease&#x90FD;&#x662F;&#x7531;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x56DB;&#x4E2A;&#x503C; cubic-bezier(\<x1\>,  \<y1\>,  \<x2\>, \<y2\>)&#x6765;&#x63A7;&#x5236;&#x66F2;&#x7EBF;&#x901F;&#x5EA6;&#xFF0C;&#x53EF;&#x5728; <a href="https://cubic-bezier.com/" target="_blank">https://cubic-bezier.com</a> &#x7F51;&#x7AD9;&#x5728;&#x7EBF;&#x4F53;&#x9A8C;&#x6548;&#x679C;&#x3002;</y2\></x2\></y1\></x1\></p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222224680-414285024-20210719222127813.png" alt="image-20200721212338537"></p>
+<p>&#x3000;&#x3000;&#x5982;&#x4EE5;&#x4E0B;&#x662F;&#x6211;&#x81EA;&#x5DF1;&#x8C03;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#xFF0C;&#x53F3;&#x8FB9;&#x7684;&#x90A3;&#x4E2A;&#xFF0C;&#x5BF9;&#x6BD4;&#x7684;&#x662F;linear&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222223762-1243630461-20210719222131874.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            height: 400px;
+            width: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid #ddd;
+        }
+
+        main div {
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            transition-duration: 3s;
+        }
+
+        main div:nth-child(1) {
+            background-color: #ff4757;
+            transition-timing-function: linear;
+        }
+
+        main div:nth-child(2) {
+            background-color: #3742fa;
+            transition-timing-function: cubic-bezier(.17, .67, .88, -0.47);
+        }
+
+        main:hover div {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x6B65;&#x8FDB;&#x901F;&#x5EA6;"><a name="&#x6B65;&#x8FDB;&#x901F;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#&#x6B65;&#x8FDB;&#x901F;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>6.5. &#x6B65;&#x8FDB;&#x901F;&#x5EA6;</h2>
+<p>&#x8FC7;&#x6E21;&#x4F7F;&#x7528;&#x9636;&#x68AF;&#x5316;&#x5448;&#x73B0;&#xFF0C;&#x6709;&#x70B9;&#x50CF;&#x73B0;&#x5B9E;&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x673A;&#x68B0;&#x821E;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x628A;&#x8FC7;&#x6E21;&#x5206;3&#x6B65;&#x5B8C;&#x6210;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>steps(n, start)</td>
+<td>&#x8BBE;&#x7F6E;n&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x70B9;&#x53D8;&#x5316;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>steps(n, end)</td>
+<td>&#x8BBE;&#x7F6E;n&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x70B9;&#x521D;&#x59CB;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>step-start</td>
+<td>&#x7B49;&#x4E8E;steps(1,start)&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4ECE;&#x4E0B;&#x4E00;&#x6B65;&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td>step-end</td>
+<td>&#x7B49;&#x4E8E;steps(1,end)&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4ECE;&#x5F53;&#x524D;&#x6B65;&#x5F00;&#x59CB;</td>
+</tr>
+</tbody>
+</table>
+<p>start&#x603B;&#x662F;&#x5148;&#x8D70;&#xFF0C;end&#x603B;&#x662F;&#x540E;&#x8D70;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222223007-1975156560-20210719222136617.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            height: 400px;
+            width: 800px;
+
+            display: flex;
+            border: 1px solid #ddd;
+
+            position: relative;
+        }
+
+        main div {
+            width: 200px;
+            height: 100%;
+            border: 1px solid #ddd;
+        }
+
+        main::after {
+            content: &quot;START&quot;;
+            height: 30%;
+            width: 25%;
+            background: #ff4757;
+            color: #fff;
+            font-size: 2em;
+            /* &#x8FC7;&#x6E21;&#x65F6;&#x95F4;2s */
+            transition: 2s;
+            /* &#x76F8;&#x5F53;&#x4E8E;&#x628A;2s&#x5206;&#x6210;&#x4E09;&#x6B65;&#x8D70; */
+            transition-timing-function: steps(3, start);
+
+            position: absolute;
+            top: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        main::before {
+            content: &quot;END&quot;;
+            height: 30%;
+            width: 25%;
+            background: #70a1ff;
+            color: #fff;
+            font-size: 2em;
+            /* &#x8FC7;&#x6E21;&#x65F6;&#x95F4;2s */
+            transition: 2s;
+            /* &#x76F8;&#x5F53;&#x4E8E;&#x628A;2s&#x5206;&#x6210;&#x4E09;&#x6B65;&#x8D70; */
+            transition-timing-function: steps(3, end);
+
+            position: absolute;
+            bottom: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main:hover::before {
+            transform: translateX(600px);
+        }
+
+        main:hover::after {
+            transform: translateX(600px);
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x65F6;&#x949F;&#x6548;&#x679C;"><a name="&#x65F6;&#x949F;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x65F6;&#x949F;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>6.6. &#x65F6;&#x949F;&#x6548;&#x679C;</h2>
+<p>&#x5176;&#x5B9E;&#x6B65;&#x8FDB;&#x8FD9;&#x6837;&#x4E00;&#x5E27;&#x4E00;&#x5E27;&#x7684;&#x6765;&#x8D70;&#x975E;&#x5E38;&#x65F6;&#x5019;&#x505A;&#x65F6;&#x949F;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x91CC;&#x5C31;&#x505A;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x964B;&#x7684;&#x65F6;&#x949F;&#x5427;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222222468-741566024-20210719222141718.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            height: 400px;
+            width: 400px;
+            display: flex;
+            position: relative;
+            background: #ffa502;
+            box-shadow: 3px 3px 3px #2f3542;
+            border-radius: 50%;
+        }
+
+        main::after {
+            content: &quot;&quot;;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #1e90ff;
+        }
+
+        main::before {
+            content: &quot;&quot;;
+            height: 48%;
+            width: 6px;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 0);
+            background: #1e90ff;
+            transition-duration: 60s;
+            transition-timing-function: steps(60, start);
+            transform-origin: bottom;
+        }
+
+        main:hover::before {
+
+            transform: translateX(-50%) rotate(360deg);
+
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;&lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h1 id="&#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;"><a name="&#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;" class="anchor-navigation-ex-anchor" href="#&#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;</h1>
+<h2 id="transition-delay"><a name="transition-delay" class="anchor-navigation-ex-anchor" href="#transition-delay"><i class="fa fa-link" aria-hidden="true"></i></a>7.1. transition-delay</h2>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x5EF6;&#x8FDF;&#x8FC7;&#x6E21;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x4E3A;0s&#x5373;&#x7ACB;&#x523B;&#x5F00;&#x59CB;&#x8FC7;&#x6E21;</li>
+<li>&#x503C;&#x53EF;&#x4EE5;&#x4E3A;&#x8D1F;&#x6570;</li>
+<li>&#x53D8;&#x5316;&#x5C5E;&#x6027;&#x6570;&#x91CF;&#x5927;&#x4E8E;&#x65F6;&#x95F4;&#x6570;&#x91CF;&#x65F6;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x518D;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x5F00;&#x59CB;&#x91CD;&#x590D;&#x4F7F;&#x7528;</li>
+</ul>
+<h2 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;"><a name="&#x57FA;&#x672C;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x672C;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>7.2. &#x57FA;&#x672C;&#x4F7F;&#x7528;</h2>
+<p>&#x4E0B;&#x9762;&#x8BBE;&#x7F6E;&#x4E86;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x4E3A;1s&#xFF0C;&#x5F53;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x65F6;&#x4EA7;&#x751F;&#x53D8;&#x5316;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/&#x5EF6;&#x8FDF;1s.gif" alt="&#x5EF6;&#x8FDF;1s"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            padding: 80px;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #e67e22;
+            border-radius: 50%;
+            transition-property: background-color, transform, opacity, border-radius;
+            transition-duration: 1s;
+            transition-delay: 1s;
+        }
+
+        div:hover {
+            border-radius: 0;
+            transform: scale(2) rotate(180deg);
+            background-color: #e67e22;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x591A;&#x503C;&#x5EF6;&#x8FDF;"><a name="&#x591A;&#x503C;&#x5EF6;&#x8FDF;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x503C;&#x5EF6;&#x8FDF;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3. &#x591A;&#x503C;&#x5EF6;&#x8FDF;</h2>
+<p>&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x5C5E;&#x6027;&#x7684;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/&#x591A;&#x503C;&#x5EF6;&#x8FDF;.gif" alt="&#x591A;&#x503C;&#x5EF6;&#x8FDF;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            padding: 80px;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            /* &#x4E00;&#x4E00;&#x5BF9;&#x5E94; */
+            transition-property: background-color, transform, border-radius;
+            transition-duration: 1s, 2s, 3s;
+            transition-delay: 1s, 3s, 5s;
+        }
+
+        div:hover {
+            border-radius: 50%;
+            transform: scale(2) rotate(180deg);
+            background-color: #e67e22;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="&#x4F7F;&#x7528;&#x8D1F;&#x503C;"><a name="&#x4F7F;&#x7528;&#x8D1F;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x8D1F;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>7.4. &#x4F7F;&#x7528;&#x8D1F;&#x503C;</h2>
+<p>&#x4E0B;&#x4F8B;&#x5706;&#x89D2;&#x5C5E;&#x6027;&#x7684;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x4E3A;4s&#xFF0C;&#x8BBE;&#x7F6E;&#x5EF6;&#x8FDF;&#x4E3A; -4s&#xFF0C;&#x8868;&#x793A;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x65F6;&#x76F4;&#x63A5;&#x663E;&#x793A;&#x5728;4s&#x4E0A;&#x7684;&#x6548;&#x679C;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;-2s&#x663E;&#x793A;&#x5706;&#x89D2;&#x53D8;&#x5F62;&#x4E00;&#x534A;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x5373;&#x5BF9;&#x5706;&#x89D2;&#x6765;&#x8BF4;&#x4E0D;&#x4EA7;&#x751F;&#x8FC7;&#x6E21;&#xFF0C;&#x662F;&#x77AC;&#x53D1;&#x7684;&#x3002;</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/&#x8D1F;&#x503C;&#x5EF6;&#x8FDF;.gif" alt="&#x8D1F;&#x503C;&#x5EF6;&#x8FDF;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            padding: 80px;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+
+            transition-property: background-color, transform, border-radius;
+            transition-duration: 1s, 2s, 4s;
+            transition-delay: 1s, 2s, -4s;
+        }
+
+        div:hover {
+            border-radius: 50%;
+            transform: scale(2) rotate(180deg);
+            background-color: #e67e22;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;main&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h1 id="&#x7EC4;&#x5408;&#x5B9A;&#x4E49;"><a name="&#x7EC4;&#x5408;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x5408;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x7EC4;&#x5408;&#x5B9A;&#x4E49;</h1>
+<h2 id="transition"><a name="transition" class="anchor-navigation-ex-anchor" href="#transition"><i class="fa fa-link" aria-hidden="true"></i></a>8.1. transition</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;transition &#x6307;&#x4EE4;&#x5C06;&#x8FC7;&#x6E21;&#x89C4;&#x5219;&#x7EDF;&#x4E00;&#x8BBE;&#x7F6E;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#x3002;</p>
+<ul>
+<li>&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;</li>
+<li>&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x653E;&#x5728;&#x9017;&#x53F7;&#x6216;&#x7ED3;&#x675F;&#x524D;</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x6570;&#x503C;&#x4F1A;&#x8BA4;&#x4E3A;&#x662F;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;</li>
+</ul>
+<pre><code>transition: border-radius linear 2s 0s,
+background 2s 2s,
+width linear 2s 4s,
+height linear 2s 4s;
+/* &#x53C2;&#x4E0E;&#x8FC7;&#x6E21;&#x7684;&#x52A8;&#x753B; &#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF; &#x8FC7;&#x6E21;&#x65F6;&#x95F4; &#x5EF6;&#x8FDF;&#x65F6;&#x95F4; */
+</code></pre><h2 id="&#x70B9;&#x8D5E;&#x6848;&#x4F8B;"><a name="&#x70B9;&#x8D5E;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x70B9;&#x8D5E;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>8.2. &#x70B9;&#x8D5E;&#x6848;&#x4F8B;</h2>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/1881426-20200721222221777-1665311733-20210719222153619.gif" alt="&#x8FC7;&#x6E21;&#x5C5E;&#x6027;"></p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+    &lt;script src=&apos;https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js&apos;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ecf0f1;
+        }
+
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div i.fa {
+            font-size: 100px;
+            position: absolute;
+            transition: all .5s;
+            color: #ddd;
+        }
+
+        div.heart i.fa {
+            font-size: 400px;
+            color: #e74c3c;
+            opacity: 0;
+        }
+
+        div.heart i.fa:nth-child(2) {
+            font-size: 80px;
+            color: #e74c3c;
+            opacity: 1;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div onclick=&quot;heart()&quot;&gt;
+        &lt;i class=&quot;fa fa-heart&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;i class=&quot;fa fa-heart&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+
+
+&lt;/body&gt;
+&lt;script&gt;
+    function heart() {
+        $(&quot;div&quot;).toggleClass(&apos;heart&apos;);
+    }
+&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x4E91;&#x5D16;&#x5148;&#x751F; 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-07-19 22:23:18
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="变形动画.html" class="navigation navigation-prev " aria-label="Previous page: 变形动画">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="帧动画.html" class="navigation navigation-next " aria-label="Next page: 帧动画">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"过渡时间","level":"1.4.2.14","depth":3,"next":{"title":"帧动画","level":"1.4.2.15","depth":3,"path":"前端专栏/CSS/帧动画.md","ref":"./前端专栏/CSS/帧动画.md","articles":[]},"previous":{"title":"变形动画","level":"1.4.2.13","depth":3,"path":"前端专栏/CSS/变形动画.md","ref":"./前端专栏/CSS/变形动画.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","splitter","expandable-chapters-small","code","github","-sharing","sharing-plus","auto-scroll-table","disqus","katex","tbfed-pagefooter","sectionx","simple-page-toc","anchor-navigation-ex","edit-link","accordion","livereload"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 云崖先生 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"starstower"},"github":{"url":"https://github.com/KahnDepot"},"livereload":{},"simple-page-toc":{"maxDepth":5,"skipFirstH1":true},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":true,"qzone":false},"edit-link":{"label":"编辑此页面","base":"https://github.com/KahnDepot/startowernode/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"云崖先生","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"星塔Node","language":"zh-hans","gitbook":"*","description":"一个自用的文档库"},"file":{"path":"前端专栏/CSS/过渡时间.md","mtime":"2021-07-19T14:23:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-07T07:14:30.016Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
