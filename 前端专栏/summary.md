@@ -2,5 +2,5 @@
 * [CSS](./CSS/summary.md)
 * [JavaScript](./JavaScript/summary.md)
 * [jQuery](./jQuery/summary.md)
-* [Vue](./Vue/summary.md)
+* [Vue3](./Vue3/summary.md)
 * [Webpack5](./Webpack5/summary.md)

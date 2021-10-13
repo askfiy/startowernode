@@ -17,7 +17,7 @@
 
 # devServer配置
 
-要想使用devServer，先要对其进行下载：
+要想使用devServer，先要对其进行下载，devServer只在开发环境下使用，所以需要加上-dev的后缀：
 
 ```
 $ npm install webpack-dev-server --save-dev
