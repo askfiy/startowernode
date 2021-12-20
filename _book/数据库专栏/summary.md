@@ -1,1 +1,0 @@
-* [MySQL](./MySQL/summary.md)
