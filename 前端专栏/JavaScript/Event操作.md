@@ -1044,6 +1044,10 @@ load事件会在文档解析完成，且所有外部资源加载完成时触发�
     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
 </body>
 
+
+
+
+
 <script>
 
     "use strict";

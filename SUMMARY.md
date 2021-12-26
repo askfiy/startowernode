@@ -267,7 +267,6 @@
         * [Vue-CLI](./前端专栏/Vue3/Vue-CLI.md)
         * [Vue-Router](./前端专栏/Vue3/Vue-Router.md)
         * [Vue-X](./前端专栏/Vue3/Vue-X.md)
-
         * [axios](./前端专栏/Vue3/axios.md)
         * [其他资源](./前端专栏/Vue3/其他资源.md)
         * [一个案例](./前端专栏/Vue3/一个案例.md)
@@ -319,7 +318,7 @@
         * [Atlas中间件](./数据库专栏/MySQL/Atlas中间件.md)
         * [数据库设计](./数据库专栏/MySQL/数据库设计.md)
 
-    * [MySQL](./数据库专栏/MongoDB/summary.md)
+    * [MongoDB](./数据库专栏/MongoDB/summary.md)
         * [基础学习](./数据库专栏/MongoDB/基础学习.md)
         * [简单概念](./数据库专栏/MongoDB/简单概念.md)
         * [库与集合](./数据库专栏/MongoDB/库与集合.md)
@@ -337,3 +336,16 @@
         * [备份恢复](./数据库专栏/MongoDB/备份恢复.md)
         * [数据迁移](./数据库专栏/MongoDB/数据迁移.md)
         * [开发指南](./数据库专栏/MongoDB/开发指南.md)
+
+    * [Redis](./数据库专栏/Redis/summary.md)
+        * [基础学习](./数据库专栏/Redis/基础学习.md)
+        * [通用命令](./数据库专栏/Redis/通用命令.md)
+        * [数据类型](./数据库专栏/Redis/数据类型.md)
+        * [持久化存储](./数据库专栏/Redis/持久化存储.md)
+        * [事务相关](./数据库专栏/Redis/事务相关.md)
+        * [主从复制](./数据库专栏/Redis/主从复制.md)
+        * [哨兵模式](./数据库专栏/Redis/哨兵模式.md)
+        * [分片集群](./数据库专栏/Redis/分片集群.md)
+        * [trib.rb工具](./数据库专栏/Redis/trib.rb工具.md)
+        * [清理策略](./数据库专栏/Redis/清理策略.md)
+        * [缓存相关](./数据库专栏/Redis/缓存相关.md)
