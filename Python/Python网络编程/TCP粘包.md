@@ -589,3 +589,107 @@ print("client close")
 client.close()
 ```
 
+# 通过占位符拆分消息
+
+规定一个特定的占位符作为消息的结束符。这是一个简单的解决方案，总体来说并不如上述方案优秀。
+
+Server 端代码如下：
+
+```
+import subprocess
+from socket import *
+
+server = socket()
+server.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+
+server.bind(("localhost", 8888))
+server.listen(5)
+
+placeholder = "{{$E$}}"
+
+
+def recv_msg(conn, size=1024) -> str:
+    data = bytes.decode(conn.recv(size), "utf-8")
+
+    # 客户端强制退出，会无限发送 ""
+    if not data:
+        return ""
+
+    while not str.endswith(data, placeholder):
+        data += bytes.decode(conn.recv(size), "utf-8")
+    return data[:-len(placeholder)]
+
+
+def send_msg(conn, msg: str) -> None:
+    conn.send(str.encode(msg + placeholder, "utf-8"))
+
+
+while 1:
+    conn, client_addr = server.accept()
+    print("%s connect server" % client_addr[0])
+
+    while 1:
+        try:
+            command = recv_msg(conn, 1024)
+
+            if not command:
+                break
+
+            result = subprocess.Popen(
+                args=command,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE
+            )
+
+            success_out = result.stdout.read()
+
+            error_out = result.stderr.read()
+
+            send_msg(conn, bytes(success_out or error_out).decode("utf-8"))
+
+        except ConnectionResetError as e:
+            break
+
+    print("%s close connect" % client_addr[0])
+    conn.close()
+```
+
+Client端代码如下：
+
+```
+from socket import *
+
+client = socket()
+client.connect(("localhost", 8888))
+
+placeholder = "{{$E$}}"
+
+
+def recv_msg(conn, size=1024) -> str:
+    data = bytes.decode(conn.recv(size), "utf-8")
+    while not str.endswith(data, placeholder):
+        data += bytes.decode(conn.recv(size), "utf-8")
+    return data[:-len(placeholder)]
+
+
+def send_msg(conn, msg: str) -> None:
+    conn.send(str.encode(msg + placeholder, "utf-8"))
+
+
+while 1:
+    command = input(">>>").strip()
+    if not command:
+        continue
+
+    if command == "exit":
+        break
+
+    send_msg(client, command)
+
+    print(recv_msg(client))
+
+
+print("client close")
+client.close()
+```
