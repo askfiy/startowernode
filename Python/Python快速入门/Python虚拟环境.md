@@ -58,6 +58,9 @@ export WORKON_HOME="~/.virtualenvs"
 # 填入你的真实Python3解释器路径，用于虚拟环境的拷贝
 export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6
 
+# virtualenv 的可执行文件路径
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+
 # Setting virtualenvwrapper.sh run path
 # 填入virtualenvwrapper.sh的脚本路径
 source /Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh                                                               
