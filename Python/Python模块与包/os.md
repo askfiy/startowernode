@@ -288,3 +288,22 @@ print(Path("User/YunYa") / r"a/b/c")
 ```
 
 无论是os.path.join()还是pathlib的/进行路径拼接，都会选择出适合当前平台的路径分隔符。
+
+## \_\_package\_\_ 变量
+
+Python 内置了一个 build-in global variable \_\_package\_\_，有的时候我们必须手动区分当前文件是不是被模块的方式导入的。
+
+若当前文件是以模块形式导入的，则 \_\_package\_\_ 为当前模块的名称。
+
+若当前文件并非以模块形式导入的，则 \_\_package\_\_ 为 None。
+
+所以，对于一个启动文件来说，我们可以:
+
+```
+import os
+import sys
+
+if not __package__:
+    # sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir))  效果和下面一样的
+    sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+```
