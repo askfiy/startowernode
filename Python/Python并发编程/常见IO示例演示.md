@@ -404,9 +404,12 @@ class TcpServer:
         
         # 注册self.sockt的可读事件并绑定回调函数为self.handle_request
         # 当客户端试图建立与服务端的双向链接通道时将触发self.socket的可读事件
+        # 如果是要注册可读写事件，可以传入 events = selectors.EVENT_READ + selectors.EVENT_WRITE,
+        # 或者传入 3 即可
         self.sel.register(self.socket, selectors.EVENT_READ, self.handle_request)
 
-        # 开始循环监听描述符，每次while循环间隔0.5s
+        # 开始循环监听描述符，每次while循环间隔0.5s, 如果这里是 0, 则会一直阻塞
+        # 直到有一个 fd 的事件出现了
         while 1:
             # 当有已注册描述符状态发生改变后，都会添加至fd_list
             # fd_list = [(fd, event), ...]

@@ -1,16 +1,12 @@
-# importlib简介
+# importlib 简介
 
-importlib模块作为Python内置模块，提供了更多导入模块的方式。
+importlib 模块作为 Python 内置模块，提供了更多导入模块的方式。
 
 [官方文档](https://docs.python.org/zh-cn/3.6/library/importlib.html)
 
 常用方法：
 
-- importlib.import_module(str)：根据字符串导入1个模块，该字符串以.为路径分割，如"package.module"
-
-
-
-
+- importlib.import_module(str)：根据字符串导入 1 个模块，该字符串以.为路径分割，如"package.module"
 
 # 项目示例
 
@@ -18,7 +14,7 @@ importlib模块作为Python内置模块，提供了更多导入模块的方式�
 
 我该如何集中式的管理这些中间件，让它们在需要的时候能够快速加上，不需要的时候能够快速去除呢？
 
-使用importlib模块是最明智的选择，整个项目目录如下：
+使用 importlib 模块是最明智的选择，整个项目目录如下：
 
 ```
 PYTHONPROJECT
@@ -34,11 +30,11 @@ PYTHONPROJECT
 │
 ├─view
 │   │  main.py
-│  
+│
 │  settings.py
 ```
 
-首先先查看一下run.py，它主要处理项目模块路径、中间件初始化以及主程序的运行：
+首先先查看一下 run.py，它主要处理项目模块路径、中间件初始化以及主程序的运行：
 
 ```
 #　run.py
@@ -59,7 +55,7 @@ if __name__ == "__main__":
     main()
 ```
 
-再来看一下中间件的启动，它会从配置文件中拿到被集中化管理的需要启动的中间件，然后利用importlib模块对其进行导入后执行其下的某一个方法：
+再来看一下中间件的启动，它会从配置文件中拿到被集中化管理的需要启动的中间件，然后利用 importlib 模块对其进行导入后执行其下的某一个方法：
 
 ```
 # middleware/init.py
@@ -77,9 +73,9 @@ def init():
         funcObject()
 ```
 
-被集中管理的需要加载的中间件被定义在了settings.py的1个列表中。
+被集中管理的需要加载的中间件被定义在了 settings.py 的 1 个列表中。
 
-其中每条数据项代表1个需要被加载的中间件，以BASE_DIR为准，用.进行分割，确定了中间件的导入路径与运行函数：
+其中每条数据项代表 1 个需要被加载的中间件，以 BASE_DIR 为准，用.进行分割，确定了中间件的导入路径与运行函数：
 
 ```
 # settings.py
@@ -90,18 +86,14 @@ LOAD_MIDDLEWARE = [
 ]
 ```
 
-当后续需要新增中间件，只需要在middleware包中添加好.py文件并且在settings.py中按照格式把路径和运行函数填入即可。
+当后续需要新增中间件，只需要在 middleware 包中添加好.py 文件并且在 settings.py 中按照格式把路径和运行函数填入即可。
 
 如果要取消某个中间件的加载，直接在列表中对它进行注释即可。
 
+总结 2 点：
 
-
-总结2点：
-
-- 如何规定模块导入的格式，参见LOAD_MIDDLEWARE列表
-- 如何使用importlib快速导入模块且执行模块下的某一个函数，参见init.py文件
-
-
+- 如何规定模块导入的格式，参见 LOAD_MIDDLEWARE 列表
+- 如何使用 importlib 快速导入模块且执行模块下的某一个函数，参见 init.py 文件
 
 把其他代码也补上吧，中间件的启动函数：
 
@@ -109,7 +101,7 @@ LOAD_MIDDLEWARE = [
 # middleware/first_middle.py
 def m1():
     print("middleware 1 run..")
-    
+
 # middleware/second_middle.py
 def m2():
     print("middleware 2 run..")
@@ -124,8 +116,6 @@ def main():
     print("view main run...")
 ```
 
-
-
 运行结果：
 
 ```
@@ -133,4 +123,3 @@ middleware 1 run..
 middleware 2 run..
 view main run...
 ```
-
