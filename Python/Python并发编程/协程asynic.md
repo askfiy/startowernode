@@ -428,10 +428,57 @@ while 1:
         break
 ```
 
+
 使用 asyncio 模块时，你可以直接通过下面方式获取到该事件循环：
 
 ```
 event_loop = asyncio.get_event_loop()
+```
+
+其实 asyncio 模块内部的事件循环是使用了一个双端队列实现的，类似：
+
+```python
+import collections
+
+
+def f1():
+    print("A")
+    yield
+    print("B")
+
+
+def f2():
+    print("C")
+    yield
+    print("D")
+
+
+ready_tasks = collections.deque()
+
+
+def create_task(generator):
+    ready_tasks.append(generator)
+
+
+def run():
+    print("loop start")
+    while True:
+        try:
+            gen = ready_tasks.popleft()
+            next(gen)
+            create_task(gen)
+        except IndexError as e:
+            print("loop done")
+            break
+
+        except StopIteration as e:
+            pass
+
+
+create_task(f1())
+create_task(f2())
+
+run()
 ```
 
 ## 协程对象
