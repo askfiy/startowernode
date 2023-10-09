@@ -428,7 +428,6 @@ while 1:
         break
 ```
 
-
 使用 asyncio 模块时，你可以直接通过下面方式获取到该事件循环：
 
 ```
@@ -867,6 +866,39 @@ asyncio.run(func())
 ```
 
 这个异步的上下文管理器还是比较有用的，平时在开发过程中 打开、处理、关闭 操作时，就可以用这种方式来处理。
+
+## \_\_await\_\_
+
+当 await 一个非协程对象的普通对象时，Python 解释器会尝试调用其 \_\_await\_\_ 方法获取一个异步迭代器。
+
+- 如果对象是一个协程对象，直接执行该协程。
+- 否则，尝试调用对象的**await**方法，获取一个迭代器对象用于执行异步操作。
+- 如果对象既不是协程对象，也没有定义**await**方法，将引发 AttributeError 异常，表示对象不是一个有效的可等待对象。
+
+代码示例：
+
+```
+import asyncio
+
+
+class MyAwaitable:
+    def __await__(self):
+        return self._await_generator().__await__()
+
+    async def _await_generator(self):
+        # 执行异步操作
+        await asyncio.sleep(1)
+        # 返回结果作为可等待对象的结果
+        return 'Hello, world!'
+
+
+async def main():
+    awaitable = MyAwaitable()
+    result = await awaitable
+    print(result)
+
+asyncio.run(main())
+```
 
 # uvloop
 

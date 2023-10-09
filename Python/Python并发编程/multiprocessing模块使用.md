@@ -1,27 +1,23 @@
-# multiprocessing模块
+# multiprocessing 模块
 
-Python中提供了multiprocessing模块来实现进程并发编程，官方文档如下：
+Python 中提供了 multiprocessing 模块来实现进程并发编程，官方文档如下：
 
 [官方文档](https://docs.python.org/zh-cn/3.6/library/multiprocessing.html)
 
-由于GIL锁的存在，所以CPython中多线程是不能够并行运行的，但是多进程可以并行运行，该模块用到的地方基本很少，但是仍然需要进行掌握。
+由于 GIL 锁的存在，所以 CPython 中多线程是不能够并行运行的，但是多进程可以并行运行，该模块用到的地方基本很少，但是仍然需要进行掌握。
 
-此外，它和threading模块99%的接口都一模一样，只有少量的差别。
-
-
+此外，它和 threading 模块 99%的接口都一模一样，只有少量的差别。
 
 # 添加子进程
 
 ## 针对不同平台选择添加子进程的方式
 
+multiprocessing 模块针对不同的平台，添加子进程的方式也有所区别：
 
+- spawn：该方式是 Windows 平台下的默认方式，它会创建一个新的解释器进程，速度比较慢
+- fork：该方式是 Unix 平台下的默认方式，内部会通过 os.fork()产生一个新的解释器分叉
 
-multiprocessing模块针对不同的平台，添加子进程的方式也有所区别：
-
-- spawn：该方式是Windows平台下的默认方式，它会创建一个新的解释器进程，速度比较慢
-- fork：该方式是Unix平台下的默认方式，内部会通过os.fork()产生一个新的解释器分叉
-
-需要注意的是，如果平台是Windows，则必须将启动代码书写到if \_\_name\_\_ == "\_\_main\_\_”语句的下面，否则将会抛出异常。
+需要注意的是，如果平台是 Windows，则必须将启动代码书写到 if \_\_name\_\_ == "\_\_main\_\_”语句的下面，否则将会抛出异常。
 
 如何指定新进程的启动方式？示例如下：
 
@@ -32,15 +28,13 @@ if __name__ == "__main__":
     multiprocessing.set_start_method("fork")
 ```
 
-
-
-## 实例化Process类
+## 实例化 Process 类
 
 使用该方式新增子线程任务是比较常见的，也是推荐使用的。
 
-简单的代码示例如下，创建3个子进程并向其添加任务，然后运行并打印它们的PID和进程名字：
+简单的代码示例如下，创建 3 个子进程并向其添加任务，然后运行并打印它们的 PID 和进程名字：
 
-```
+```python
 import multiprocessing
 import time
 
@@ -76,15 +70,11 @@ if __name__ == "__main__":
 # current sub process params : 2
 ```
 
-
-
-
-
-## 自定义类覆写run()方法
+## 自定义类覆写 run()方法
 
 上面的子进程任务对象是一个全局函数，我们也可以将它作为方法来进行调用。
 
-书写一个类并继承Process类，覆写run()方法即可：
+书写一个类并继承 Process 类，覆写 run()方法即可：
 
 ```
 import multiprocessing
@@ -127,11 +117,9 @@ if __name__ == "__main__":
 # current sub process params : 2
 ```
 
+# multiprocessing 模块方法大全
 
-
-# multiprocessing模块方法大全
-
-以下是multiprocessing模块提供的类或方法：
+以下是 multiprocessing 模块提供的类或方法：
 
 | 类或方法                                      | 描述                                           | 返回值               |
 | --------------------------------------------- | ---------------------------------------------- | -------------------- |
@@ -139,39 +127,35 @@ if __name__ == "__main__":
 | multiprocessing.active_children()             | 查看当前进程下的所有子进程对象，以列表形式返回 | [processObject, ...] |
 | multiprocessing.current_process()             | 获取当前的进程对象                             | processObject        |
 
-以下是好伙伴os模块所提供的2个方法：
+以下是好伙伴 os 模块所提供的 2 个方法：
 
-| 方法         | 描述                      | 返回值 |
-| ------------ | ------------------------- | ------ |
-| os.getpid()  | 返回当前进程pid           | int    |
-| os.getppid() | 返回当前进程的父进程的pid | int    |
+| 方法         | 描述                       | 返回值 |
+| ------------ | -------------------------- | ------ |
+| os.getpid()  | 返回当前进程 pid           | int    |
+| os.getppid() | 返回当前进程的父进程的 pid | int    |
 
-# processObject方法大全
+# processObject 方法大全
 
 以下是针对进程对象提供的属性或者方法：
 
-| 方法/属性                        | 描述                                                         | 返回值      |
-| -------------------------------- | ------------------------------------------------------------ | ----------- |
-| processObject.start()            | 通知系统该进程调度完毕，可以随时进行启动，一个进程对象只能运行一次该方法，若多次运行则抛出RunTimeError异常 | ...         |
-| processObject.join(timeout=None) | 主进程默认会等待子进程运行结束后再继续执行，timeou为等待的秒数，如不设置该参数则一直等待。 | ...         |
-| processObject.close()            | 关闭进程                                                     | ...         |
-| processObject.terminate()        | 终止进程                                                     | ...         |
-| processObject.kill()             | 终止进程                                                     | ...         |
-| processObject.is_alive()         | 查看进程对象是否存活                                         | bool        |
-| processObject.ident              | 获取进程对象的编号                                           | int         |
-| processObject.pid                | 获取进程对象的编号                                           |             |
-| processObject.name               | 获取或者设置进程对象的名字                                   | str or None |
-| processObject.daemon             | 查看进程对象是守护进程                                       | bool        |
-| processObject.exitcode           | 子进程的退出代码。如果进程尚未终止，这将是None。负值 *-N* 表示子进程被信号 *N* 终止 | int         |
-| processObject.authkey            | 获取进程的身份验证密码                                       | bytes       |
-
-
-
-
+| 方法/属性                        | 描述                                                                                                         | 返回值      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
+| processObject.start()            | 通知系统该进程调度完毕，可以随时进行启动，一个进程对象只能运行一次该方法，若多次运行则抛出 RunTimeError 异常 | ...         |
+| processObject.join(timeout=None) | 主进程默认会等待子进程运行结束后再继续执行，timeou 为等待的秒数，如不设置该参数则一直等待。                  | ...         |
+| processObject.close()            | 关闭进程                                                                                                     | ...         |
+| processObject.terminate()        | 终止进程                                                                                                     | ...         |
+| processObject.kill()             | 终止进程                                                                                                     | ...         |
+| processObject.is_alive()         | 查看进程对象是否存活                                                                                         | bool        |
+| processObject.ident              | 获取进程对象的编号                                                                                           | int         |
+| processObject.pid                | 获取进程对象的编号                                                                                           |             |
+| processObject.name               | 获取或者设置进程对象的名字                                                                                   | str or None |
+| processObject.daemon             | 查看进程对象是守护进程                                                                                       | bool        |
+| processObject.exitcode           | 子进程的退出代码。如果进程尚未终止，这将是 None。负值 _-N_ 表示子进程被信号 _N_ 终止                         | int         |
+| processObject.authkey            | 获取进程的身份验证密码                                                                                       | bytes       |
 
 # 守护进程示例
 
-multiprocessing模块的守护进程和threading的守护线程设置有所不同。
+multiprocessing 模块的守护进程和 threading 的守护线程设置有所不同。
 
 它是通过赋值来进行设置的，如下所示：
 
@@ -208,23 +192,19 @@ if __name__ == "__main__":
 # main process run end
 ```
 
+# multiprocessing 与 threading 模块异同
 
+1.创建子进程的方式针对不同平台有着差异化
 
-# multiprocessing与threading模块异同
+2.关于守护线程的设置接口是 setDaemon(True)，而关于守护进程的接口是 deamon = True
 
-　　1.创建子进程的方式针对不同平台有着差异化
-
-　　2.关于守护线程的设置接口是setDaemon(True)，而关于守护进程的接口是deamon = True
-
-　　3.multiprocessing模块下的获取进程名与设置进程名没有threading模块下的getName()和setName()，而是直接采取属性name进行操作
-
-
+3.multiprocessing 模块下的获取进程名与设置进程名没有 threading 模块下的 getName()和 setName()，而是直接采取属性 name 进行操作
 
 # 锁的使用
 
-multiprocessing模块中锁的接口和使用与threading中锁的接口和使用一致。
+multiprocessing 模块中锁的接口和使用与 threading 中锁的接口和使用一致。
 
-所以这里仅介绍一个lock锁即可：
+所以这里仅介绍一个 lock 锁即可：
 
 ```
 import multiprocessing
@@ -267,4 +247,3 @@ if __name__ == "__main__":
 # num result : 0
 # num result : 0
 ```
-
