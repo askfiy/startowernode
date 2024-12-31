@@ -27,20 +27,22 @@ $ tsc --init
 ```
 {
   "include": [
-    "./src/**/*", // 仅编译src目录下的所有ts文件
+    "./src/**/*" // 仅编译src目录下的所有ts文件
   ],
   "exclude": [
-    "./src/test/**/*", // 不编译src目录中test目录下所有的ts文件
+    "./src/test/**/*" // 不编译src目录中test目录下所有的ts文件
   ],
   "compilerOptions": {
     "target": "ES6", // 编译后生成的js版本为es6
     "module": "CommonJS", // 编译后的模块使用规范为CommonJs
-    "lib": [ // node环境中测试ts代码所需要使用的库
+    "lib": [
+      // node环境中测试ts代码所需要使用的库
       "ES6"
     ],
     "outDir": "./dist", // 编译后生成的js文件存放路径
     "allowJs": true, // 二次编译js文件
     "checkJs": true, // 验证js文件语法
+    "esModuleInterop": true,
     "removeComments": false, // 编译后的js文件删除注释信息
     "noEmitOnError": true, // 如果编译时出现错误，编译将终止
     "strict": true, // 启用TypeScript的严格模式
@@ -49,7 +51,7 @@ $ tsc --init
     "noImplicitReturns": true, // 检测函数是否具有隐式的返回值
     "noUnusedLocals": true, // 检测是否具有未使用的局部变量
     "noUnusedParameters": true, // 检测是否具有未使用的函数参数
-    "allowUnreachableCode": true, // 检测是否具有永远不会运行的代码
+    "allowUnreachableCode": true // 检测是否具有永远不会运行的代码
   }
 }
 ```
